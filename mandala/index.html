@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Weaving Relations – Mandala Diagram</title>
+  <style>
+    :root {
+      --bg: #0b1020;
+      --fg: #f6f5f2;
+      --accent-eu: #4ea0ff;
+      --accent-prov: #ffb347;
+      --accent-mun: #6cd47b;
+      --segment: #7f8cff;
+      --segment-muted: #323954;
+    }
+
+    * {
+      box-sizing: border-box;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      margin: 0;
+      background: radial-gradient(circle at top, #1b2140, #050711 60%);
+      color: var(--fg);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    .mandala-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 1.75rem;
+      padding: 1.75rem 1.5rem 2.25rem;
+      border-radius: 24px;
+      background: rgba(3, 7, 22, 0.92);
+      box-shadow: 0 24px 70px rgba(0, 0, 0, 0.6);
+      max-width: 720px;
+      width: 100%;
+      margin: 2rem auto;
+    }
+
+    .mandala-svg-container {
+      position: relative;
+      width: 100%;
+      padding-bottom: 100%; /* square */
+    }
+
+    svg {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+    }
+
+    .info-panel {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .info-panel h1 {
+      font-size: 1.4rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: #c2c8ff;
+      margin: 0;
+    }
+
+    .info-panel h2 {
+      font-size: 1.1rem;
+      margin: 0.2rem 0 0.4rem;
+      color: #ffffff;
+    }
+
+    .info-panel p {
+      margin: 0;
+      font-size: 0.9rem;
+      line-height: 1.4;
+      color: #d0d4f5;
+    }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.4rem;
+      margin-top: 0.4rem;
+    }
+
+    .chip {
+      font-size: 0.72rem;
+      padding: 0.25rem 0.6rem;
+      border-radius: 999px;
+      border: 1px solid rgba(194, 200, 255, 0.3);
+      color: #c2c8ff;
+      background: rgba(16, 27, 68, 0.7);
+      backdrop-filter: blur(8px);
+    }
+
+    .legend {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.6rem;
+      margin-top: 1rem;
+      border-top: 1px solid rgba(81, 93, 168, 0.6);
+      padding-top: 0.75rem;
+    }
+
+    .legend-item {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      font-size: 0.8rem;
+      color: #9fa6ff;
+    }
+
+    .legend-color {
+      width: 10px;
+      height: 10px;
+      border-radius: 999px;
+    }
+
+    .legend-color.eco { background: var(--segment); }
+    .legend-color.eh  { background: var(--accent-prov); }
+    .legend-color.eu  { background: var(--accent-eu); }
+    .legend-color.mun { background: var(--accent-mun); }
+
+    /* Hover states from SVG */
+    .segment,
+    .actor-arc {
+      cursor: pointer;
+      transition: fill 0.2s ease, opacity 0.2s ease, stroke-width 0.2s ease;
+    }
+
+    .segment {
+      fill: var(--segment-muted);
+      stroke: rgba(151, 164, 255, 0.3);
+      stroke-width: 1;
+      opacity: 0.8;
+    }
+
+    .segment.active {
+      fill: var(--segment);
+      opacity: 1;
+      stroke-width: 2;
+    }
+
+    .actor-arc {
+      opacity: 0.5;
+      stroke: rgba(0, 0, 0, 0.4);
+      stroke-width: 1;
+    }
+
+    .actor-arc.eu     { fill: var(--accent-eu); }
+    .actor-arc.prov   { fill: var(--accent-prov); }
+    .actor-arc.mun    { fill: var(--accent-mun); }
+
+    .actor-arc.active {
+      opacity: 0.9;
+      stroke-width: 2;
+    }
+
+    .center-circle {
+      fill: #12172e;
+      stroke: #848dff;
+      stroke-width: 2;
+    }
+
+    .center-icon {
+      fill: none;
+      stroke: #e6edf9;
+      stroke-width: 1.4;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      opacity: 0.95;
+    }
+
+    .center-text {
+      font-size: 0.6rem;
+      text-anchor: middle;
+      fill: #cfd5ff;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+    }
+
+    .segment-label,
+    .actor-label {
+      font-size: 0.4rem;
+      fill: #d3d7ff;
+      text-anchor: middle;
+      pointer-events: none;
+    }
+
+    @media (max-width: 600px) {
+      .mandala-wrapper {
+        padding: 1.25rem 1rem 1.75rem;
+        border-radius: 18px;
+        margin: 1rem auto;
+      }
+
+      .info-panel h1 {
+        font-size: 1.2rem;
+      }
+
+      .info-panel p {
+        font-size: 0.85rem;
+      }
+    }
+
+      body {
+        align-items: flex-start;
+        padding-top: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="mandala-wrapper">
+  <div class="mandala-svg-container">
+    <svg id="mandala" viewBox="-120 -120 240 240" aria-labelledby="title desc" xmlns:xlink="http://www.w3.org/1999/xlink">
+      <title id="title">Weaving Relations Mandala</title>
+      <desc id="desc">
+        Radial diagram showing human governance actors and the crayfish ecosystem around Cornelis Douwes.
+      </desc>
+
+      <!-- Groups for ordering -->
+      <g id="ecosystem-layer"></g>
+      <g id="actors-layer"></g>
+
+      <!-- Center: American crayfish -->
+      <circle class="center-circle" cx="0" cy="0" r="22"></circle>
+      <!-- simple crayfish-like icon -->
+      <g class="center-icon">
+        <path d="M -10 0 C -6 -4 -2 -6 0 -6 C 2 -6 6 -4 10 0" />
+        <path d="M -10 0 C -6 4 -2 6 0 6 C 2 6 6 4 10 0" />
+        <path d="M 0 -6 L 0 -12" />
+        <path d="M 0 6 L 0 12" />
+        <path d="M -6 -2 L -12 -6" />
+        <path d="M 6 -2 L 12 -6" />
+      </g>
+      <text class="center-text" x="0" y="24">AMERICAN CRAYFISH</text>
+    </svg>
+  </div>
+
+  <aside class="info-panel" id="info">
+    <h1>Mandala – Governance & Ecosystem</h1>
+    <h2 id="info-title">Hover a segment</h2>
+    <p id="info-body">
+      Move your cursor over one of the ecosystem segments or governance arcs in the mandala to explore how human actors (EU, province, municipality) intersect with the crayfish and its non-human habitat.
+    </p>
+    <div class="chips" id="info-tags">
+      <span class="chip">EU invasive species list</span>
+      <span class="chip">Industrial heritage</span>
+      <span class="chip">Circular city 2050</span>
+      <span class="chip">Non-human ecosystem</span>
+    </div>
+
+    <div class="legend">
+      <div class="legend-item">
+        <span class="legend-color eco"></span>
+        Ecosystem segments
+      </div>
+      <div class="legend-item">
+        <span class="legend-color eu"></span>
+        EU – invasive species list
+      </div>
+      <div class="legend-item">
+        <span class="legend-color eh"></span>
+        Province – industrial heritage
+      </div>
+      <div class="legend-item">
+        <span class="legend-color mun"></span>
+        Municipality – housing & circular 2050
+      </div>
+    </div>
+  </aside>
+</div>
+
+<script>
+  // ----- Data definition -----
+  const ecosystemSegments = [
+    {
+      id: "native-crayfish",
+      label: "Native crayfish",
+      description: "Native European crayfish species that are displaced and infected by the invasive American crayfish and its plague.",
+      tags: ["biodiversity", "competition", "vulnerability"]
+    },
+    {
+      id: "predators",
+      label: "Predators – eel, pike, heron",
+      description: "Predator species such as eel, pike and heron that can control crayfish numbers but are themselves pressured by water quality and habitat loss.",
+      tags: ["food web", "top-down control"]
+    },
+    {
+      id: "river-banks",
+      label: "River banks, burrows & erosion",
+      description: "Crayfish burrowing destabilizes the industrial riverbanks around Cornelis Douwes, affecting dikes, quays and industrial heritage structures.",
+      tags: ["erosion", "morphology", "heritage risk"]
+    },
+    {
+      id: "water-quality",
+      label: "Water quality & O₂",
+      description: "Oxygen levels, pollution and temperature determine whether crayfish, fish and aquatic plants can survive or collapse.",
+      tags: ["chemistry", "urban runoff", "climate stress"]
+    },
+    {
+      id: "aquatic-plants",
+      label: "Aquatic plants",
+      description: "Submerged and emergent plants structure the habitat, provide shelter and influence oxygen and sediment dynamics.",
+      tags: ["habitat", "oxygen", "stabilisation"]
+    },
+    {
+      id: "detritus",
+      label: "Detritus & carrion",
+      description: "Dead organic matter and carrion form a key food resource for crayfish and many decomposer species.",
+      tags: ["nutrient cycling", "decomposition"]
+    },
+    {
+      id: "insects",
+      label: "Insects & larvae",
+      description: "Aquatic insects and larvae link the under-water world to birds and terrestrial food webs.",
+      tags: ["trophic link", "sensitive indicators"]
+    },
+    {
+      id: "fish-eggs",
+      label: "Fish eggs",
+      description: "Crayfish feed on fish eggs and fry, impacting fish recruitment and the wider river ecosystem.",
+      tags: ["recruitment", "predation pressure"]
+    },
+    {
+      id: "plague",
+      label: "Crayfish plague",
+      description: "The crayfish plague carried by the American crayfish threatens native species and is a central reason for EU regulation.",
+      tags: ["pathogen", "EU regulation", "extinction risk"]
+    }
+  ];
+
+  const actors = [
+    {
+      id: "eu",
+      label: "EU – invasive species list",
+      description:
+        "The European Union lists the American crayfish and its plague as invasive, setting legal frameworks for control and protection of native species.",
+      tags: ["IAS policy", "regulation", "bans"]
+    },
+    {
+      id: "province",
+      label: "Province – industrial heritage",
+      description:
+        "The province aims to preserve industrial heritage along the riverfront, including factories, silos and quays that are literally undermined by burrowing crayfish.",
+      tags: ["heritage", "riverfront morphology", "spatial rules"]
+    },
+    {
+      id: "municipality",
+      label: "Municipality – housing & circular 2050",
+      description:
+        "The municipality wants new housing, urban industry and a 100% circular city by 2050, with urban mining, repair, sharing and nature-inclusive waterfronts.",
+      tags: ["housing", "circular economy", "urban ecology"]
+    }
+  ];
+
+  // ----- Geometry helpers -----
+  function polarToCartesian(cx, cy, r, angleDeg) {
+    const rad = (angleDeg - 90) * (Math.PI / 180);
+    return {
+      x: cx + r * Math.cos(rad),
+      y: cy + r * Math.sin(rad)
+    };
+  }
+
+  function describeArcSector(cx, cy, innerR, outerR, startAngle, endAngle) {
+    const startOuter = polarToCartesian(cx, cy, outerR, endAngle);
+    const endOuter   = polarToCartesian(cx, cy, outerR, startAngle);
+    const startInner = polarToCartesian(cx, cy, innerR, startAngle);
+    const endInner   = polarToCartesian(cx, cy, innerR, endAngle);
+
+    const largeArc = endAngle - startAngle <= 180 ? "0" : "1";
+
+    return [
+      "M", startOuter.x, startOuter.y,
+      "A", outerR, outerR, 0, largeArc, 0, endOuter.x, endOuter.y,
+      "L", startInner.x, startInner.y,
+      "A", innerR, innerR, 0, largeArc, 1, endInner.x, endInner.y,
+      "Z"
+    ].join(" ");
+  }
+
+  function describeArcPath(cx, cy, r, startAngle, endAngle) {
+    const start = polarToCartesian(cx, cy, r, endAngle);
+    const end = polarToCartesian(cx, cy, r, startAngle);
+    const largeArc = endAngle - startAngle <= 180 ? "0" : "1";
+    return [
+      "M", start.x, start.y,
+      "A", r, r, 0, largeArc, 0, end.x, end.y
+    ].join(" ");
+  }
+
+  // ----- Build SVG -----
+  const svg = document.getElementById("mandala");
+  const ecoLayer = document.getElementById("ecosystem-layer");
+  const actorsLayer = document.getElementById("actors-layer");
+
+  const ecoInnerR = 28;
+  const ecoOuterR = 75;
+  const actorInnerR = 78;
+  const actorOuterR = 95; // donut radius
+  const actorLabelOffset = 10; // labels outside donut
+
+  const ecoCount = ecosystemSegments.length;
+  const ecoAngleStep = 360 / ecoCount;
+
+  // ecosystem segments
+  ecosystemSegments.forEach((seg, i) => {
+    const start = i * ecoAngleStep;
+    const end = start + ecoAngleStep;
+
+    const path = document.createElementNS("http://www.w3.org/2000/svg", "path");
+    path.setAttribute("d", describeArcSector(0, 0, ecoInnerR, ecoOuterR, start, end));
+    path.classList.add("segment");
+    path.dataset.id = seg.id;
+    path.dataset.type = "ecosystem";
+    ecoLayer.appendChild(path);
+
+    const mid = start + ecoAngleStep / 2;
+    const labelRadius = (ecoInnerR + ecoOuterR) / 2;
+    const labelPos = polarToCartesian(0, 0, labelRadius, mid);
+    const tangentAngle = mid + 90;
+    const textRotation = (tangentAngle > 90 && tangentAngle < 270) ? tangentAngle - 180 : tangentAngle;
+    const text = document.createElementNS("http://www.w3.org/2000/svg", "text");
+    text.classList.add("segment-label");
+    text.setAttribute("transform", `translate(${labelPos.x} ${labelPos.y}) rotate(${textRotation})`);
+    text.textContent = seg.label;
+    ecoLayer.appendChild(text);
+  });
+
+  // actors as outer arcs with labels outside
+  const actorAngleSpan = 360 / actors.length;
+  const svgNS = "http://www.w3.org/2000/svg";
+  const xlinkNS = "http://www.w3.org/1999/xlink";
+
+  actors.forEach((actor, i) => {
+    const start = i * actorAngleSpan;
+    const end = start + actorAngleSpan;
+
+    // colored donut arc
+    const arcPath = document.createElementNS(svgNS, "path");
+    arcPath.setAttribute("d", describeArcSector(0, 0, actorInnerR, actorOuterR, start, end));
+    arcPath.classList.add("actor-arc");
+    arcPath.classList.add(
+      actor.id === "eu" ? "eu" : actor.id === "province" ? "prov" : "mun"
+    );
+    arcPath.dataset.id = actor.id;
+    arcPath.dataset.type = "actor";
+    actorsLayer.appendChild(arcPath);
+
+    // label arc outside donut
+    const labelRadius = actorOuterR + actorLabelOffset;
+    let labelStart = start;
+    let labelEnd = end;
+    const mid = start + actorAngleSpan / 2;
+
+    if (mid > 90 && mid < 270) {
+      labelStart = end;
+      labelEnd = start;
+    }
+
+    const labelPathId = `actor-label-path-${actor.id}`;
+    const labelPath = document.createElementNS(svgNS, "path");
+    labelPath.setAttribute("id", labelPathId);
+    labelPath.setAttribute("d", describeArcPath(0, 0, labelRadius, labelStart, labelEnd));
+    labelPath.setAttribute("fill", "none");
+    labelPath.setAttribute("stroke", "none");
+    actorsLayer.appendChild(labelPath);
+
+    const text = document.createElementNS(svgNS, "text");
+    text.classList.add("actor-label");
+    const textPath = document.createElementNS(svgNS, "textPath");
+    textPath.setAttributeNS(xlinkNS, "xlink:href", `#${labelPathId}`);
+    textPath.setAttribute("href", `#${labelPathId}`);
+    textPath.setAttribute("startOffset", "50%");
+    textPath.textContent = actor.label;
+    text.appendChild(textPath);
+    actorsLayer.appendChild(text);
+  });
+
+  // ----- Interaction -----
+  const infoTitle = document.getElementById("info-title");
+  const infoBody = document.getElementById("info-body");
+  const infoTags = document.getElementById("info-tags");
+
+  function setInfoFromDataset(type, id) {
+    let data;
+    if (type === "ecosystem") {
+      data = ecosystemSegments.find(s => s.id === id);
+    } else {
+      data = actors.find(a => a.id === id);
+    }
+    if (!data) return;
+
+    infoTitle.textContent = data.label;
+    infoBody.textContent = data.description;
+    infoTags.innerHTML = "";
+    (data.tags || []).forEach(tag => {
+      const span = document.createElement("span");
+      span.className = "chip";
+      span.textContent = tag;
+      infoTags.appendChild(span);
+    });
+  }
+
+  function resetHighlights() {
+    document.querySelectorAll(".segment").forEach(el => el.classList.remove("active"));
+    document.querySelectorAll(".actor-arc").forEach(el => el.classList.remove("active"));
+  }
+
+  function setupHover() {
+    svg.addEventListener("mouseover", (e) => {
+      const target = e.target;
+      const type = target.dataset && target.dataset.type;
+      const id = target.dataset && target.dataset.id;
+      if (!type || !id) return;
+
+      resetHighlights();
+      target.classList.add("active");
+      setInfoFromDataset(type, id);
+    });
+
+    svg.addEventListener("mouseleave", () => {
+      resetHighlights();
+      infoTitle.textContent = "Hover a segment";
+      infoBody.textContent =
+        "Move your cursor over one of the ecosystem segments or governance arcs in the mandala to explore how human actors (EU, province, municipality) intersect with the crayfish and its non-human habitat.";
+      infoTags.innerHTML = `
+        <span class="chip">EU invasive species list</span>
+        <span class="chip">Industrial heritage</span>
+        <span class="chip">Circular city 2050</span>
+        <span class="chip">Non-human ecosystem</span>
+      `;
+    });
+  }
+
+  setupHover();
+</script>
+</body>
+</html>
