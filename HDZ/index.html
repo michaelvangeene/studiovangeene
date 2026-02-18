@@ -1,0 +1,647 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Human Dignity Zone — Visual Diagram</title>
+  <style>
+    :root{
+      --bg:#0b0d12;
+      --panel:#121625;
+      --panel2:#0f1320;
+      --text:#e9ecf5;
+      --muted:#a9b0c3;
+      --grid:#2a3146;
+      --accent:#7aa2ff;
+      --good:#3ddc97;
+      --mid:#ffd166;
+      --bad:#ff5c7a;
+      --border:#1f2640;
+      --shadow: 0 10px 30px rgba(0,0,0,.35);
+      --radius: 16px;
+      --mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      --sans: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji","Segoe UI Emoji";
+    }
+    *{ box-sizing:border-box; }
+    body{
+      margin:0; font-family:var(--sans);
+      background: radial-gradient(1200px 600px at 20% 0%, rgba(122,162,255,.16), transparent 60%),
+                  radial-gradient(900px 500px at 90% 20%, rgba(61,220,151,.12), transparent 60%),
+                  var(--bg);
+      color:var(--text);
+      padding: 28px;
+    }
+    header{
+      display:flex; gap:16px; align-items:flex-end; justify-content:space-between;
+      margin-bottom: 18px;
+    }
+    h1{ margin:0; font-size: 20px; letter-spacing:.2px; }
+    .sub{ color:var(--muted); font-size: 13px; margin-top: 6px; }
+    .wrap{
+      display:grid;
+      grid-template-columns: 1.05fr .95fr;
+      gap: 18px;
+    }
+    .card{
+      background: linear-gradient(180deg, rgba(255,255,255,.03), transparent 35%), var(--panel);
+      border:1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 16px;
+      overflow:hidden;
+    }
+    .card h2{
+      margin:0 0 10px 0;
+      font-size: 14px;
+      letter-spacing:.3px;
+      color: var(--text);
+      display:flex; align-items:center; gap:8px;
+    }
+    .tag{
+      font-family:var(--mono);
+      font-size: 11px;
+      padding: 2px 8px;
+      border-radius: 999px;
+      border:1px solid var(--border);
+      color: var(--muted);
+      background: rgba(255,255,255,.02);
+    }
+    .grid{
+      display:grid; gap: 12px;
+    }
+    .two{
+      display:grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+    .note{
+      color: var(--muted);
+      font-size: 12px;
+      line-height: 1.4;
+    }
+    .controls{
+      display:flex; gap:10px; align-items:center; flex-wrap:wrap;
+      margin-top: 10px;
+      padding-top: 10px;
+      border-top: 1px solid var(--border);
+    }
+    select{
+      background: var(--panel2);
+      color: var(--text);
+      border:1px solid var(--border);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 12px;
+      outline:none;
+    }
+    .btn{
+      background: rgba(122,162,255,.16);
+      border:1px solid rgba(122,162,255,.35);
+      color: var(--text);
+      padding: 8px 10px;
+      border-radius: 10px;
+      font-size: 12px;
+      cursor:pointer;
+    }
+    .btn:hover{ background: rgba(122,162,255,.22); }
+    .legend{
+      display:flex; gap:14px; flex-wrap:wrap;
+      color: var(--muted);
+      font-size: 12px;
+      align-items:center;
+    }
+    .dot{
+      width:10px; height:10px; border-radius:50%;
+      display:inline-block; margin-right:6px;
+      vertical-align: -1px;
+    }
+    .table{
+      width:100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      overflow:hidden;
+      border-radius: 12px;
+      border:1px solid var(--border);
+    }
+    .table th, .table td{
+      padding: 10px 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    .table th{
+      text-align:left;
+      color: var(--muted);
+      font-weight: 600;
+      background: rgba(255,255,255,.02);
+    }
+    .table tr:last-child td{ border-bottom:none; }
+    .pill{
+      font-family:var(--mono);
+      font-size: 11px;
+      padding: 3px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: rgba(255,255,255,.02);
+      color: var(--text);
+      white-space:nowrap;
+    }
+    .score{
+      font-family:var(--mono);
+      font-weight:700;
+      letter-spacing:.4px;
+    }
+    .good{ color: var(--good); }
+    .mid{ color: var(--mid); }
+    .bad{ color: var(--bad); }
+    .mini{
+      font-family:var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+    }
+    .footer{
+      margin-top: 16px;
+      color: var(--muted);
+      font-size: 12px;
+      display:flex; justify-content:space-between; gap:12px; flex-wrap:wrap;
+    }
+    .hr{ height:1px; background: var(--border); margin: 10px 0; }
+    .svgbox{
+      border-radius: 14px;
+      border:1px solid var(--border);
+      background: radial-gradient(900px 400px at 10% 0%, rgba(255,255,255,.03), transparent 55%),
+                  var(--panel2);
+      overflow:hidden;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div>
+      <h1>Human Dignity Zone (HDZ) — Visual Guide + Grading Diagram</h1>
+      <div class="sub">Four-layer policy stack + 4-axis grading (A–D) + example scenarios</div>
+    </div>
+    <div class="legend">
+      <span><span class="dot" style="background:var(--bad)"></span>Low</span>
+      <span><span class="dot" style="background:var(--mid)"></span>Medium</span>
+      <span><span class="dot" style="background:var(--good)"></span>High</span>
+    </div>
+  </header>
+
+  <div class="wrap">
+    <!-- LEFT COLUMN -->
+    <div class="grid">
+      <section class="card">
+        <h2>1) HDZ Governance Stack <span class="tag">Concept → Rule</span></h2>
+        <div class="svgbox">
+          <svg id="stackSvg" viewBox="0 0 900 340" width="100%" height="auto" role="img" aria-label="HDZ governance stack diagram">
+            <!-- background grid -->
+            <defs>
+              <pattern id="pGrid" width="24" height="24" patternUnits="userSpaceOnUse">
+                <path d="M24 0H0V24" fill="none" stroke="rgba(169,176,195,.12)" stroke-width="1"/>
+              </pattern>
+              <linearGradient id="gCard" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0" stop-color="rgba(255,255,255,.06)"/>
+                <stop offset="1" stop-color="rgba(255,255,255,.00)"/>
+              </linearGradient>
+            </defs>
+            <rect x="0" y="0" width="900" height="340" fill="url(#pGrid)"/>
+            <!-- stack blocks -->
+            <g transform="translate(70,40)">
+              <rect x="0" y="0" width="760" height="64" rx="14" fill="rgba(61,220,151,.16)" stroke="rgba(61,220,151,.35)"/>
+              <rect x="0" y="74" width="760" height="64" rx="14" fill="rgba(255,209,102,.12)" stroke="rgba(255,209,102,.35)"/>
+              <rect x="0" y="148" width="760" height="64" rx="14" fill="rgba(122,162,255,.14)" stroke="rgba(122,162,255,.35)"/>
+              <rect x="0" y="222" width="760" height="64" rx="14" fill="rgba(255,92,122,.12)" stroke="rgba(255,92,122,.35)"/>
+              <g font-family="ui-sans-serif, system-ui" fill="rgba(233,236,245,1)">
+                <text x="24" y="28" font-size="15" font-weight="700">IV — Human Rights Baseline</text>
+                <text x="24" y="50" font-size="12" fill="rgba(169,176,195,1)">Minimum dignity standard (adequacy, security, affordability)</text>
+
+                <text x="24" y="102" font-size="15" font-weight="700">III — Wicked Problem Structure</text>
+                <text x="24" y="124" font-size="12" fill="rgba(169,176,195,1)">Adaptive conditions, not “final solutions”</text>
+
+                <text x="24" y="176" font-size="15" font-weight="700">II — Redistributive Principle</text>
+                <text x="24" y="198" font-size="12" fill="rgba(169,176,195,1)">Equalise baseline conditions (“ongelijk investeren…”)</text>
+
+                <text x="24" y="250" font-size="15" font-weight="700">I — Spatial-Legal Anchoring</text>
+                <text x="24" y="272" font-size="12" fill="rgba(169,176,195,1)">Translate RSU ambition into Omgevingsplan rules</text>
+              </g>
+
+              <g stroke="rgba(233,236,245,.35)" stroke-width="2" fill="none">
+                <path d="M380 64 L380 74" />
+                <path d="M380 138 L380 148" />
+                <path d="M380 212 L380 222" />
+              </g>
+              <g fill="rgba(233,236,245,.75)">
+                <circle cx="380" cy="69" r="3"/>
+                <circle cx="380" cy="143" r="3"/>
+                <circle cx="380" cy="217" r="3"/>
+              </g>
+            </g>
+
+            <g transform="translate(70,320)" font-family="ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas" font-size="11" fill="rgba(169,176,195,1)">
+              <text x="0" y="0">Stack logic: each layer strengthens enforceability → from ethics to spatial rule.</text>
+            </g>
+          </svg>
+        </div>
+        <div class="note" style="margin-top:10px">
+          Read bottom-up: RSU ambitions become enforceable via Omgevingsplan; equality + wicked-problem logic + rights baseline define what gets enforced.
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>2) Dignity Matrix (A–D) <span class="tag">4 axes × 0–4</span></h2>
+        <div class="two">
+          <div>
+            <table class="table" id="axisTable">
+              <thead>
+                <tr><th>Axis</th><th>Meaning</th><th>0 → 4</th></tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><span class="pill">A</span></td>
+                  <td>Spatial-Legal Anchoring</td>
+                  <td class="mini">none → binding plan</td>
+                </tr>
+                <tr>
+                  <td><span class="pill">B</span></td>
+                  <td>Equality of Conditions</td>
+                  <td class="mini">segregated → equal baseline</td>
+                </tr>
+                <tr>
+                  <td><span class="pill">C</span></td>
+                  <td>Structural Resilience</td>
+                  <td class="mini">temporary → adaptive system</td>
+                </tr>
+                <tr>
+                  <td><span class="pill">D</span></td>
+                  <td>Human Dignity Fulfilment</td>
+                  <td class="mini">violation → full dignity</td>
+                </tr>
+              </tbody>
+            </table>
+            <div class="hr"></div>
+            <div class="note">
+              Score each situation on A–D (0–4). Total score = <span class="pill">A+B+C+D</span> (0–16).
+            </div>
+          </div>
+
+          <div class="svgbox">
+            <svg id="matrixSvg" viewBox="0 0 460 280" width="100%" height="auto" role="img" aria-label="Dignity matrix levels diagram">
+              <defs>
+                <linearGradient id="gRow" x1="0" y1="0" x2="1" y2="0">
+                  <stop offset="0" stop-color="rgba(255,92,122,.10)"/>
+                  <stop offset=".5" stop-color="rgba(255,209,102,.10)"/>
+                  <stop offset="1" stop-color="rgba(61,220,151,.10)"/>
+                </linearGradient>
+              </defs>
+              <rect x="0" y="0" width="460" height="280" fill="rgba(15,19,32,1)"/>
+              <g transform="translate(22,20)" font-family="ui-sans-serif, system-ui">
+                <text x="0" y="0" fill="rgba(169,176,195,1)" font-size="12" font-weight="700">0</text>
+                <text x="100" y="0" fill="rgba(169,176,195,1)" font-size="12" font-weight="700">1</text>
+                <text x="200" y="0" fill="rgba(169,176,195,1)" font-size="12" font-weight="700">2</text>
+                <text x="300" y="0" fill="rgba(169,176,195,1)" font-size="12" font-weight="700">3</text>
+                <text x="400" y="0" fill="rgba(169,176,195,1)" font-size="12" font-weight="700">4</text>
+
+                <g transform="translate(0,14)">
+                  <text x="0" y="32" fill="rgba(233,236,245,1)" font-size="12" font-weight="700">A</text>
+                  <rect x="20" y="18" width="410" height="22" rx="10" fill="url(#gRow)" stroke="rgba(31,38,64,1)"/>
+
+                  <text x="0" y="78" fill="rgba(233,236,245,1)" font-size="12" font-weight="700">B</text>
+                  <rect x="20" y="64" width="410" height="22" rx="10" fill="url(#gRow)" stroke="rgba(31,38,64,1)"/>
+
+                  <text x="0" y="124" fill="rgba(233,236,245,1)" font-size="12" font-weight="700">C</text>
+                  <rect x="20" y="110" width="410" height="22" rx="10" fill="url(#gRow)" stroke="rgba(31,38,64,1)"/>
+
+                  <text x="0" y="170" fill="rgba(233,236,245,1)" font-size="12" font-weight="700">D</text>
+                  <rect x="20" y="156" width="410" height="22" rx="10" fill="url(#gRow)" stroke="rgba(31,38,64,1)"/>
+
+                  <g stroke="rgba(169,176,195,.35)" stroke-width="1">
+                    <line x1="20" y1="12" x2="20" y2="186"/>
+                    <line x1="122.5" y1="12" x2="122.5" y2="186"/>
+                    <line x1="225" y1="12" x2="225" y2="186"/>
+                    <line x1="327.5" y1="12" x2="327.5" y2="186"/>
+                    <line x1="430" y1="12" x2="430" y2="186"/>
+                  </g>
+
+                  <text x="20" y="220" fill="rgba(169,176,195,1)" font-size="11">
+                    Low → Medium → High (qualitative thresholds)
+                  </text>
+                </g>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- RIGHT COLUMN -->
+    <div class="grid">
+      <section class="card">
+        <h2>3) Scenario Grader + Radar Diagram <span class="tag">Interactive</span></h2>
+        <div class="note">
+          Choose a scenario to see its A–D scores and total (0–16). You can also edit the scores manually.
+        </div>
+
+        <div class="controls">
+          <label class="mini">Scenario</label>
+          <select id="scenarioSelect"></select>
+          <button class="btn" id="randomBtn" title="Randomize scores (for stress-testing)">Randomize</button>
+          <button class="btn" id="resetBtn" title="Reset to selected scenario defaults">Reset</button>
+        </div>
+
+        <div class="two" style="margin-top:12px">
+          <div>
+            <table class="table" id="scoreTable">
+              <thead>
+                <tr><th>Axis</th><th>Score (0–4)</th><th>Interpretation</th></tr>
+              </thead>
+              <tbody></tbody>
+              <tfoot>
+                <tr>
+                  <td colspan="3">
+                    <div style="display:flex;justify-content:space-between;align-items:center;gap:10px">
+                      <div class="mini">Total</div>
+                      <div id="totalScore" class="score"></div>
+                    </div>
+                  </td>
+                </tr>
+              </tfoot>
+            </table>
+            <div class="note" style="margin-top:10px">
+              Heuristic bands: <span class="pill">0–5</span> low dignity regime,
+              <span class="pill">6–11</span> partial,
+              <span class="pill">12–16</span> strong.
+            </div>
+          </div>
+
+          <div class="svgbox">
+            <svg id="radarSvg" viewBox="0 0 460 420" width="100%" height="auto" role="img" aria-label="Radar chart showing A–D scores">
+              <defs>
+                <filter id="softShadow" x="-50%" y="-50%" width="200%" height="200%">
+                  <feDropShadow dx="0" dy="8" stdDeviation="8" flood-color="rgba(0,0,0,.35)"/>
+                </filter>
+              </defs>
+              <rect width="460" height="420" fill="rgba(15,19,32,1)"/>
+              <g id="radarGroup" transform="translate(230,210)"></g>
+              <g transform="translate(16,16)" font-family="ui-sans-serif, system-ui" font-size="12" fill="rgba(169,176,195,1)">
+                <text x="0" y="0">Radar: A (top), B (right), C (bottom), D (left)</text>
+              </g>
+            </svg>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>4) Example Situations <span class="tag">3 cases</span></h2>
+        <div class="note">These are the three example situations we discussed, encoded as defaults:</div>
+        <table class="table" id="examplesTable" style="margin-top:10px">
+          <thead>
+            <tr><th>Situation</th><th>A</th><th>B</th><th>C</th><th>D</th><th>Total</th></tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+        <div class="footer">
+          <div>Tip: screenshot this page for slides, or export SVG from the browser devtools.</div>
+          <div class="mini">File: single self-contained HTML</div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <script>
+    const scenarios = {
+      "1) Temp container housing (edge of city)": {
+        desc: "Temporary container housing for labour migrants; peripheral; lower baseline; permit-driven.",
+        scores: { A: 1, B: 1, C: 0, D: 2 }
+      },
+      "2) Standard mixed social housing block": {
+        desc: "Permanent housing in mixed block; Bbl-compliant; structurally provided; category-based allocation.",
+        scores: { A: 3, B: 3, C: 3, D: 3 }
+      },
+      "3) HDZ embedded in Omgevingsplan": {
+        desc: "Binding Omgevingsplan article; universal dignity baseline; structural + adaptive monitoring.",
+        scores: { A: 4, B: 4, C: 4, D: 4 }
+      }
+    };
+
+    const axisMeaning = {
+      A: ["Spatial-Legal Anchoring", ["none", "policy", "contract", "municipal rule", "binding plan"]],
+      B: ["Equality of Conditions", ["segregated", "minimal", "unequal", "comparable", "equal baseline"]],
+      C: ["Structural Resilience", ["temporary", "patch", "medium-term", "structural", "adaptive system"]],
+      D: ["Human Dignity Fulfilment", ["violation", "shelter", "adequate", "secure+adequate", "full dignity"]]
+    };
+
+    const clamp = (n, lo, hi) => Math.max(lo, Math.min(hi, n));
+    const total = (s) => Object.values(s).reduce((a,b)=>a+b,0);
+
+    function bandClass(t){
+      if (t <= 5) return "bad";
+      if (t <= 11) return "mid";
+      return "good";
+    }
+
+    const sel = document.getElementById("scenarioSelect");
+    Object.keys(scenarios).forEach(k=>{
+      const opt = document.createElement("option");
+      opt.value = k; opt.textContent = k;
+      sel.appendChild(opt);
+    });
+
+    const scoreTbody = document.querySelector("#scoreTable tbody");
+    let currentScenarioKey = sel.value;
+    let currentScores = JSON.parse(JSON.stringify(scenarios[currentScenarioKey].scores));
+
+    function renderScoreTable(){
+      scoreTbody.innerHTML = "";
+      ["A","B","C","D"].forEach(axis=>{
+        const tr = document.createElement("tr");
+
+        const tdAxis = document.createElement("td");
+        tdAxis.innerHTML = `<span class="pill">${axis}</span> <span class="mini">${axisMeaning[axis][0]}</span>`;
+        tr.appendChild(tdAxis);
+
+        const tdScore = document.createElement("td");
+        const scoreSel = document.createElement("select");
+        scoreSel.style.width = "100%";
+        for (let i=0;i<=4;i++){
+          const o = document.createElement("option");
+          o.value = i;
+          o.textContent = i;
+          if (i === currentScores[axis]) o.selected = true;
+          scoreSel.appendChild(o);
+        }
+        scoreSel.addEventListener("change", ()=>{
+          currentScores[axis] = parseInt(scoreSel.value, 10);
+          updateAll();
+        });
+        tdScore.appendChild(scoreSel);
+        tr.appendChild(tdScore);
+
+        const tdInterp = document.createElement("td");
+        tdInterp.className = "mini";
+        tdInterp.textContent = axisMeaning[axis][1][currentScores[axis]];
+        tr.appendChild(tdInterp);
+
+        scoreTbody.appendChild(tr);
+      });
+
+      const t = total(currentScores);
+      const el = document.getElementById("totalScore");
+      el.textContent = `${t} / 16`;
+      el.className = `score ${bandClass(t)}`;
+    }
+
+    const radarGroup = document.getElementById("radarGroup");
+
+    function polar(r, angleDeg){
+      const a = (angleDeg - 90) * Math.PI / 180;
+      return { x: r * Math.cos(a), y: r * Math.sin(a) };
+    }
+
+    function radarPath(values, maxR){
+      const axes = [
+        {k:"A", ang:0},
+        {k:"B", ang:90},
+        {k:"C", ang:180},
+        {k:"D", ang:270},
+      ];
+      const pts = axes.map(ax=>{
+        const v = clamp(values[ax.k], 0, 4);
+        const r = (v/4) * maxR;
+        return polar(r, ax.ang);
+      });
+      const d = pts.map((p,i)=> (i===0?`M ${p.x.toFixed(2)} ${p.y.toFixed(2)}`:`L ${p.x.toFixed(2)} ${p.y.toFixed(2)}`)).join(" ")
+              + " Z";
+      return { d, pts };
+    }
+
+    function renderRadar(){
+      radarGroup.innerHTML = "";
+      const maxR = 140;
+
+      for (let i=1;i<=4;i++){
+        const r = (i/4)*maxR;
+        const ring = document.createElementNS("http://www.w3.org/2000/svg","circle");
+        ring.setAttribute("cx","0"); ring.setAttribute("cy","0"); ring.setAttribute("r", r);
+        ring.setAttribute("fill","none");
+        ring.setAttribute("stroke","rgba(169,176,195,.22)");
+        ring.setAttribute("stroke-width","1");
+        radarGroup.appendChild(ring);
+      }
+
+      const axes = [
+        {k:"A", ang:0, label:"A — Legal"},
+        {k:"B", ang:90, label:"B — Equality"},
+        {k:"C", ang:180, label:"C — Structural"},
+        {k:"D", ang:270, label:"D — Dignity"},
+      ];
+
+      axes.forEach(ax=>{
+        const end = polar(maxR, ax.ang);
+        const line = document.createElementNS("http://www.w3.org/2000/svg","line");
+        line.setAttribute("x1","0"); line.setAttribute("y1","0");
+        line.setAttribute("x2", end.x); line.setAttribute("y2", end.y);
+        line.setAttribute("stroke","rgba(233,236,245,.35)");
+        line.setAttribute("stroke-width","1.5");
+        radarGroup.appendChild(line);
+
+        const lbl = document.createElementNS("http://www.w3.org/2000/svg","text");
+        const off = polar(maxR + 22, ax.ang);
+        lbl.setAttribute("x", off.x);
+        lbl.setAttribute("y", off.y);
+        lbl.setAttribute("fill","rgba(233,236,245,.85)");
+        lbl.setAttribute("font-size","12");
+        lbl.setAttribute("font-family","ui-sans-serif, system-ui");
+        lbl.setAttribute("text-anchor", (ax.ang===90) ? "start" : (ax.ang===270 ? "end" : "middle"));
+        lbl.setAttribute("dominant-baseline", (ax.ang===0) ? "auto" : (ax.ang===180 ? "hanging" : "middle"));
+        lbl.textContent = ax.label;
+        radarGroup.appendChild(lbl);
+      });
+
+      const t = total(currentScores);
+      const cls = bandClass(t);
+      const color = (cls==="bad") ? "rgba(255,92,122,.85)" : (cls==="mid" ? "rgba(255,209,102,.85)" : "rgba(61,220,151,.85)");
+      const fill = (cls==="bad") ? "rgba(255,92,122,.18)" : (cls==="mid" ? "rgba(255,209,102,.18)" : "rgba(61,220,151,.18)");
+
+      const { d, pts } = radarPath(currentScores, maxR);
+
+      const poly = document.createElementNS("http://www.w3.org/2000/svg","path");
+      poly.setAttribute("d", d);
+      poly.setAttribute("fill", fill);
+      poly.setAttribute("stroke", color);
+      poly.setAttribute("stroke-width","2.5");
+      poly.setAttribute("filter","url(#softShadow)");
+      radarGroup.appendChild(poly);
+
+      pts.forEach(p=>{
+        const c = document.createElementNS("http://www.w3.org/2000/svg","circle");
+        c.setAttribute("cx", p.x); c.setAttribute("cy", p.y); c.setAttribute("r", 4.2);
+        c.setAttribute("fill", color);
+        c.setAttribute("stroke", "rgba(15,19,32,1)");
+        c.setAttribute("stroke-width", "2");
+        radarGroup.appendChild(c);
+      });
+
+      const center = document.createElementNS("http://www.w3.org/2000/svg","text");
+      center.setAttribute("x","0"); center.setAttribute("y","0");
+      center.setAttribute("fill","rgba(169,176,195,1)");
+      center.setAttribute("font-size","11");
+      center.setAttribute("font-family","ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas");
+      center.setAttribute("text-anchor","middle");
+      center.setAttribute("dominant-baseline","middle");
+      center.textContent = `${t}/16`;
+      radarGroup.appendChild(center);
+    }
+
+    const exBody = document.querySelector("#examplesTable tbody");
+    function renderExamples(){
+      exBody.innerHTML = "";
+      Object.entries(scenarios).forEach(([name, obj])=>{
+        const s = obj.scores;
+        const t = total(s);
+        const tr = document.createElement("tr");
+        tr.innerHTML = `
+          <td>${name}</td>
+          <td><span class="pill">${s.A}</span></td>
+          <td><span class="pill">${s.B}</span></td>
+          <td><span class="pill">${s.C}</span></td>
+          <td><span class="pill">${s.D}</span></td>
+          <td class="score ${bandClass(t)}">${t}/16</td>
+        `;
+        exBody.appendChild(tr);
+      });
+    }
+
+    function updateAll(){
+      renderScoreTable();
+      renderRadar();
+      const rows = scoreTbody.querySelectorAll("tr");
+      ["A","B","C","D"].forEach((axis, i)=>{
+        const tdInterp = rows[i].children[2];
+        tdInterp.textContent = axisMeaning[axis][1][currentScores[axis]];
+      });
+    }
+
+    sel.addEventListener("change", ()=>{
+      currentScenarioKey = sel.value;
+      currentScores = JSON.parse(JSON.stringify(scenarios[currentScenarioKey].scores));
+      updateAll();
+    });
+
+    document.getElementById("resetBtn").addEventListener("click", ()=>{
+      currentScores = JSON.parse(JSON.stringify(scenarios[sel.value].scores));
+      updateAll();
+    });
+
+    document.getElementById("randomBtn").addEventListener("click", ()=>{
+      currentScores = { A: Math.floor(Math.random()*5), B: Math.floor(Math.random()*5), C: Math.floor(Math.random()*5), D: Math.floor(Math.random()*5) };
+      updateAll();
+    });
+
+    sel.value = Object.keys(scenarios)[0];
+    currentScenarioKey = sel.value;
+    currentScores = JSON.parse(JSON.stringify(scenarios[currentScenarioKey].scores));
+    renderExamples();
+    updateAll();
+  </script>
+</body>
+</html>
