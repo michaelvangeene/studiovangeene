@@ -1,45 +1,137 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="nl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="A brief description of the page for SEO purposes">
-    <title>Improved Page Title</title>
-    <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="favicon_new.ico" type="image/x-icon">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Studio van Geene</title>
+  <meta name="description" content="Studio van Geene. Voor iedereen die droomt. Creatief bureau voor ontwerp, onderzoek en verbeelding.">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="Studio van Geene">
+  <meta property="og:description" content="Voor iedereen die droomt. Creatief bureau voor bouwkundig ontwerp, onderzoek en verbeelding.">
+  <meta property="og:url" content="https://studiovangeene.nl">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="https://studiovangeene.nl/og-image.jpg">
+    <!-- 🏷️ Canonical -->
+  <link rel="canonical" href="https://studiovangeene.nl/" />
+  
+  <style>
+    @font-face {
+      font-family: 'GiphursBlack';
+      src: url('Giphurs-Black.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    @font-face {
+      font-family: 'GiphursMedium';
+      src: url('Giphurs-Medium.otf') format('opentype');
+      font-weight: normal;
+      font-style: normal;
+    }
+
+    body {
+      margin: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Arial', sans-serif;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+    h1 {
+      font-size: 1.5rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-family: 'GiphursBlack', sans-serif;
+    }
+    h2 {
+      font-size: 0.75rem;
+      letter-spacing: 0.05em;
+      font-family: 'GiphursMedium', sans-serif;
+      margin-top: 0.5rem;
+    }
+
+    #contact-link,
+#contact-link:visited {          /* ook de “bezochte” staat wit houden */
+  color: #fff;                   /* wit */
+  text-decoration: none;         /* optioneel: streepje weghalen */
+}
+#contact-link:hover,
+#contact-link:focus {
+  color: #ccc;                   /* subtiele hover-kleur */
+}
+    
+  </style>
+
+  
+
+
+  <!-- 🌐 Open Graph / social -->
+  <meta property="og:locale" content="nl_NL">
+  <meta property="og:site_name" content="Studio van Geene">
+  <meta property="og:image" content="https://studiovangeene.nl/og-image.jpg">
+
+  <!-- 🗺️ LocalBusiness structured-data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Studio van Geene",
+    "description": "Bouwkundige tekeningen voor omgevingsvergunningen, aanbouw, uitbouw en dakopbouw in Utrecht en omgeving.",
+    "url": "https://studiovangeene.nl",
+    "email": "mailto:michael@studiovangeene.nl",
+    "telephone": "+31-6-26130070",
+    "areaServed": "Utrecht",
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Utrecht",
+      "addressCountry": "NL"
+    },
+    "sameAs": ["https://wa.me/31626130070"]
+  }
+  </script>
+  
 </head>
 <body>
-    <header>
-        <h1>Welcome to Our Website</h1>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="home">
-            <h2>Home Section</h2>
-            <p>This is an example paragraph that demonstrates basic content structure.</p>
-        </section>
-        <section id="about">
-            <h2>About Us</h2>
-            <p>Some information about us goes here.</p>
-        </section>
-        <section id="contact">
-            <h2>Contact Us</h2>
-            <form>
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <button type="submit">Submit</button>
-            </form>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2026 Your Company. All rights reserved.</p>
-    </footer>
+  <h1>de Studio van Geene</h1>
+  <h2>Michael van Geene - <a href="mailto:michael@studiovangeene.nl?subject=Vraag%20via%200studiovangeene.nl;"
+                               style="color:#fff;text-decoration:none;">
+  michael@studiovangeene.nl
+</a></h2>
+
+  <!-- WhatsApp-knop rechtsonder -->
+<a href="https://wa.me/31626130070?text=Hoi!%20Voor%20een%20snelle%20offerte%20stuur%20ik%20mijn%20postcode%2C%20omschrijving%20van%20de%20verbouwing%20en%20telefoonnummer%20mee." 
+   target="_blank"
+   style="
+       position: fixed;
+       bottom: 20px;
+       right: 20px;
+       z-index: 1000;
+       height: 10vh;
+       width: auto;
+       display: block;
+   ">
+   <img src="pngegg.png" 
+        alt="WhatsApp"
+        style="
+            height: 100%;
+            width: auto;
+            display: block;
+            border: none;
+            margin: 0;
+            padding: 0;
+            background: none;
+        ">
+</a>
+
+
+  
+</a>
+
+  
 </body>
 </html>
