@@ -1,0 +1,16 @@
+name: Recover blocked Pages deployment
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/recover-pages.yml]
+permissions:
+  pages: write
+jobs:
+  cancel-stuck-publication:
+    runs-on: ubuntu-latest
+    timeout-minutes: 2
+    steps:
+      - name: Cancel the stale Pages deployment
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh api --method POST repos/michaelvangeene/studiovangeene/pages/deployments/e413ae389283ca963dc3319bc2806183866190aa/cancel
