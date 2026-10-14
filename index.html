@@ -103,6 +103,21 @@
       .studio-contact h1 { font-size: clamp(1rem, 4.6vw, 1.5rem); letter-spacing: .06em; }
     }
 
+
+    .project-image { position: relative; overflow: hidden; isolation: isolate; }
+    .gallery-enhanced .project-slide:not(.is-active) .project-image {
+      filter: grayscale(1) contrast(8);
+    }
+    .gallery-enhanced .project-slide:not(.is-active) .project-image img {
+      filter: brightness(.85) blur(.6px);
+    }
+    .project-image::after {
+      content: ""; position: absolute; inset: 0; pointer-events: none;
+      background: radial-gradient(circle, #000 0%, #888 38%, #fff 70%) 0 0 / 5px 5px;
+      mix-blend-mode: screen; opacity: 0;
+    }
+    .gallery-enhanced .project-slide:not(.is-active) .project-image::after { opacity: 1; }
+
   </style>
 
   
@@ -140,15 +155,15 @@
     <section class="project-gallery" aria-label="Een selectie van ons werk">
       <div class="project-track" tabindex="0" aria-label="Projectbeelden, swipe of gebruik de pijlen">
         <figure class="project-slide">
-          <img src="images/tilburg.webp" alt="Interieurvisualisatie in Tilburg met houten keukenkasten en een donkere werkbank" width="1400" height="788" decoding="async">
+          <div class="project-image"><img src="images/tilburg.webp" alt="Interieurvisualisatie in Tilburg met houten keukenkasten en een donkere werkbank" width="1400" height="788" decoding="async"></div>
           <figcaption>Tilburg · Interieurvisualisatie</figcaption>
         </figure>
         <figure class="project-slide">
-          <img src="images/rozengracht.webp" alt="Gevelvisualisatie voor de Rozengracht in Amsterdam met houten gevelbekleding en luifels" width="1400" height="791" fetchpriority="high" decoding="async">
+          <div class="project-image"><img src="images/rozengracht.webp" alt="Gevelvisualisatie voor de Rozengracht in Amsterdam met houten gevelbekleding en luifels" width="1400" height="791" fetchpriority="high" decoding="async"></div>
           <figcaption>Rozengracht, Amsterdam · Gevelvisualisatie</figcaption>
         </figure>
         <figure class="project-slide">
-          <img src="images/gerard-doustraat.webp" alt="Visualisatie van de achtergevel aan de Gerard Doustraat met balkon en buitentrap" width="1400" height="788" decoding="async">
+          <div class="project-image"><img src="images/gerard-doustraat.webp" alt="Visualisatie van de achtergevel aan de Gerard Doustraat met balkon en buitentrap" width="1400" height="788" decoding="async"></div>
           <figcaption>Gerard Doustraat, Amsterdam · Gevelvisualisatie</figcaption>
         </figure>
       </div>
@@ -198,6 +213,7 @@
       const track = document.querySelector('.project-track');
       const slides = Array.from(track.querySelectorAll('.project-slide'));
       const counter = document.getElementById('project-counter');
+      track.closest('.project-gallery').classList.add('gallery-enhanced');
       const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
       let active = 1;
       let frame = 0;
@@ -216,6 +232,7 @@
           const bestDistance = Math.abs(previous.offsetLeft - track.offsetLeft + previous.clientWidth / 2 - center);
           return distance < bestDistance ? index : best;
         }, 0);
+        slides.forEach((slide, index) => slide.classList.toggle('is-active', index === active));
         counter.textContent = String(active + 1).padStart(2, '0') + ' / ' + String(slides.length).padStart(2, '0');
         frame = 0;
       }
