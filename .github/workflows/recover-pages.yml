@@ -1,16 +1,20 @@
-name: Recover blocked Pages deployment
+name: Clear superseded Pages retry
 on:
   push:
     branches: [main]
     paths: [.github/workflows/recover-pages.yml]
 permissions:
-  pages: write
+  actions: write
 jobs:
-  cancel-stuck-publication:
+  cancel-superseded-retry:
     runs-on: ubuntu-latest
     timeout-minutes: 2
     steps:
-      - name: Cancel the stale Pages deployment
+      - name: Cancel the outdated retry if still pending
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        run: gh api --method POST repos/michaelvangeene/studiovangeene/pages/deployments/e413ae389283ca963dc3319bc2806183866190aa/cancel
+        run: |
+          retry_state=$(gh api repos/michaelvangeene/studiovangeene/actions/runs/38596969665 --jq .status)
+          if [ "$retry_state" != "completed" ]; then
+            gh api --method POST repos/michaelvangeene/studiovangeene/actions/runs/38596969665/cancel
+          fi
