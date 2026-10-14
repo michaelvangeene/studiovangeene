@@ -1,5 +1,39 @@
 [
   {
+    "slug": "ikec-de-zevensprong",
+    "title": "IKEC De Zevensprong, Hoorn",
+    "kind": "Integraal Kind- en Expertisecentrum",
+    "image": "https://luning.nl/wp-content/uploads/2025/10/KR-IKEC-0080-%C2%A9StijnBollaert-SR.jpg",
+    "batch": "bureau-ervaring",
+    "artwork": "photo",
+    "background": "full-image",
+    "employer": "KRFT",
+    "contribution": "Werkzaam aan dit project als medewerker van KRFT.",
+    "architects": "KRFT",
+    "completed": 2025,
+    "photographer": "Stijn Bollaert",
+    "projectSource": "https://krft.nl/projects/ikec-hoorn",
+    "imageSource": "https://luning.nl/projecten/ikec-hoorn/",
+    "alt": "Gerealiseerd IKEC De Zevensprong in Hoorn, ontworpen door KRFT; fotografie Stijn Bollaert"
+  },
+  {
+    "slug": "wonderwoods-utrecht",
+    "title": "Wonderwoods, Utrecht",
+    "kind": "Groene woontoren",
+    "image": "https://inbo.com/wp-content/uploads/2022/08/G37A9036-copy-711x0-c-default.jpg",
+    "batch": "bureau-ervaring",
+    "artwork": "photo",
+    "background": "full-image",
+    "employer": "INBO",
+    "contribution": "BIM-modellering en technische uitwerking als medewerker van INBO.",
+    "architects": "Stefano Boeri Architetti; co-architect en engineering: INBO",
+    "completed": 2024,
+    "photographer": "Giovanni Nardi",
+    "projectSource": "https://inbo.com/nl/projects/biodiversiteit-in-twee-torens-wonderwoods-utrecht/",
+    "imageSource": "https://inbo.com/nl/projects/biodiversiteit-in-twee-torens-wonderwoods-utrecht/",
+    "alt": "Gerealiseerde groene woontoren van Wonderwoods in Utrecht, architectuur Stefano Boeri Architetti met INBO als co-architect en engineer; fotografie Giovanni Nardi"
+  },
+  {
     "slug": "tilburg",
     "title": "Tilburg",
     "kind": "Interieurvisualisatie",
@@ -111,7 +145,7 @@
     "slug": "paltzerweg-64",
     "title": "Paltzerweg 64",
     "kind": "Uitbouw achtergevel",
-    "image": "images/paltzerweg-64.webp",
+    "image": "images/paltzerweg-64.jpg",
     "batch": "01",
     "artwork": "render",
     "background": "full-image"
