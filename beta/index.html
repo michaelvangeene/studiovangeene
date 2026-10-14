@@ -15,6 +15,15 @@ main{padding-top:28px}.filters{display:flex;justify-content:center;gap:6px;flex-
 dialog{padding:0;border:1px solid #333;background:#101010;color:#eee;max-width:1000px;width:90vw;max-height:90svh;overflow:auto}dialog::backdrop{background:#000c;backdrop-filter:blur(8px)}.detail-top{display:flex;justify-content:space-between;align-items:center;padding:16px 22px;font-size:10px;color:#888}.close{border:1px solid #444;background:transparent;border-radius:50%;width:30px;height:30px}.detail-image{width:100%;max-height:52svh;object-fit:contain;display:block}.detail-image.line{filter:url(#white-lines)}.detail-copy{padding:24px}.detail-copy h2{font:25px Giphurs;margin:0}.detail-copy p{font-size:13px;line-height:1.8;color:#aaa}.detail-copy .credit{font-size:11px}.error{padding:30px;color:#ccc;text-align:center}
 @media(max-width:700px){header{padding:22px 6vw}.version{gap:10px}.version a{display:none}main{padding-top:16px}.wordmark{font-size:16px}.filters{gap:2px}.filters button{font-size:10px;padding:9px 11px}.stage{height:clamp(270px,85vw,460px);margin-top:14px;perspective:1000px}.orbit-card{width:76vw}.caption{width:84vw;min-height:225px}.caption-top{gap:12px}.caption h1{font-size:22px}.controls{gap:7px}.controls button{width:29px;height:29px}.counter{font-size:9px}.description{font-size:12px}.hint{margin:10px 0 25px}footer{flex-direction:column;gap:12px;text-align:center}.detail-copy{padding:20px}}
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+/* Overview: the entire ring fits inside the stage, including its rear panels. */
+.stage{height:clamp(360px,43vw,650px);perspective-origin:50% 50%;margin-top:14px}
+.stage:before,.stage:after{display:none}
+.orbit-card{top:76%;border:1px solid #3b3b3b;background:#121212;backface-visibility:visible}
+.orbit-card[data-content="false"]{border-color:#505050;background:#161616;pointer-events:none}
+.orbit-card[data-content="true"]{border-color:#262626}
+.orbit-card.active{border-color:#555}
+@media(max-width:700px){.stage{height:360px;margin-top:10px}.caption{margin-top:12px}.orbit-card{top:75%}}
 </style>
 </head>
 <body>
@@ -22,7 +31,7 @@ dialog{padding:0;border:1px solid #333;background:#101010;color:#eee;max-width:1
 <header><a class="wordmark" href="/">Studio van Geene</a><div class="version"><span>Beta</span><a href="/">Naar de website ↗</a></div></header>
 <main>
 <nav class="filters" aria-label="Projectcategorieën"><button data-filter="all" aria-pressed="true">Alle projecten <small></small></button><button data-filter="home" aria-pressed="false">Huisuitbreidingen <small></small></button><button data-filter="technical" aria-pressed="false">Complex technisch ontwerp <small></small></button><button data-filter="interior" aria-pressed="false">Interieur <small></small></button></nav>
-<section class="stage" tabindex="0" aria-label="Projectcarrousel. Gebruik de pijltjestoetsen, scroll of sleep door de projecten."><div class="orbit"></div></section>
+<section class="stage" tabindex="0" aria-label="Volledige projectring met negen zichtbare projectbeelden. Gebruik de pijltjestoetsen, scroll of sleep door de projecten."><div class="orbit"></div></section>
 <section class="caption" aria-label="Geselecteerd project"><div class="caption-top"><h1 id="project-title">Projecten laden…</h1><div class="controls"><button id="previous" aria-label="Vorig project">←</button><span class="counter" id="counter"></span><button id="next" aria-label="Volgend project">→</button></div></div><p class="description" id="description"></p><p class="credit" id="credit"></p><div class="tags" id="tags"></div><span id="announcement" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)"></span></section>
 <p class="hint">Scroll of sleep om te ontdekken · klik op het centrale beeld voor meer</p>
 </main>
@@ -43,12 +52,48 @@ dialog{padding:0;border:1px solid #333;background:#101010;color:#eee;max-width:1
  const imageUrl=p=>p.image?.startsWith('https:')?p.image:'/'+p.image;
  const credits=p=>[p.employer?'Werkzaam aan dit project namens '+p.employer:p.collaboration?'In samenwerking met '+p.collaboration:'',p.architects?'Architectuur: '+p.architects:'',p.imageCredit||(p.photographer?'Fotografie © '+p.photographer:'')].filter(Boolean).join(' · ');
  function fillTags(node,p){node.replaceChildren(...(p.tags||[]).map(t=>{const span=document.createElement('span');span.textContent=t;return span;}));}
- const cards=Array.from({length:9},()=>{const card=document.createElement('button');card.className='orbit-card';card.type='button';card.dataset.bound='';card.addEventListener('click',()=>{if(dragged)return;const absolute=Number(card.dataset.absolute);if(Math.round(position)===absolute)openDetail();else{target=absolute;kick();}});orbit.append(card);return card;});
+ let cards=[];
+ function buildRing(){
+  orbit.replaceChildren();
+  cards=items.map((p,index)=>{const card=document.createElement('button');card.className='orbit-card';card.type='button';card.dataset.bound='';card.dataset.index=index;card.addEventListener('click',()=>{if(dragged)return;const absolute=Number(card.dataset.absolute);if(Math.round(position)===absolute)openDetail();else{target=absolute;kick();}});orbit.append(card);return card;});
+ }
  function bind(card,p){if(card.dataset.bound===p.slug)return;card.dataset.bound=p.slug;card.dataset.slug=p.slug;card.dataset.artwork=p.artwork;card.setAttribute('aria-label',p.title);card.replaceChildren();if(p.image){const img=document.createElement('img');img.src=imageUrl(p);img.alt=p.title;img.draggable=false;img.decoding='async';card.append(img);}else{const wrap=document.createElement('div');wrap.className='project-placeholder';const small=document.createElement('small');small.textContent=p.kind;const strong=document.createElement('strong');strong.textContent=p.title;wrap.append(small,strong);card.append(wrap);}}
  function setCaption(index){const p=items[index];title.textContent=p.title;description.textContent=p.description||p.kind;credit.textContent=credits(p);fillTags(tags,p);counter.textContent=String(index+1).padStart(2,'0')+' / '+String(items.length).padStart(2,'0');lastIndex=index;}
- function paint(speed=0){if(!items.length)return;const center=Math.round(position),width=stage.clientWidth*(innerWidth<=700?.76:.52);const cardWidth=Math.min(width,820),radius=cardWidth*1.38;
- cards.forEach((card,slot)=>{const absolute=center+slot-4,index=mod(absolute,items.length),d=absolute-position;bind(card,items[index]);const angle=d*.57;const x=Math.sin(angle)*radius,z=(Math.cos(angle)-1)*radius;card.dataset.absolute=absolute;const visible=Math.abs(d)<3.3;card.hidden=!visible;card.style.transform=`translate(-50%,-50%) translate3d(${x}px,${Math.abs(d)*5}px,${z}px) rotateY(${-angle*180/Math.PI}deg) scale(${1-Math.min(Math.abs(speed)*.006,.045)})`;card.style.opacity=String(Math.max(0,1-Math.abs(d)*.23));card.style.zIndex=String(10-Math.abs(slot-4));card.classList.toggle('active',slot===4);card.tabIndex=slot===4?0:-1;card.setAttribute('aria-hidden',slot===4?'false':'true');});
- orbit.style.transform=`rotateX(${-cameraY*3}deg) rotateY(${cameraX*3}deg)`;const index=mod(center,items.length);if(index!==lastIndex)setCaption(index);}
+ function ringGeometry(distance,count,width,height){
+  const a=Math.abs(distance),sign=Math.sign(distance);
+  // Spread nine front panels out; compress the rest around the rear arc.
+  const frontAngle=a<=1?a*.56:.56+(a-1)*.20;
+  const angle=sign*(a<=4.5?frontAngle:1.26+(a-4.5)/Math.max(count/2-4.5,1)*(Math.PI-1.26));
+  const radiusX=width*.43,radiusY=height*.30,depth=width*.10;
+  return {angle,x:Math.sin(angle)*radiusX,y:(Math.cos(angle)-1)*radiusY,z:(Math.cos(angle)-1)*depth};
+ }
+ function paint(speed=0){
+  if(!items.length)return;
+  const count=items.length,center=Math.round(position),width=stage.clientWidth,height=stage.clientHeight||Math.max(360,width*.43);
+  stage.style.perspective=width*4+'px';
+  cards.forEach((card,index)=>{
+   const distance=mod(index-position+count/2,count)-count/2;
+   const neighbor=mod(index-mod(center,count)+count/2,count)-count/2;
+   const showContent=Math.abs(neighbor)<=4;
+   const g=ringGeometry(distance,count,width,height);
+   const main=neighbor===0;
+   // Only these nine slots contain images or text; rear panels remain empty.
+   if(showContent)bind(card,items[index]);
+   else if(card.dataset.bound){card.replaceChildren();card.dataset.bound='';card.removeAttribute('aria-label');}
+   card.dataset.absolute=String(Math.round(position+distance));
+   card.dataset.content=String(showContent);
+   card.hidden=false;
+   card.style.width=(main?Math.min(width*(width<=700?.35:.29),450):showContent?width*.135:width*.055)+'px';
+   card.style.transform=`translate(-50%,-50%) translate3d(${g.x}px,${g.y}px,${g.z}px) rotateY(${-g.angle*180/Math.PI}deg) scale(${1-Math.min(Math.abs(speed)*.006,.035)})`;
+   card.style.opacity=showContent?(main?'1':'.9'):'.42';
+   card.style.zIndex=String(Math.round((Math.cos(g.angle)+1)*100));
+   card.classList.toggle('active',main);
+   card.tabIndex=main?0:-1;
+   card.setAttribute('aria-hidden',main?'false':'true');
+  });
+  orbit.style.transform=`rotateX(${-cameraY*2}deg) rotateY(${cameraX*2}deg)`;
+  const index=mod(center,count);if(index!==lastIndex)setCaption(index);
+ }
  function animate(time){frame=0;const dt=Math.min((time-lastTime)||16,40);lastTime=time;const delta=target-position;const next=reduced.matches?target:position+delta*(1-Math.pow(.86,dt/16));const speed=next-position;position=next;cameraX+=(cameraGoalX-cameraX)*.12;cameraY+=(cameraGoalY-cameraY)*.12;
  if(Math.abs(delta)<.0005)position=target;paint(speed);if(Math.abs(target-position)>.0005||Math.abs(cameraX-cameraGoalX)>.005||Math.abs(cameraY-cameraGoalY)>.005)kick();else{announcement.textContent=items[mod(Math.round(position),items.length)]?.title||'';if(Math.abs(target)>items.length*100){position=target=mod(target,items.length);paint();}}}
  function kick(){if(!frame)frame=requestAnimationFrame(animate);}
@@ -61,7 +106,7 @@ dialog{padding:0;border:1px solid #333;background:#101010;color:#eee;max-width:1
  stage.addEventListener('pointerup',release);stage.addEventListener('pointercancel',e=>{drag=null;target=Math.round(target);kick();});stage.addEventListener('pointerleave',()=>{cameraGoalX=cameraGoalY=0;kick();});
  stage.addEventListener('keydown',e=>{if(e.key==='ArrowRight'||e.key==='ArrowLeft'){e.preventDefault();step(e.key==='ArrowRight'?1:-1);}else if(e.key==='Home'||e.key==='End'){e.preventDefault();target=e.key==='Home'?0:items.length-1;kick();}});
  document.getElementById('previous').addEventListener('click',()=>step(-1));document.getElementById('next').addEventListener('click',()=>step(1));
- function choose(name){filter=name;items=projects.filter(p=>name==='all'||categories(p).includes(name));position=target=0;lastIndex=-1;clearTimeout(snapTimer);buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===name)));paint();kick();}
+ function choose(name){filter=name;items=projects.filter(p=>name==='all'||categories(p).includes(name));buildRing();position=target=0;lastIndex=-1;clearTimeout(snapTimer);buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===name)));paint();kick();}
  buttons.forEach(b=>b.addEventListener('click',()=>choose(b.dataset.filter)));
  function openDetail(){const p=items[mod(Math.round(position),items.length)];if(!p)return;const img=detail.querySelector('img');img.hidden=!p.image;if(p.image){img.src=imageUrl(p);img.alt=p.title;img.classList.toggle('line',p.artwork==='line');}else{img.removeAttribute('src');}detail.querySelector('h2').textContent=p.title;detail.querySelector('.detail-description').textContent=p.description||p.kind;detail.querySelector('.credit').textContent=credits(p);fillTags(detail.querySelector('.tags'),p);detail.showModal();}
  detail.querySelector('.close').addEventListener('click',()=>detail.close());detail.addEventListener('click',e=>{if(e.target===detail){const r=detail.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)detail.close();}});
