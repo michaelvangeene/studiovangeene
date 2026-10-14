@@ -578,9 +578,12 @@
       "Breukelen"
     ],
     "inventoryId": "013",
-    "image": null,
-    "artwork": "text",
-    "background": "project-information"
+    "image": "images/zandpad-133-cutout.svg",
+    "artwork": "render",
+    "background": "transparent",
+    "width": 1107,
+    "height": 1000,
+    "alt": "Visualisatie van Zandpad 133, Breukelen"
   },
   {
     "slug": "grote-lijster-16",
@@ -594,9 +597,12 @@
       "Muiden"
     ],
     "inventoryId": "014",
-    "image": null,
-    "artwork": "text",
-    "background": "project-information"
+    "image": "images/grote-lijster-16.webp",
+    "artwork": "line",
+    "background": "transparent-filter",
+    "width": 1600,
+    "height": 1000,
+    "alt": "Bouwkundige tekening van Grote Lijster 16, Muiden"
   },
   {
     "slug": "lijnbaan-63",
@@ -610,9 +616,12 @@
       "Rotterdam"
     ],
     "inventoryId": "015",
-    "image": null,
-    "artwork": "text",
-    "background": "project-information"
+    "image": "images/lijnbaan-63.webp",
+    "artwork": "line",
+    "background": "transparent-filter",
+    "width": 1600,
+    "height": 1000,
+    "alt": "Bouwkundige tekening van Lijnbaan 63, Rotterdam"
   },
   {
     "slug": "zwanenbloemlaan-212",
@@ -661,9 +670,12 @@
       "Woning  /  verkooptekeningen"
     ],
     "inventoryId": "022",
-    "image": null,
-    "artwork": "text",
-    "background": "project-information"
+    "image": "images/delfgaauwstraat-51-a-b-c.webp",
+    "artwork": "line",
+    "background": "transparent-filter",
+    "width": 1600,
+    "height": 1000,
+    "alt": "Bouwkundige tekening van Delfgaauwstraat 51 A/B/C"
   },
   {
     "slug": "vrolikstraat-401d",
@@ -697,9 +709,12 @@
       "Inmeten"
     ],
     "inventoryId": "025",
-    "image": null,
-    "artwork": "text",
-    "background": "project-information"
+    "image": "images/moerkerkestraat-43-a01-b01-b02.webp",
+    "artwork": "line",
+    "background": "transparent-filter",
+    "width": 1600,
+    "height": 1000,
+    "alt": "Bouwkundige tekening van Moerkerkestraat 43 A01/B01/B02"
   },
   {
     "slug": "moerkerkestraat-45-a01-b01-b02",
@@ -714,9 +729,12 @@
       "Inmeten"
     ],
     "inventoryId": "026",
-    "image": null,
-    "artwork": "text",
-    "background": "project-information"
+    "image": "images/moerkerkestraat-45-a01-b01-b02.webp",
+    "artwork": "line",
+    "background": "transparent-filter",
+    "width": 1600,
+    "height": 1000,
+    "alt": "Bouwkundige tekening van Moerkerkestraat 45 A01/B01/B02"
   },
   {
     "slug": "gevelisolatie-bestaande-woning",
@@ -744,9 +762,12 @@
       "BIM-modellering"
     ],
     "inventoryId": "031",
-    "image": null,
-    "artwork": "text",
-    "background": "project-information"
+    "image": "images/smederij-schetsontwerp.webp",
+    "artwork": "line",
+    "background": "transparent-filter",
+    "width": 1600,
+    "height": 1000,
+    "alt": "Bouwkundige tekening van Smederij – schetsontwerp"
   },
   {
     "slug": "swadenburgerdam-1826",
@@ -759,9 +780,12 @@
       "BIM-modellering"
     ],
     "inventoryId": "032",
-    "image": null,
-    "artwork": "text",
-    "background": "project-information"
+    "image": "images/swadenburgerdam-1826.webp",
+    "artwork": "line",
+    "background": "transparent-filter",
+    "width": 1600,
+    "height": 1000,
+    "alt": "Bouwkundige tekening van Swadenburgerdam 18–26"
   },
   {
     "slug": "keukenvisualisatie-boekel",
@@ -898,9 +922,12 @@
     ],
     "inventoryId": "047",
     "collaboration": "JVAI",
-    "image": null,
-    "artwork": "text",
-    "background": "project-information"
+    "image": "images/fritz-dietrich-kahlenbergstraat-11b.webp",
+    "artwork": "render",
+    "background": "full-image",
+    "width": 1280,
+    "height": 1000,
+    "alt": "Visualisatie van Fritz Dietrich Kahlenbergstraat 11b, Amsterdam"
   },
   {
     "slug": "rijksstraatweg-hsb",
@@ -914,9 +941,12 @@
       "Duivendrecht"
     ],
     "inventoryId": "048",
-    "image": null,
-    "artwork": "text",
-    "background": "project-information"
+    "image": "images/rijksstraatweg-hsb-cutout.svg",
+    "artwork": "render",
+    "background": "transparent",
+    "width": 1600,
+    "height": 661,
+    "alt": "Visualisatie van Rijksstraatweg – HSB-aanbouw en tuinhuis, Duivendrecht"
   },
   {
     "slug": "willem-walravenhove-66",
@@ -1112,9 +1142,12 @@
     ],
     "inventoryId": "059",
     "collaboration": "JVAI",
-    "image": null,
-    "artwork": "text",
-    "background": "project-information"
+    "image": "images/govert-flinckstraat-168e.webp",
+    "artwork": "render",
+    "background": "full-image",
+    "width": 1600,
+    "height": 900,
+    "alt": "Visualisatie van Govert Flinckstraat 168E, Amsterdam"
   },
   {
     "slug": "jacob-de-graeflaan-127",
@@ -1129,9 +1162,12 @@
     ],
     "inventoryId": "060",
     "collaboration": "JVAI",
-    "image": null,
-    "artwork": "text",
-    "background": "project-information"
+    "image": "images/jacob-de-graeflaan-127.webp",
+    "artwork": "line",
+    "background": "transparent-filter",
+    "width": 1600,
+    "height": 1000,
+    "alt": "Bouwkundige tekening van Jacob de Graeflaan 127"
   },
   {
     "slug": "agricolastraat-152",
@@ -1150,7 +1186,10 @@
     "image": "images/agricolastraat-152.webp",
     "artwork": "line",
     "background": "transparent-filter",
-    "imageCredit": "Ontwerp © Peter Bergboer · BMA Ontwerpers"
+    "imageCredit": "Ontwerp © Peter Bergboer · BMA Ontwerpers",
+    "width": 1600,
+    "height": 1000,
+    "alt": "Bouwkundige tekening van Agricolastraat 152, Wijk bij Duurstede"
   },
   {
     "slug": "faunalaan-42",
@@ -1169,7 +1208,10 @@
     "image": "images/faunalaan-42.webp",
     "artwork": "line",
     "background": "transparent-filter",
-    "imageCredit": "Ontwerp © Peter Bergboer · BMA Ontwerpers"
+    "imageCredit": "Ontwerp © Peter Bergboer · BMA Ontwerpers",
+    "width": 1600,
+    "height": 1000,
+    "alt": "Bouwkundige tekening van Faunalaan 42, Driebergen"
   },
   {
     "slug": "bachlaan-45",
@@ -1186,9 +1228,12 @@
     "inventoryId": "063",
     "collaboration": "BMA Ontwerpers",
     "image": "images/bachlaan-45.webp",
-    "artwork": "line",
-    "background": "transparent-filter",
-    "imageCredit": "Ontwerp © Peter Bergboer · BMA Ontwerpers"
+    "artwork": "render",
+    "background": "full-image",
+    "imageCredit": "Ontwerp © Peter Bergboer · BMA Ontwerpers",
+    "width": 1600,
+    "height": 960,
+    "alt": "Visualisatie van Bachlaan 45, Veenendaal"
   },
   {
     "slug": "van-der-leelaan-18",
@@ -1242,9 +1287,12 @@
     "inventoryId": "066",
     "collaboration": "BMA Ontwerpers",
     "image": "images/pleinesbos-65.webp",
-    "artwork": "line",
-    "background": "transparent-filter",
-    "imageCredit": "Ontwerp © Peter Bergboer · BMA Ontwerpers"
+    "artwork": "render",
+    "background": "full-image",
+    "imageCredit": "Ontwerp © Peter Bergboer · BMA Ontwerpers",
+    "width": 1539,
+    "height": 1000,
+    "alt": "Visualisatie van Pleinesbos 65, Vleuten"
   },
   {
     "slug": "marsjes-18",
@@ -1463,6 +1511,88 @@
     ],
     "contribution": "Ontwerp, geveluitwerking en BIM-coördinatie",
     "imageCredit": "Projectbeeld KRFT · Bijdrage Michael van Geene"
+  },
+  {
+    "slug": "hogeweg-38",
+    "batch": "03",
+    "title": "Hogeweg 38-3, Amsterdam",
+    "kind": "Dakopbouw",
+    "description": "Bouwkundige modellering en vergunningtekeningen voor een dakopbouw aan Hogeweg 38-3 in Amsterdam, in samenwerking met JVAI.",
+    "tags": [
+      "Dakopbouw",
+      "BIM-modellering",
+      "Omgevingsvergunning",
+      "Amsterdam"
+    ],
+    "collaboration": "JVAI",
+    "image": "images/hogeweg-38.webp",
+    "artwork": "line",
+    "background": "transparent-filter",
+    "width": 1600,
+    "height": 1000,
+    "alt": "Bouwkundige tekening van Hogeweg 38-3, Amsterdam"
+  },
+  {
+    "slug": "bhc-overbos",
+    "batch": "03",
+    "title": "BHC Overbos",
+    "kind": "Clubhuisvisualisatie",
+    "description": "Visualisatie van het clubhuis van BHC Overbos, met houten gevels en de relatie met de hockeyvelden, in samenwerking met JVAI.",
+    "tags": [
+      "Sportgebouw",
+      "Clubhuis",
+      "Architectuurvisualisatie"
+    ],
+    "collaboration": "JVAI",
+    "image": "images/bhc-overbos.webp",
+    "artwork": "render",
+    "background": "full-image",
+    "width": 1600,
+    "height": 502,
+    "alt": "Visualisatie van BHC Overbos"
+  },
+  {
+    "slug": "de-roskam-30",
+    "batch": "03",
+    "title": "De Roskam 30, Ulvenhout",
+    "kind": "Trapverbouwing",
+    "description": "Bouwkundige uitwerking van een trapverbouwing in Ulvenhout, met plattegronden, doorsneden en een isometrisch model, in samenwerking met JVAI.",
+    "tags": [
+      "Woningverbouwing",
+      "Bouwkundige uitwerking",
+      "Trap",
+      "Ulvenhout"
+    ],
+    "collaboration": "JVAI",
+    "image": "images/de-roskam-30.webp",
+    "artwork": "line",
+    "background": "transparent-filter",
+    "width": 1600,
+    "height": 1000,
+    "alt": "Bouwkundige tekening van De Roskam 30, Ulvenhout"
+  },
+  {
+    "slug": "victoriatoren-eindhoven",
+    "batch": "03",
+    "title": "Victoriatoren, Eindhoven",
+    "kind": "BIM en technische uitwerking",
+    "description": "Bouwkundige uitwerking van blok C voor het vergunningstraject, met BIM-modellering en aanpassing van het bouwsysteem. Michael werkte aan dit project als medewerker van INBO.",
+    "tags": [
+      "Woningbouw",
+      "BIM-modellering",
+      "Technische uitwerking",
+      "Omgevingsvergunning",
+      "Eindhoven"
+    ],
+    "employer": "INBO",
+    "contribution": "Bouwkundige uitwerking van blok C, BIM-modellering en aanpassing van het bouwsysteem voor de omgevingsvergunning.",
+    "imageCredit": "BIM-model en bouwkundige uitwerking namens INBO",
+    "image": "images/victoriatoren-eindhoven-cutout.svg",
+    "artwork": "render",
+    "background": "transparent",
+    "width": 903,
+    "height": 1000,
+    "alt": "BIM-model van Victoriatoren, Eindhoven"
   },
   {
     "slug": "tilburg",
