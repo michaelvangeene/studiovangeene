@@ -158,6 +158,11 @@
     .project-tags { display: flex; flex-wrap: wrap; gap: 5px 7px; margin-top: 10px; }
     .project-tag { border: 1px solid #333; border-radius: 3px; padding: 3px 7px; font: 10px/1.4 Arial, sans-serif; color: #999; }
     .project-track { align-items: flex-start; }
+    .project-card { box-sizing: border-box; aspect-ratio: 16 / 10; background: #111; border: 1px solid #292929; padding: clamp(18px, 4vw, 64px); display: flex; flex-direction: column; justify-content: center; gap: 18px; }
+    .project-card-kind, .project-card-label { font: 10px/1.4 Arial, sans-serif; letter-spacing: .08em; color: #888; }
+    .project-card-title { font: clamp(20px, 3.8vw, 56px)/1.1 'GiphursMedium', Arial, sans-serif; color: #eee; overflow-wrap: anywhere; }
+    .project-card-label { margin-top: auto; }
+    .project-slide--added figcaption > .project-affiliation, .project-slide--added figcaption > .project-photo-credit { display: block; margin-top: 4px; }
   </style>
 
   
@@ -199,7 +204,7 @@
   "inLanguage": "nl-NL",
   "mainEntity": {
     "@type": "ItemList",
-    "numberOfItems": 29,
+    "numberOfItems": 83,
     "itemListElement": [
       {
         "@type": "ListItem",
@@ -216,12 +221,12 @@
             "KRFT",
             "Hoorn"
           ],
-          "image": "https://luning.nl/wp-content/uploads/2025/10/KR-IKEC-0080-%C2%A9StijnBollaert-SR.jpg",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
           },
+          "image": "https://luning.nl/wp-content/uploads/2025/10/KR-IKEC-0080-%C2%A9StijnBollaert-SR.jpg",
           "citation": "https://krft.nl/projects/ikec-hoorn"
         }
       },
@@ -240,12 +245,12 @@
             "Technische uitwerking",
             "Utrecht"
           ],
-          "image": "https://inbo.com/wp-content/uploads/2022/08/G37A9036-copy-711x0-c-default.jpg",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
           },
+          "image": "https://inbo.com/wp-content/uploads/2022/08/G37A9036-copy-711x0-c-default.jpg",
           "citation": "https://inbo.com/nl/projects/biodiversiteit-in-twee-torens-wonderwoods-utrecht/"
         }
       },
@@ -264,12 +269,12 @@
             "BIM-coördinatie",
             "Zetten"
           ],
-          "image": "https://bbn.nl.object-storage.io/2025/07/MFC-Zetten2.jpg",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
           },
+          "image": "https://bbn.nl.object-storage.io/2025/07/MFC-Zetten2.jpg",
           "citation": "https://krft.nl/projects/multifunctioneel-centrum-zetten-nl"
         }
       },
@@ -288,12 +293,12 @@
             "Technische uitwerking",
             "Rotterdam"
           ],
-          "image": "https://inbo.com/wp-content/uploads/2024/04/2346_Rottanova_Ext-F_FINAL-711x0-c-default.jpg",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
           },
+          "image": "https://inbo.com/wp-content/uploads/2024/04/2346_Rottanova_Ext-F_FINAL-711x0-c-default.jpg",
           "citation": "https://inbo.com/nl/projects/rottanova-rotterdam/"
         }
       },
@@ -311,12 +316,12 @@
             "INBO",
             "Nijmegen"
           ],
-          "image": "https://www.trebbe.nl/wp-content/uploads/2025/10/%C2%A9-Aiste-Rakauskaite-11-Large.jpg",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
           },
+          "image": "https://www.trebbe.nl/wp-content/uploads/2025/10/%C2%A9-Aiste-Rakauskaite-11-Large.jpg",
           "citation": "https://www.trebbe.nl/project/nijmegen-havenkade/"
         }
       },
@@ -335,12 +340,12 @@
             "Bouwkundige uitwerking",
             "Utrecht"
           ],
-          "image": "https://jvst.nl/image/cms/project/1762443713_7d2135d0bcc81dfe2a00.jpg",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
           },
+          "image": "https://jvst.nl/image/cms/project/1762443713_7d2135d0bcc81dfe2a00.jpg",
           "citation": "https://jvst.nl/project/Ivoordreef"
         }
       },
@@ -360,12 +365,12 @@
             "Gevelrestauratie",
             "Amsterdam"
           ],
-          "image": "https://studiovangeene.nl/images/rozengracht.webp",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
-          }
+          },
+          "image": "https://studiovangeene.nl/images/rozengracht.webp"
         }
       },
       {
@@ -382,12 +387,12 @@
             "Architectuurvisualisatie",
             "Amsterdam"
           ],
-          "image": "https://studiovangeene.nl/images/gerard-doustraat.webp",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
-          }
+          },
+          "image": "https://studiovangeene.nl/images/gerard-doustraat.webp"
         }
       },
       {
@@ -405,12 +410,12 @@
             "Bouwkundige tekeningen",
             "Detaillering"
           ],
-          "image": "https://studiovangeene.nl/images/wilhelminaplantsoen-69.webp",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
-          }
+          },
+          "image": "https://studiovangeene.nl/images/wilhelminaplantsoen-69.webp"
         }
       },
       {
@@ -428,12 +433,12 @@
             "Bouwkundige uitwerking",
             "Amsterdam"
           ],
-          "image": "https://studiovangeene.nl/images/bert-haanstrakade-428.webp",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
-          }
+          },
+          "image": "https://studiovangeene.nl/images/bert-haanstrakade-428.webp"
         }
       },
       {
@@ -451,12 +456,12 @@
             "Bouwkundige tekeningen",
             "Amsterdam"
           ],
-          "image": "https://studiovangeene.nl/images/westerdokdijk-567.webp",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
-          }
+          },
+          "image": "https://studiovangeene.nl/images/westerdokdijk-567.webp"
         }
       },
       {
@@ -473,12 +478,12 @@
             "Bouwkundige tekeningen",
             "Bestaande bouw"
           ],
-          "image": "https://studiovangeene.nl/images/wilhelminastraat-26.webp",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
-          }
+          },
+          "image": "https://studiovangeene.nl/images/wilhelminastraat-26.webp"
         }
       },
       {
@@ -495,12 +500,12 @@
             "Balustrade",
             "Technische uitwerking"
           ],
-          "image": "https://studiovangeene.nl/images/egelskopstraat-1.webp",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
-          }
+          },
+          "image": "https://studiovangeene.nl/images/egelskopstraat-1.webp"
         }
       },
       {
@@ -518,12 +523,12 @@
             "Bestaande bouw",
             "Amsterdam"
           ],
-          "image": "https://studiovangeene.nl/images/zwanenbloemlaan-204-206.webp",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
-          }
+          },
+          "image": "https://studiovangeene.nl/images/zwanenbloemlaan-204-206.webp"
         }
       },
       {
@@ -540,12 +545,12 @@
             "Technische tekeningen",
             "Bestaande bouw"
           ],
-          "image": "https://studiovangeene.nl/images/rochussenstraat.webp",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
-          }
+          },
+          "image": "https://studiovangeene.nl/images/rochussenstraat.webp"
         }
       },
       {
@@ -563,12 +568,12 @@
             "Spouwisolatie",
             "Bouwkundige detaillering"
           ],
-          "image": "https://studiovangeene.nl/images/meentweg-43.webp",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
-          }
+          },
+          "image": "https://studiovangeene.nl/images/meentweg-43.webp"
         }
       },
       {
@@ -586,12 +591,12 @@
             "Architectuurvisualisatie",
             "Amsterdam"
           ],
-          "image": "https://studiovangeene.nl/images/zwanenbloemlaan-202-cutout.svg",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
-          }
+          },
+          "image": "https://studiovangeene.nl/images/zwanenbloemlaan-202-cutout.svg"
         }
       },
       {
@@ -609,12 +614,12 @@
             "Bouwkundige tekeningen",
             "Architectuurvisualisatie"
           ],
-          "image": "https://studiovangeene.nl/images/paltzerweg-64.jpg",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
-          }
+          },
+          "image": "https://studiovangeene.nl/images/paltzerweg-64.jpg"
         }
       },
       {
@@ -632,12 +637,12 @@
             "Architectuurvisualisatie",
             "Amsterdam"
           ],
-          "image": "https://studiovangeene.nl/images/hudigstraat-70.webp",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
-          }
+          },
+          "image": "https://studiovangeene.nl/images/hudigstraat-70.webp"
         }
       },
       {
@@ -655,12 +660,12 @@
             "Bouwkundige detaillering",
             "Amsterdam"
           ],
-          "image": "https://studiovangeene.nl/images/hogeweg-28-3.webp",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
-          }
+          },
+          "image": "https://studiovangeene.nl/images/hogeweg-28-3.webp"
         }
       },
       {
@@ -678,12 +683,12 @@
             "Gevelvisualisatie",
             "Amstelveen"
           ],
-          "image": "https://studiovangeene.nl/images/smedemanplein-15.webp",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
-          }
+          },
+          "image": "https://studiovangeene.nl/images/smedemanplein-15.webp"
         }
       },
       {
@@ -701,12 +706,12 @@
             "Architectuurvisualisatie",
             "Amsterdam"
           ],
-          "image": "https://studiovangeene.nl/images/lisdoddelaan-94b.webp",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
-          }
+          },
+          "image": "https://studiovangeene.nl/images/lisdoddelaan-94b.webp"
         }
       },
       {
@@ -724,12 +729,12 @@
             "Gevelvisualisatie",
             "Westzaan"
           ],
-          "image": "https://studiovangeene.nl/images/jj-allanstraat-172a-westzaan.webp",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
-          }
+          },
+          "image": "https://studiovangeene.nl/images/jj-allanstraat-172a-westzaan.webp"
         }
       },
       {
@@ -747,12 +752,12 @@
             "Bouwkundige tekeningen",
             "Amsterdam"
           ],
-          "image": "https://studiovangeene.nl/images/vegterstraat-6-8.webp",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
-          }
+          },
+          "image": "https://studiovangeene.nl/images/vegterstraat-6-8.webp"
         }
       },
       {
@@ -770,12 +775,12 @@
             "Bouwkundige detaillering",
             "Duivendrecht"
           ],
-          "image": "https://studiovangeene.nl/images/rijksstraatweg-219.webp",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
-          }
+          },
+          "image": "https://studiovangeene.nl/images/rijksstraatweg-219.webp"
         }
       },
       {
@@ -793,12 +798,12 @@
             "Bouwkundige detaillering",
             "Arnhem"
           ],
-          "image": "https://studiovangeene.nl/images/midwoldastraat-11.webp",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
-          }
+          },
+          "image": "https://studiovangeene.nl/images/midwoldastraat-11.webp"
         }
       },
       {
@@ -816,12 +821,12 @@
             "Bouwkundige detaillering",
             "Ter Aar"
           ],
-          "image": "https://studiovangeene.nl/images/paradijsweg-104.webp",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
-          }
+          },
+          "image": "https://studiovangeene.nl/images/paradijsweg-104.webp"
         }
       },
       {
@@ -839,7 +844,72 @@
             "Bouwkundige detaillering",
             "Weesp"
           ],
-          "image": "https://studiovangeene.nl/images/gj-wiefferingdreef-9.webp",
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/gj-wiefferingdreef-9.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 29,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-amstelstraat-35",
+          "url": "https://studiovangeene.nl/#project-amstelstraat-35",
+          "name": "New Times, Amstelstraat 35, Amsterdam",
+          "description": "Werkzaamheden: Ontwerp en technische uitwerking horeca.",
+          "keywords": [
+            "Horeca / interieur",
+            "Amsterdam"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/amstelstraat-35.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 30,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-mechelenstraat-10",
+          "url": "https://studiovangeene.nl/#project-mechelenstraat-10",
+          "name": "Mechelenstraat 10, Waalwijk",
+          "description": "Werkzaamheden: 3D-modellen meubels en interieur, renders, feedback.",
+          "keywords": [
+            "Interieurvisualisatie",
+            "Architectuurvisualisatie",
+            "Waalwijk"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/mechelenstraat-10.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 31,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-zandpad-133",
+          "url": "https://studiovangeene.nl/#project-zandpad-133",
+          "name": "Zandpad 133, Breukelen",
+          "description": "Werkzaamheden: Inventarisatie, drie schetsontwerp- en interieurvarianten, tekeningen en render.",
+          "keywords": [
+            "Ontwerpstudie",
+            "Architectuurvisualisatie",
+            "Schetsontwerp",
+            "Breukelen"
+          ],
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
@@ -849,7 +919,1141 @@
       },
       {
         "@type": "ListItem",
-        "position": 29,
+        "position": 32,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-grote-lijster-16",
+          "url": "https://studiovangeene.nl/#project-grote-lijster-16",
+          "name": "Grote Lijster 16, Muiden",
+          "description": "Werkzaamheden: Situatie, aanzichten, details, fotomontage en doorsnede.",
+          "keywords": [
+            "Fietsberging",
+            "Bouwkundige detaillering",
+            "Muiden"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 33,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-lijnbaan-63",
+          "url": "https://studiovangeene.nl/#project-lijnbaan-63",
+          "name": "Lijnbaan 63, Rotterdam",
+          "description": "Werkzaamheden: Inventarisatie, gevelaanzicht, details, fotomontage en indiening.",
+          "keywords": [
+            "Omgevingsvergunning",
+            "Bouwkundige detaillering",
+            "Rotterdam"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 34,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-zwanenbloemlaan-212",
+          "url": "https://studiovangeene.nl/#project-zwanenbloemlaan-212",
+          "name": "Zwanenbloemlaan 212, Amsterdam",
+          "description": "Werkzaamheden: BIM, vergunningtekeningen en render.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Omgevingsvergunning",
+            "Architectuurvisualisatie",
+            "Amsterdam"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/zwanenbloemlaan-212.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 35,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-edward-masseystraat-12",
+          "url": "https://studiovangeene.nl/#project-edward-masseystraat-12",
+          "name": "Edward Masseystraat 12",
+          "description": "Werkzaamheden: BIM, vergunningtekeningen en render.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Omgevingsvergunning",
+            "Architectuurvisualisatie"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 36,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-delfgaauwstraat-51-a-b-c",
+          "url": "https://studiovangeene.nl/#project-delfgaauwstraat-51-a-b-c",
+          "name": "Delfgaauwstraat 51 A/B/C",
+          "description": "Werkzaamheden: Tekeningen, modellen en Funda-plattegronden.",
+          "keywords": [
+            "Woning  /  verkooptekeningen"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 37,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-vrolikstraat-401d",
+          "url": "https://studiovangeene.nl/#project-vrolikstraat-401d",
+          "name": "Vrolikstraat 401D, Amsterdam",
+          "description": "Werkzaamheden: BIM, vergunningtekeningen, render en aanpassingen zonnepanelen.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Omgevingsvergunning",
+            "Architectuurvisualisatie",
+            "Amsterdam"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/vrolikstraat-401d.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 38,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-moerkerkestraat-43-a01-b01-b02",
+          "url": "https://studiovangeene.nl/#project-moerkerkestraat-43-a01-b01-b02",
+          "name": "Moerkerkestraat 43 A01/B01/B02",
+          "description": "Werkzaamheden: Inmeten, BIM, splitsingstekening en BVO/GO.",
+          "keywords": [
+            "Splitsing  /  inmeten",
+            "BIM-modellering",
+            "Splitsingstekening",
+            "Inmeten"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 39,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-moerkerkestraat-45-a01-b01-b02",
+          "url": "https://studiovangeene.nl/#project-moerkerkestraat-45-a01-b01-b02",
+          "name": "Moerkerkestraat 45 A01/B01/B02",
+          "description": "Werkzaamheden: Inmeten, BIM, splitsingstekening en BVO/GO.",
+          "keywords": [
+            "Splitsing  /  inmeten",
+            "BIM-modellering",
+            "Splitsingstekening",
+            "Inmeten"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 40,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-gevelisolatie-bestaande-woning",
+          "url": "https://studiovangeene.nl/#project-gevelisolatie-bestaande-woning",
+          "name": "Gevelisolatie bestaande woning",
+          "description": "Werkzaamheden: BIM, nieuwe gevelaanzichten en detail.",
+          "keywords": [
+            "Gevelisolatie",
+            "BIM-modellering"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 41,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-smederij-schetsontwerp",
+          "url": "https://studiovangeene.nl/#project-smederij-schetsontwerp",
+          "name": "Smederij – schetsontwerp",
+          "description": "Werkzaamheden: BIM bestaande/nieuwe situatie en drie ontwerpopties.",
+          "keywords": [
+            "Ontwerpstudie",
+            "BIM-modellering"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 42,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-swadenburgerdam-1826",
+          "url": "https://studiovangeene.nl/#project-swadenburgerdam-1826",
+          "name": "Swadenburgerdam 18–26",
+          "description": "Werkzaamheden: BIM bestaande/nieuwe situatie, principedetail en materialisatie.",
+          "keywords": [
+            "Ontwerp  /  tekenwerk",
+            "BIM-modellering"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 43,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-keukenvisualisatie-boekel",
+          "url": "https://studiovangeene.nl/#project-keukenvisualisatie-boekel",
+          "name": "Keukenvisualisatie Boekel",
+          "description": "Werkzaamheden: BIM, renders, materialisatie en feedback.",
+          "keywords": [
+            "Interieurvisualisatie",
+            "BIM-modellering",
+            "Architectuurvisualisatie",
+            "Boekel"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/keukenvisualisatie-boekel.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 44,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-zwanenbloemlaan-232",
+          "url": "https://studiovangeene.nl/#project-zwanenbloemlaan-232",
+          "name": "Zwanenbloemlaan 232, Amsterdam",
+          "description": "Werkzaamheden: BIM, details, Bouwbesluit en render.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Bouwkundige detaillering",
+            "Architectuurvisualisatie",
+            "Amsterdam"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/zwanenbloemlaan-232.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 45,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-ruyschstraat-343a",
+          "url": "https://studiovangeene.nl/#project-ruyschstraat-343a",
+          "name": "Ruyschstraat 343a, Amsterdam",
+          "description": "Werkzaamheden: HSB-elementtekeningen voor uitvoering en prefabricage.",
+          "keywords": [
+            "HSB  /  dakopbouw",
+            "Houtskeletbouw",
+            "Amsterdam"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/ruyschstraat-343a.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 46,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-derde-oosterparkstraat-198d",
+          "url": "https://studiovangeene.nl/#project-derde-oosterparkstraat-198d",
+          "name": "Derde Oosterparkstraat 198 / 198D, Amsterdam",
+          "description": "Werkzaamheden: HSB-elementtekeningen voor uitvoering en prefabricage.",
+          "keywords": [
+            "HSB  /  dakopbouw",
+            "Houtskeletbouw",
+            "Amsterdam"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/derde-oosterparkstraat-198d.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 47,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-koopvaardersplantsoen-87",
+          "url": "https://studiovangeene.nl/#project-koopvaardersplantsoen-87",
+          "name": "Koopvaardersplantsoen 87",
+          "description": "Werkzaamheden: BIM, details, Bouwbesluit, render en aanpassing opbouw.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Bouwkundige detaillering",
+            "Architectuurvisualisatie"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/koopvaardersplantsoen-87.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 48,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-kanaalstraat-106-3",
+          "url": "https://studiovangeene.nl/#project-kanaalstraat-106-3",
+          "name": "Kanaalstraat 106-3",
+          "description": "Werkzaamheden: BIM, details, Bouwbesluit en render.",
+          "keywords": [
+            "Dakhuis  /  dakopbouw",
+            "BIM-modellering",
+            "Bouwkundige detaillering",
+            "Architectuurvisualisatie"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/kanaalstraat-106-3.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 49,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-nuovaweg-2",
+          "url": "https://studiovangeene.nl/#project-nuovaweg-2",
+          "name": "Nuovaweg 2, Alphen aan de Rijn",
+          "description": "Werkzaamheden: HSB-elementen voor drie aanbouwen, opbouw en twee dakkapellen.",
+          "keywords": [
+            "HSB  /  woninguitbreiding",
+            "Houtskeletbouw",
+            "Alphen aan de Rijn"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/nuovaweg-2.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 50,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-fritz-dietrich-kahlenbergstraat-11b",
+          "url": "https://studiovangeene.nl/#project-fritz-dietrich-kahlenbergstraat-11b",
+          "name": "Fritz Dietrich Kahlenbergstraat 11b, Amsterdam",
+          "description": "Werkzaamheden: BIM, details, Bouwbesluit, render en HSB-elementtekeningen.",
+          "keywords": [
+            "Woningverbouwing  /  HSB",
+            "BIM-modellering",
+            "Houtskeletbouw",
+            "Bouwkundige detaillering",
+            "Amsterdam"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 51,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-rijksstraatweg-hsb",
+          "url": "https://studiovangeene.nl/#project-rijksstraatweg-hsb",
+          "name": "Rijksstraatweg – HSB-aanbouw en tuinhuis, Duivendrecht",
+          "description": "Werkzaamheden: HSB-elementtekeningen voor uitvoering.",
+          "keywords": [
+            "HSB  /  aanbouw en tuinhuis",
+            "Houtskeletbouw",
+            "Duivendrecht"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 52,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-willem-walravenhove-66",
+          "url": "https://studiovangeene.nl/#project-willem-walravenhove-66",
+          "name": "Willem Walravenhove 66, Nieuwegein",
+          "description": "Werkzaamheden: HSB-elementtekeningen voor uitvoering.",
+          "keywords": [
+            "HSB  /  dakopbouw",
+            "Houtskeletbouw",
+            "Nieuwegein"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/willem-walravenhove-66.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 53,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-zacharias-jansestraat-32-3",
+          "url": "https://studiovangeene.nl/#project-zacharias-jansestraat-32-3",
+          "name": "Zacharias Jansestraat 32-3",
+          "description": "Werkzaamheden: BIM, details, Bouwbesluit en render.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Bouwkundige detaillering",
+            "Architectuurvisualisatie"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/zacharias-jansestraat-32-3.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 54,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-tilanusstraat-45-iv",
+          "url": "https://studiovangeene.nl/#project-tilanusstraat-45-iv",
+          "name": "Tilanusstraat 45-IV",
+          "description": "Werkzaamheden: BIM, details, Bouwbesluit en render.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Bouwkundige detaillering",
+            "Architectuurvisualisatie"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/tilanusstraat-45-iv.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 55,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-hudigstraat-74",
+          "url": "https://studiovangeene.nl/#project-hudigstraat-74",
+          "name": "Hudigstraat 74",
+          "description": "Werkzaamheden: BIM, details, Bouwbesluit, render en ontwerpaanpassing.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Bouwkundige detaillering",
+            "Architectuurvisualisatie"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/hudigstraat-74.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 56,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-brouwersgracht-905",
+          "url": "https://studiovangeene.nl/#project-brouwersgracht-905",
+          "name": "Brouwersgracht 905, Amsterdam",
+          "description": "Werkzaamheden: Digitaliseren, BIM en ontwerpaanpassingen.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Amsterdam"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/brouwersgracht-905.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 57,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-brouwersgracht-847",
+          "url": "https://studiovangeene.nl/#project-brouwersgracht-847",
+          "name": "Brouwersgracht 847, Amsterdam",
+          "description": "Werkzaamheden: BIM, details, Bouwbesluit en render.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Bouwkundige detaillering",
+            "Architectuurvisualisatie",
+            "Amsterdam"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/brouwersgracht-847.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 58,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-pythagorasstraat-83-1",
+          "url": "https://studiovangeene.nl/#project-pythagorasstraat-83-1",
+          "name": "Pythagorasstraat 83-1",
+          "description": "Werkzaamheden: BIM, vergunningtekeningen, zichtlijnen, details en materialisatie.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Omgevingsvergunning",
+            "Bouwkundige detaillering"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/pythagorasstraat-83-1.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 59,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-blauwpijpstraat-33",
+          "url": "https://studiovangeene.nl/#project-blauwpijpstraat-33",
+          "name": "Blauwpijpstraat 33",
+          "description": "Werkzaamheden: BIM, details, Bouwbesluit en render.",
+          "keywords": [
+            "Dakopbouw",
+            "BIM-modellering",
+            "Bouwkundige detaillering",
+            "Architectuurvisualisatie"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/blauwpijpstraat-33.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 60,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-zwanenbloemlaan-208",
+          "url": "https://studiovangeene.nl/#project-zwanenbloemlaan-208",
+          "name": "Zwanenbloemlaan 208, Amsterdam",
+          "description": "Werkzaamheden: BIM, details, Bouwbesluit en render.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Bouwkundige detaillering",
+            "Architectuurvisualisatie",
+            "Amsterdam"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/zwanenbloemlaan-208.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 61,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-vrolikstraat-277-4",
+          "url": "https://studiovangeene.nl/#project-vrolikstraat-277-4",
+          "name": "Vrolikstraat 277-4, Amsterdam",
+          "description": "Werkzaamheden: BIM, details, Bouwbesluit en render.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Bouwkundige detaillering",
+            "Architectuurvisualisatie",
+            "Amsterdam"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/vrolikstraat-277-4.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 62,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-govert-flinckstraat-168e",
+          "url": "https://studiovangeene.nl/#project-govert-flinckstraat-168e",
+          "name": "Govert Flinckstraat 168E, Amsterdam",
+          "description": "Werkzaamheden: BIM, details, Bouwbesluit en zichtlijnen.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Bouwkundige detaillering",
+            "Amsterdam"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 63,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-jacob-de-graeflaan-127",
+          "url": "https://studiovangeene.nl/#project-jacob-de-graeflaan-127",
+          "name": "Jacob de Graeflaan 127",
+          "description": "Werkzaamheden: Digitaliseren, BIM, vergunningtekeningen en Bouwbesluit.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Omgevingsvergunning"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 64,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-agricolastraat-152",
+          "url": "https://studiovangeene.nl/#project-agricolastraat-152",
+          "name": "Agricolastraat 152, Wijk bij Duurstede",
+          "description": "Werkzaamheden: BIM bestaande situatie en schetsontwerp.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Schetsontwerp",
+            "Wijk bij Duurstede"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/agricolastraat-152.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 65,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-faunalaan-42",
+          "url": "https://studiovangeene.nl/#project-faunalaan-42",
+          "name": "Faunalaan 42, Driebergen",
+          "description": "Werkzaamheden: BIM bestaande situatie en schetsontwerp.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Schetsontwerp",
+            "Driebergen"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/faunalaan-42.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 66,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-bachlaan-45",
+          "url": "https://studiovangeene.nl/#project-bachlaan-45",
+          "name": "Bachlaan 45, Veenendaal",
+          "description": "Werkzaamheden: BIM bestaande/nieuwe situatie en render.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Architectuurvisualisatie",
+            "Veenendaal"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/bachlaan-45.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 67,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-van-der-leelaan-18",
+          "url": "https://studiovangeene.nl/#project-van-der-leelaan-18",
+          "name": "Van der Leelaan 18, Doorn",
+          "description": "Werkzaamheden: BIM bestaande/nieuwe situatie en render.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Architectuurvisualisatie",
+            "Doorn"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/van-der-leelaan-18.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 68,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-doornenburg-5",
+          "url": "https://studiovangeene.nl/#project-doornenburg-5",
+          "name": "Doornenburg 5, Veenendaal",
+          "description": "Werkzaamheden: BIM nieuwe situatie en render.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Architectuurvisualisatie",
+            "Veenendaal"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 69,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-pleinesbos-65",
+          "url": "https://studiovangeene.nl/#project-pleinesbos-65",
+          "name": "Pleinesbos 65, Vleuten",
+          "description": "Werkzaamheden: BIM bestaande/nieuwe situatie en render.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Architectuurvisualisatie",
+            "Vleuten"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/pleinesbos-65.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 70,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-marsjes-18",
+          "url": "https://studiovangeene.nl/#project-marsjes-18",
+          "name": "Marsjes 18, Hellendoorn",
+          "description": "Werkzaamheden: BIM bestaande situatie.",
+          "keywords": [
+            "BIM  /  woningontwerp",
+            "BIM-modellering",
+            "Hellendoorn"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/marsjes-18.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 71,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-cuneralaan-34",
+          "url": "https://studiovangeene.nl/#project-cuneralaan-34",
+          "name": "Cuneralaan 34, Rhenen",
+          "description": "Werkzaamheden: Bestemmingsonderzoek, BIM, SO/VO, vergunning, daglicht/ventilatie en renders.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Omgevingsvergunning",
+            "Architectuurvisualisatie",
+            "Rhenen"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/cuneralaan-34.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 72,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-debussystraat-39",
+          "url": "https://studiovangeene.nl/#project-debussystraat-39",
+          "name": "Debussystraat 39, Amersfoort",
+          "description": "Werkzaamheden: BIM bestaande situatie, SO en renders.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Architectuurvisualisatie",
+            "Amersfoort"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/debussystraat-39.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 73,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-hobbemastraat-27",
+          "url": "https://studiovangeene.nl/#project-hobbemastraat-27",
+          "name": "Hobbemastraat 27, Amersfoort",
+          "description": "Werkzaamheden: BIM, SO/VO, mansardekap en renders.",
+          "keywords": [
+            "Woningverbouwing",
+            "BIM-modellering",
+            "Architectuurvisualisatie",
+            "Amersfoort"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/hobbemastraat-27.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 74,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-nudepark",
+          "url": "https://studiovangeene.nl/#project-nudepark",
+          "name": "Nudepark, Wageningen",
+          "description": "Werkzaamheden: Details.",
+          "keywords": [
+            "Bouwkundige uitwerking",
+            "Bouwkundige detaillering",
+            "Wageningen"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 75,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-vd-dordrecht",
+          "url": "https://studiovangeene.nl/#project-vd-dordrecht",
+          "name": "V&D – transformatie, Dordrecht",
+          "description": "Bij INBO werkte Michael aan dit project: Omgevingsvergunning, woningbouw en commerciële functies.",
+          "keywords": [
+            "Transformatie",
+            "Omgevingsvergunning",
+            "Dordrecht"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 76,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-heijmans-woonconcept",
+          "url": "https://studiovangeene.nl/#project-heijmans-woonconcept",
+          "name": "Heijmans WoonConcept",
+          "description": "Werkzaamheden bij INBO aan meerdere projecten binnen Heijmans WoonConcept: omgevingsvergunning, technisch ontwerp en uitvoeringsgereed ontwerp.",
+          "keywords": [
+            "Woningbouw",
+            "Omgevingsvergunning"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          }
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 77,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-mfa-gorssel",
+          "url": "https://studiovangeene.nl/#project-mfa-gorssel",
+          "name": "Multifunctionele accommodatie Gorssel",
+          "description": "Bij KRFT werkte Michael aan dit project: Onderzoek en ruimtelijke herconfiguratie van programma.",
+          "keywords": [
+            "Tender  /  onderwijs",
+            "Gorssel"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/mfa-gorssel.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 78,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-het-baken-cruquius",
+          "url": "https://studiovangeene.nl/#project-het-baken-cruquius",
+          "name": "Het Baken – Cruquius, Amsterdam",
+          "description": "Bij KRFT werkte Michael aan dit project: Stedenbouw, plattegronden, diagrammen, maquette en visualisaties.",
+          "keywords": [
+            "Tender  /  woningbouw",
+            "Amsterdam"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/het-baken-cruquius.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 79,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-wisselspoor-daalcentraal",
+          "url": "https://studiovangeene.nl/#project-wisselspoor-daalcentraal",
+          "name": "Wisselspoor / DaalCentraal, Utrecht",
+          "description": "Bij KRFT werkte Michael aan dit project: Gevelontwerp, stedelijke functies, diagrammen en axonometrieën.",
+          "keywords": [
+            "Tender  /  stedenbouw",
+            "Utrecht"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/wisselspoor-daalcentraal.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 80,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-pesthuis-leiden",
+          "url": "https://studiovangeene.nl/#project-pesthuis-leiden",
+          "name": "Pesthuis, Leiden",
+          "description": "Bij KRFT werkte Michael aan dit project: VO, onderzoek, programma, massastudies en ruimtelijke varianten.",
+          "keywords": [
+            "Transformatie  /  paviljoen",
+            "Leiden"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/pesthuis-leiden.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 81,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-tiny-house-eindhoven",
+          "url": "https://studiovangeene.nl/#project-tiny-house-eindhoven",
+          "name": "Tiny house, Eindhoven",
+          "description": "Technische uitwerking van een tiny house met hergebruikte containers: plattegronden, gevels, constructieve aansluitingen en een Bouwbesluittoets.",
+          "keywords": [
+            "Tiny house",
+            "Hergebruik",
+            "Technische uitwerking",
+            "Bouwbesluit",
+            "Eindhoven"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/tiny-house-eindhoven.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 82,
+        "item": {
+          "@type": "CreativeWork",
+          "@id": "https://studiovangeene.nl/#project-kc-zijdelwaard",
+          "url": "https://studiovangeene.nl/#project-kc-zijdelwaard",
+          "name": "KC Zijdelwaard, Uithoorn",
+          "description": "Kindcentrum met onderwijs, kinderopvang en jeugdvoorzieningen. Michael werkte bij KRFT aan ontwerp, geveluitwerking en BIM-coördinatie.",
+          "keywords": [
+            "Onderwijsgebouw",
+            "Gevelontwerp",
+            "BIM-coördinatie",
+            "Uithoorn"
+          ],
+          "inLanguage": "nl-NL",
+          "contributor": {
+            "@type": "Person",
+            "name": "Michael van Geene"
+          },
+          "image": "https://studiovangeene.nl/images/kc-zijdelwaard.webp"
+        }
+      },
+      {
+        "@type": "ListItem",
+        "position": 83,
         "item": {
           "@type": "CreativeWork",
           "@id": "https://studiovangeene.nl/#project-tilburg",
@@ -862,12 +2066,12 @@
             "Materialisatie",
             "Tilburg"
           ],
-          "image": "https://studiovangeene.nl/images/tilburg.webp",
           "inLanguage": "nl-NL",
           "contributor": {
             "@type": "Person",
             "name": "Michael van Geene"
-          }
+          },
+          "image": "https://studiovangeene.nl/images/tilburg.webp"
         }
       }
     ]
@@ -1047,6 +2251,222 @@
           <div class="project-image"><img src="images/gj-wiefferingdreef-9.webp" alt="Dakopbouw – G.J. Wiefferingdreef 9, Weesp" width="1600" height="1000" loading="lazy" decoding="async"></div>
           <figcaption><h2 class="project-title">G.J. Wiefferingdreef 9, Weesp</h2><span class="project-kind">G.J. Wiefferingdreef 9, Weesp · Dakopbouw · In samenwerking met JVAI</span><p class="project-description">Dakopbouw in Weesp, met gevelaanzichten, doorsneden en details voor de aansluiting op de bestaande woning, in samenwerking met JVAI.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Dakopbouw</span><span class="project-tag">Bouwkundige tekeningen</span><span class="project-tag">Bouwkundige detaillering</span><span class="project-tag">Weesp</span></div></figcaption>
         </figure>
+                <figure class="project-slide project-slide--added" id="project-amstelstraat-35" data-project="amstelstraat-35" data-artwork="render">
+          <div class="project-image"><img src="images/amstelstraat-35.webp" alt="Horeca/interieur – New Times, Amstelstraat 35, Amsterdam" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">New Times, Amstelstraat 35, Amsterdam</h2><span class="project-kind">Horeca/interieur</span><p class="project-description">Werkzaamheden: Ontwerp en technische uitwerking horeca.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Horeca / interieur</span><span class="project-tag">Amsterdam</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-mechelenstraat-10" data-project="mechelenstraat-10" data-artwork="render">
+          <div class="project-image"><img src="images/mechelenstraat-10.webp" alt="Interieurvisualisatie – Mechelenstraat 10, Waalwijk" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Mechelenstraat 10, Waalwijk</h2><span class="project-kind">Interieurvisualisatie</span><p class="project-description">Werkzaamheden: 3D-modellen meubels en interieur, renders, feedback.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Interieurvisualisatie</span><span class="project-tag">Architectuurvisualisatie</span><span class="project-tag">Waalwijk</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-zandpad-133" data-project="zandpad-133" data-artwork="text">
+          <div class="project-card"><span class="project-card-kind">Ontwerpstudie</span><span class="project-card-title">Zandpad 133, Breukelen</span><span class="project-card-label">Projectinformatie</span></div>
+          <figcaption><h2 class="project-title">Zandpad 133, Breukelen</h2><span class="project-kind">Ontwerpstudie</span><p class="project-description">Werkzaamheden: Inventarisatie, drie schetsontwerp- en interieurvarianten, tekeningen en render.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Ontwerpstudie</span><span class="project-tag">Architectuurvisualisatie</span><span class="project-tag">Schetsontwerp</span><span class="project-tag">Breukelen</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-grote-lijster-16" data-project="grote-lijster-16" data-artwork="text">
+          <div class="project-card"><span class="project-card-kind">Fietsberging</span><span class="project-card-title">Grote Lijster 16, Muiden</span><span class="project-card-label">Projectinformatie</span></div>
+          <figcaption><h2 class="project-title">Grote Lijster 16, Muiden</h2><span class="project-kind">Fietsberging</span><p class="project-description">Werkzaamheden: Situatie, aanzichten, details, fotomontage en doorsnede.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Fietsberging</span><span class="project-tag">Bouwkundige detaillering</span><span class="project-tag">Muiden</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-lijnbaan-63" data-project="lijnbaan-63" data-artwork="text">
+          <div class="project-card"><span class="project-card-kind">Omgevingsvergunning</span><span class="project-card-title">Lijnbaan 63, Rotterdam</span><span class="project-card-label">Projectinformatie</span></div>
+          <figcaption><h2 class="project-title">Lijnbaan 63, Rotterdam</h2><span class="project-kind">Omgevingsvergunning</span><p class="project-description">Werkzaamheden: Inventarisatie, gevelaanzicht, details, fotomontage en indiening.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Omgevingsvergunning</span><span class="project-tag">Bouwkundige detaillering</span><span class="project-tag">Rotterdam</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-zwanenbloemlaan-212" data-project="zwanenbloemlaan-212" data-artwork="render">
+          <div class="project-image"><img src="images/zwanenbloemlaan-212.webp" alt="Woningverbouwing – Zwanenbloemlaan 212, Amsterdam" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Zwanenbloemlaan 212, Amsterdam</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met JVAI</span><p class="project-description">Werkzaamheden: BIM, vergunningtekeningen en render.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Omgevingsvergunning</span><span class="project-tag">Architectuurvisualisatie</span><span class="project-tag">Amsterdam</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-edward-masseystraat-12" data-project="edward-masseystraat-12" data-artwork="text">
+          <div class="project-card"><span class="project-card-kind">Woningverbouwing</span><span class="project-card-title">Edward Masseystraat 12</span><span class="project-card-label">Projectinformatie</span></div>
+          <figcaption><h2 class="project-title">Edward Masseystraat 12</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met JVAI</span><p class="project-description">Werkzaamheden: BIM, vergunningtekeningen en render.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Omgevingsvergunning</span><span class="project-tag">Architectuurvisualisatie</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-delfgaauwstraat-51-a-b-c" data-project="delfgaauwstraat-51-a-b-c" data-artwork="text">
+          <div class="project-card"><span class="project-card-kind">Woning / verkooptekeningen</span><span class="project-card-title">Delfgaauwstraat 51 A/B/C</span><span class="project-card-label">Projectinformatie</span></div>
+          <figcaption><h2 class="project-title">Delfgaauwstraat 51 A/B/C</h2><span class="project-kind">Woning / verkooptekeningen</span><p class="project-description">Werkzaamheden: Tekeningen, modellen en Funda-plattegronden.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woning  /  verkooptekeningen</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-vrolikstraat-401d" data-project="vrolikstraat-401d" data-artwork="render">
+          <div class="project-image"><img src="images/vrolikstraat-401d.webp" alt="Woningverbouwing – Vrolikstraat 401D, Amsterdam" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Vrolikstraat 401D, Amsterdam</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met JVAI</span><p class="project-description">Werkzaamheden: BIM, vergunningtekeningen, render en aanpassingen zonnepanelen.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Omgevingsvergunning</span><span class="project-tag">Architectuurvisualisatie</span><span class="project-tag">Amsterdam</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-moerkerkestraat-43-a01-b01-b02" data-project="moerkerkestraat-43-a01-b01-b02" data-artwork="text">
+          <div class="project-card"><span class="project-card-kind">Splitsing / inmeten</span><span class="project-card-title">Moerkerkestraat 43 A01/B01/B02</span><span class="project-card-label">Projectinformatie</span></div>
+          <figcaption><h2 class="project-title">Moerkerkestraat 43 A01/B01/B02</h2><span class="project-kind">Splitsing / inmeten</span><p class="project-description">Werkzaamheden: Inmeten, BIM, splitsingstekening en BVO/GO.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Splitsing  /  inmeten</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Splitsingstekening</span><span class="project-tag">Inmeten</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-moerkerkestraat-45-a01-b01-b02" data-project="moerkerkestraat-45-a01-b01-b02" data-artwork="text">
+          <div class="project-card"><span class="project-card-kind">Splitsing / inmeten</span><span class="project-card-title">Moerkerkestraat 45 A01/B01/B02</span><span class="project-card-label">Projectinformatie</span></div>
+          <figcaption><h2 class="project-title">Moerkerkestraat 45 A01/B01/B02</h2><span class="project-kind">Splitsing / inmeten</span><p class="project-description">Werkzaamheden: Inmeten, BIM, splitsingstekening en BVO/GO.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Splitsing  /  inmeten</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Splitsingstekening</span><span class="project-tag">Inmeten</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-gevelisolatie-bestaande-woning" data-project="gevelisolatie-bestaande-woning" data-artwork="text">
+          <div class="project-card"><span class="project-card-kind">Gevelisolatie</span><span class="project-card-title">Gevelisolatie bestaande woning</span><span class="project-card-label">Projectinformatie</span></div>
+          <figcaption><h2 class="project-title">Gevelisolatie bestaande woning</h2><span class="project-kind">Gevelisolatie</span><p class="project-description">Werkzaamheden: BIM, nieuwe gevelaanzichten en detail.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Gevelisolatie</span><span class="project-tag">BIM-modellering</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-smederij-schetsontwerp" data-project="smederij-schetsontwerp" data-artwork="text">
+          <div class="project-card"><span class="project-card-kind">Ontwerpstudie</span><span class="project-card-title">Smederij – schetsontwerp</span><span class="project-card-label">Projectinformatie</span></div>
+          <figcaption><h2 class="project-title">Smederij – schetsontwerp</h2><span class="project-kind">Ontwerpstudie</span><p class="project-description">Werkzaamheden: BIM bestaande/nieuwe situatie en drie ontwerpopties.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Ontwerpstudie</span><span class="project-tag">BIM-modellering</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-swadenburgerdam-1826" data-project="swadenburgerdam-1826" data-artwork="text">
+          <div class="project-card"><span class="project-card-kind">Ontwerp / tekenwerk</span><span class="project-card-title">Swadenburgerdam 18–26</span><span class="project-card-label">Projectinformatie</span></div>
+          <figcaption><h2 class="project-title">Swadenburgerdam 18–26</h2><span class="project-kind">Ontwerp / tekenwerk</span><p class="project-description">Werkzaamheden: BIM bestaande/nieuwe situatie, principedetail en materialisatie.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Ontwerp  /  tekenwerk</span><span class="project-tag">BIM-modellering</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-keukenvisualisatie-boekel" data-project="keukenvisualisatie-boekel" data-artwork="render">
+          <div class="project-image"><img src="images/keukenvisualisatie-boekel.webp" alt="Interieurvisualisatie – Keukenvisualisatie Boekel" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Keukenvisualisatie Boekel</h2><span class="project-kind">Interieurvisualisatie</span><p class="project-description">Werkzaamheden: BIM, renders, materialisatie en feedback.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Interieurvisualisatie</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Architectuurvisualisatie</span><span class="project-tag">Boekel</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-zwanenbloemlaan-232" data-project="zwanenbloemlaan-232" data-artwork="line">
+          <div class="project-image"><img src="images/zwanenbloemlaan-232.webp" alt="Woningverbouwing – Zwanenbloemlaan 232, Amsterdam" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Zwanenbloemlaan 232, Amsterdam</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met JVAI</span><p class="project-description">Werkzaamheden: BIM, details, Bouwbesluit en render.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Bouwkundige detaillering</span><span class="project-tag">Architectuurvisualisatie</span><span class="project-tag">Amsterdam</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-ruyschstraat-343a" data-project="ruyschstraat-343a" data-artwork="line">
+          <div class="project-image"><img src="images/ruyschstraat-343a.webp" alt="HSB / dakopbouw – Ruyschstraat 343a, Amsterdam" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Ruyschstraat 343a, Amsterdam</h2><span class="project-kind">HSB / dakopbouw</span><p class="project-description">Werkzaamheden: HSB-elementtekeningen voor uitvoering en prefabricage.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">HSB  /  dakopbouw</span><span class="project-tag">Houtskeletbouw</span><span class="project-tag">Amsterdam</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-derde-oosterparkstraat-198d" data-project="derde-oosterparkstraat-198d" data-artwork="line">
+          <div class="project-image"><img src="images/derde-oosterparkstraat-198d.webp" alt="HSB / dakopbouw – Derde Oosterparkstraat 198 / 198D, Amsterdam" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Derde Oosterparkstraat 198 / 198D, Amsterdam</h2><span class="project-kind">HSB / dakopbouw</span><p class="project-description">Werkzaamheden: HSB-elementtekeningen voor uitvoering en prefabricage.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">HSB  /  dakopbouw</span><span class="project-tag">Houtskeletbouw</span><span class="project-tag">Amsterdam</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-koopvaardersplantsoen-87" data-project="koopvaardersplantsoen-87" data-artwork="render">
+          <div class="project-image"><img src="images/koopvaardersplantsoen-87.webp" alt="Woningverbouwing – Koopvaardersplantsoen 87" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Koopvaardersplantsoen 87</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met JVAI</span><p class="project-description">Werkzaamheden: BIM, details, Bouwbesluit, render en aanpassing opbouw.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Bouwkundige detaillering</span><span class="project-tag">Architectuurvisualisatie</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-kanaalstraat-106-3" data-project="kanaalstraat-106-3" data-artwork="line">
+          <div class="project-image"><img src="images/kanaalstraat-106-3.webp" alt="Dakhuis / dakopbouw – Kanaalstraat 106-3" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Kanaalstraat 106-3</h2><span class="project-kind">Dakhuis / dakopbouw</span><span class="project-affiliation">In samenwerking met JVAI</span><p class="project-description">Werkzaamheden: BIM, details, Bouwbesluit en render.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Dakhuis  /  dakopbouw</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Bouwkundige detaillering</span><span class="project-tag">Architectuurvisualisatie</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-nuovaweg-2" data-project="nuovaweg-2" data-artwork="line">
+          <div class="project-image"><img src="images/nuovaweg-2.webp" alt="HSB / woninguitbreiding – Nuovaweg 2, Alphen aan de Rijn" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Nuovaweg 2, Alphen aan de Rijn</h2><span class="project-kind">HSB / woninguitbreiding</span><p class="project-description">Werkzaamheden: HSB-elementen voor drie aanbouwen, opbouw en twee dakkapellen.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">HSB  /  woninguitbreiding</span><span class="project-tag">Houtskeletbouw</span><span class="project-tag">Alphen aan de Rijn</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-fritz-dietrich-kahlenbergstraat-11b" data-project="fritz-dietrich-kahlenbergstraat-11b" data-artwork="text">
+          <div class="project-card"><span class="project-card-kind">Woningverbouwing / HSB</span><span class="project-card-title">Fritz Dietrich Kahlenbergstraat 11b, Amsterdam</span><span class="project-card-label">Projectinformatie</span></div>
+          <figcaption><h2 class="project-title">Fritz Dietrich Kahlenbergstraat 11b, Amsterdam</h2><span class="project-kind">Woningverbouwing / HSB</span><span class="project-affiliation">In samenwerking met JVAI</span><p class="project-description">Werkzaamheden: BIM, details, Bouwbesluit, render en HSB-elementtekeningen.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing  /  HSB</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Houtskeletbouw</span><span class="project-tag">Bouwkundige detaillering</span><span class="project-tag">Amsterdam</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-rijksstraatweg-hsb" data-project="rijksstraatweg-hsb" data-artwork="text">
+          <div class="project-card"><span class="project-card-kind">HSB / aanbouw en tuinhuis</span><span class="project-card-title">Rijksstraatweg – HSB-aanbouw en tuinhuis, Duivendrecht</span><span class="project-card-label">Projectinformatie</span></div>
+          <figcaption><h2 class="project-title">Rijksstraatweg – HSB-aanbouw en tuinhuis, Duivendrecht</h2><span class="project-kind">HSB / aanbouw en tuinhuis</span><p class="project-description">Werkzaamheden: HSB-elementtekeningen voor uitvoering.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">HSB  /  aanbouw en tuinhuis</span><span class="project-tag">Houtskeletbouw</span><span class="project-tag">Duivendrecht</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-willem-walravenhove-66" data-project="willem-walravenhove-66" data-artwork="line">
+          <div class="project-image"><img src="images/willem-walravenhove-66.webp" alt="HSB / dakopbouw – Willem Walravenhove 66, Nieuwegein" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Willem Walravenhove 66, Nieuwegein</h2><span class="project-kind">HSB / dakopbouw</span><p class="project-description">Werkzaamheden: HSB-elementtekeningen voor uitvoering.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">HSB  /  dakopbouw</span><span class="project-tag">Houtskeletbouw</span><span class="project-tag">Nieuwegein</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-zacharias-jansestraat-32-3" data-project="zacharias-jansestraat-32-3" data-artwork="render">
+          <div class="project-image"><img src="images/zacharias-jansestraat-32-3.webp" alt="Woningverbouwing – Zacharias Jansestraat 32-3" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Zacharias Jansestraat 32-3</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met JVAI</span><p class="project-description">Werkzaamheden: BIM, details, Bouwbesluit en render.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Bouwkundige detaillering</span><span class="project-tag">Architectuurvisualisatie</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-tilanusstraat-45-iv" data-project="tilanusstraat-45-iv" data-artwork="render">
+          <div class="project-image"><img src="images/tilanusstraat-45-iv.webp" alt="Woningverbouwing – Tilanusstraat 45-IV" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Tilanusstraat 45-IV</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met JVAI</span><p class="project-description">Werkzaamheden: BIM, details, Bouwbesluit en render.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Bouwkundige detaillering</span><span class="project-tag">Architectuurvisualisatie</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-hudigstraat-74" data-project="hudigstraat-74" data-artwork="render">
+          <div class="project-image"><img src="images/hudigstraat-74.webp" alt="Woningverbouwing – Hudigstraat 74" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Hudigstraat 74</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met JVAI</span><p class="project-description">Werkzaamheden: BIM, details, Bouwbesluit, render en ontwerpaanpassing.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Bouwkundige detaillering</span><span class="project-tag">Architectuurvisualisatie</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-brouwersgracht-905" data-project="brouwersgracht-905" data-artwork="render">
+          <div class="project-image"><img src="images/brouwersgracht-905.webp" alt="Woningverbouwing – Brouwersgracht 905, Amsterdam" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Brouwersgracht 905, Amsterdam</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met JVAI</span><p class="project-description">Werkzaamheden: Digitaliseren, BIM en ontwerpaanpassingen.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Amsterdam</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-brouwersgracht-847" data-project="brouwersgracht-847" data-artwork="render">
+          <div class="project-image"><img src="images/brouwersgracht-847.webp" alt="Woningverbouwing – Brouwersgracht 847, Amsterdam" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Brouwersgracht 847, Amsterdam</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met JVAI</span><p class="project-description">Werkzaamheden: BIM, details, Bouwbesluit en render.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Bouwkundige detaillering</span><span class="project-tag">Architectuurvisualisatie</span><span class="project-tag">Amsterdam</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-pythagorasstraat-83-1" data-project="pythagorasstraat-83-1" data-artwork="render">
+          <div class="project-image"><img src="images/pythagorasstraat-83-1.webp" alt="Woningverbouwing – Pythagorasstraat 83-1" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Pythagorasstraat 83-1</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met JVAI</span><p class="project-description">Werkzaamheden: BIM, vergunningtekeningen, zichtlijnen, details en materialisatie.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Omgevingsvergunning</span><span class="project-tag">Bouwkundige detaillering</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-blauwpijpstraat-33" data-project="blauwpijpstraat-33" data-artwork="render">
+          <div class="project-image"><img src="images/blauwpijpstraat-33.webp" alt="Dakopbouw – Blauwpijpstraat 33" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Blauwpijpstraat 33</h2><span class="project-kind">Dakopbouw</span><span class="project-affiliation">In samenwerking met JVAI</span><p class="project-description">Werkzaamheden: BIM, details, Bouwbesluit en render.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Dakopbouw</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Bouwkundige detaillering</span><span class="project-tag">Architectuurvisualisatie</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-zwanenbloemlaan-208" data-project="zwanenbloemlaan-208" data-artwork="render">
+          <div class="project-image"><img src="images/zwanenbloemlaan-208.webp" alt="Woningverbouwing – Zwanenbloemlaan 208, Amsterdam" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Zwanenbloemlaan 208, Amsterdam</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met JVAI</span><p class="project-description">Werkzaamheden: BIM, details, Bouwbesluit en render.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Bouwkundige detaillering</span><span class="project-tag">Architectuurvisualisatie</span><span class="project-tag">Amsterdam</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-vrolikstraat-277-4" data-project="vrolikstraat-277-4" data-artwork="render">
+          <div class="project-image"><img src="images/vrolikstraat-277-4.webp" alt="Woningverbouwing – Vrolikstraat 277-4, Amsterdam" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Vrolikstraat 277-4, Amsterdam</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met JVAI</span><p class="project-description">Werkzaamheden: BIM, details, Bouwbesluit en render.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Bouwkundige detaillering</span><span class="project-tag">Architectuurvisualisatie</span><span class="project-tag">Amsterdam</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-govert-flinckstraat-168e" data-project="govert-flinckstraat-168e" data-artwork="text">
+          <div class="project-card"><span class="project-card-kind">Woningverbouwing</span><span class="project-card-title">Govert Flinckstraat 168E, Amsterdam</span><span class="project-card-label">Projectinformatie</span></div>
+          <figcaption><h2 class="project-title">Govert Flinckstraat 168E, Amsterdam</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met JVAI</span><p class="project-description">Werkzaamheden: BIM, details, Bouwbesluit en zichtlijnen.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Bouwkundige detaillering</span><span class="project-tag">Amsterdam</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-jacob-de-graeflaan-127" data-project="jacob-de-graeflaan-127" data-artwork="text">
+          <div class="project-card"><span class="project-card-kind">Woningverbouwing</span><span class="project-card-title">Jacob de Graeflaan 127</span><span class="project-card-label">Projectinformatie</span></div>
+          <figcaption><h2 class="project-title">Jacob de Graeflaan 127</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met JVAI</span><p class="project-description">Werkzaamheden: Digitaliseren, BIM, vergunningtekeningen en Bouwbesluit.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Omgevingsvergunning</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-agricolastraat-152" data-project="agricolastraat-152" data-artwork="line">
+          <div class="project-image"><img src="images/agricolastraat-152.webp" alt="Woningverbouwing – Agricolastraat 152, Wijk bij Duurstede" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Agricolastraat 152, Wijk bij Duurstede</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met BMA Ontwerpers</span><span class="project-photo-credit">Ontwerp © Peter Bergboer · BMA Ontwerpers</span><p class="project-description">Werkzaamheden: BIM bestaande situatie en schetsontwerp.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Schetsontwerp</span><span class="project-tag">Wijk bij Duurstede</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-faunalaan-42" data-project="faunalaan-42" data-artwork="line">
+          <div class="project-image"><img src="images/faunalaan-42.webp" alt="Woningverbouwing – Faunalaan 42, Driebergen" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Faunalaan 42, Driebergen</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met BMA Ontwerpers</span><span class="project-photo-credit">Ontwerp © Peter Bergboer · BMA Ontwerpers</span><p class="project-description">Werkzaamheden: BIM bestaande situatie en schetsontwerp.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Schetsontwerp</span><span class="project-tag">Driebergen</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-bachlaan-45" data-project="bachlaan-45" data-artwork="line">
+          <div class="project-image"><img src="images/bachlaan-45.webp" alt="Woningverbouwing – Bachlaan 45, Veenendaal" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Bachlaan 45, Veenendaal</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met BMA Ontwerpers</span><span class="project-photo-credit">Ontwerp © Peter Bergboer · BMA Ontwerpers</span><p class="project-description">Werkzaamheden: BIM bestaande/nieuwe situatie en render.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Architectuurvisualisatie</span><span class="project-tag">Veenendaal</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-van-der-leelaan-18" data-project="van-der-leelaan-18" data-artwork="render">
+          <div class="project-image"><img src="images/van-der-leelaan-18.webp" alt="Woningverbouwing – Van der Leelaan 18, Doorn" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Van der Leelaan 18, Doorn</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met BMA Ontwerpers</span><span class="project-photo-credit">Ontwerp © Peter Bergboer · BMA Ontwerpers</span><p class="project-description">Werkzaamheden: BIM bestaande/nieuwe situatie en render.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Architectuurvisualisatie</span><span class="project-tag">Doorn</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-doornenburg-5" data-project="doornenburg-5" data-artwork="text">
+          <div class="project-card"><span class="project-card-kind">Woningverbouwing</span><span class="project-card-title">Doornenburg 5, Veenendaal</span><span class="project-card-label">Projectinformatie</span></div>
+          <figcaption><h2 class="project-title">Doornenburg 5, Veenendaal</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met BMA Ontwerpers</span><p class="project-description">Werkzaamheden: BIM nieuwe situatie en render.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Architectuurvisualisatie</span><span class="project-tag">Veenendaal</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-pleinesbos-65" data-project="pleinesbos-65" data-artwork="line">
+          <div class="project-image"><img src="images/pleinesbos-65.webp" alt="Woningverbouwing – Pleinesbos 65, Vleuten" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Pleinesbos 65, Vleuten</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met BMA Ontwerpers</span><span class="project-photo-credit">Ontwerp © Peter Bergboer · BMA Ontwerpers</span><p class="project-description">Werkzaamheden: BIM bestaande/nieuwe situatie en render.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Architectuurvisualisatie</span><span class="project-tag">Vleuten</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-marsjes-18" data-project="marsjes-18" data-artwork="line">
+          <div class="project-image"><img src="images/marsjes-18.webp" alt="BIM / woningontwerp – Marsjes 18, Hellendoorn" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Marsjes 18, Hellendoorn</h2><span class="project-kind">BIM / woningontwerp</span><span class="project-affiliation">In samenwerking met BMA Ontwerpers</span><span class="project-photo-credit">Ontwerp © Peter Bergboer · BMA Ontwerpers</span><p class="project-description">Werkzaamheden: BIM bestaande situatie.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">BIM  /  woningontwerp</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Hellendoorn</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-cuneralaan-34" data-project="cuneralaan-34" data-artwork="render">
+          <div class="project-image"><img src="images/cuneralaan-34.webp" alt="Woningverbouwing – Cuneralaan 34, Rhenen" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Cuneralaan 34, Rhenen</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met BMA Ontwerpers</span><span class="project-photo-credit">Ontwerp © Peter Bergboer · BMA Ontwerpers</span><p class="project-description">Werkzaamheden: Bestemmingsonderzoek, BIM, SO/VO, vergunning, daglicht/ventilatie en renders.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Omgevingsvergunning</span><span class="project-tag">Architectuurvisualisatie</span><span class="project-tag">Rhenen</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-debussystraat-39" data-project="debussystraat-39" data-artwork="line">
+          <div class="project-image"><img src="images/debussystraat-39.webp" alt="Woningverbouwing – Debussystraat 39, Amersfoort" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Debussystraat 39, Amersfoort</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met BMA Ontwerpers</span><span class="project-photo-credit">Ontwerp © Peter Bergboer · BMA Ontwerpers</span><p class="project-description">Werkzaamheden: BIM bestaande situatie, SO en renders.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Architectuurvisualisatie</span><span class="project-tag">Amersfoort</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-hobbemastraat-27" data-project="hobbemastraat-27" data-artwork="line">
+          <div class="project-image"><img src="images/hobbemastraat-27.webp" alt="Woningverbouwing – Hobbemastraat 27, Amersfoort" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Hobbemastraat 27, Amersfoort</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met BMA Ontwerpers</span><span class="project-photo-credit">Ontwerp © Peter Bergboer · BMA Ontwerpers</span><p class="project-description">Werkzaamheden: BIM, SO/VO, mansardekap en renders.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Architectuurvisualisatie</span><span class="project-tag">Amersfoort</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-nudepark" data-project="nudepark" data-artwork="text">
+          <div class="project-card"><span class="project-card-kind">Bouwkundige uitwerking</span><span class="project-card-title">Nudepark, Wageningen</span><span class="project-card-label">Projectinformatie</span></div>
+          <figcaption><h2 class="project-title">Nudepark, Wageningen</h2><span class="project-kind">Bouwkundige uitwerking</span><span class="project-affiliation">In samenwerking met BMA Ontwerpers</span><p class="project-description">Werkzaamheden: Details.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Bouwkundige uitwerking</span><span class="project-tag">Bouwkundige detaillering</span><span class="project-tag">Wageningen</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added project-slide--bureau" id="project-vd-dordrecht" data-project="vd-dordrecht" data-artwork="text">
+          <div class="project-card"><span class="project-card-kind">Transformatie</span><span class="project-card-title">V&amp;D – transformatie, Dordrecht</span><span class="project-card-label">Projectinformatie</span></div>
+          <figcaption><h2 class="project-title">V&amp;D – transformatie, Dordrecht</h2><span class="project-kind">Transformatie</span><span class="project-affiliation">Werkzaam aan dit project namens INBO</span><p class="project-description">Bij INBO werkte Michael aan dit project: Omgevingsvergunning, woningbouw en commerciële functies.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Transformatie</span><span class="project-tag">Omgevingsvergunning</span><span class="project-tag">Dordrecht</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added project-slide--bureau" id="project-heijmans-woonconcept" data-project="heijmans-woonconcept" data-artwork="text">
+          <div class="project-card"><span class="project-card-kind">Woningbouw</span><span class="project-card-title">Heijmans WoonConcept</span><span class="project-card-label">Projectinformatie</span></div>
+          <figcaption><h2 class="project-title">Heijmans WoonConcept</h2><span class="project-kind">Woningbouw</span><span class="project-affiliation">Werkzaam aan dit project namens INBO</span><p class="project-description">Werkzaamheden bij INBO aan meerdere projecten binnen Heijmans WoonConcept: omgevingsvergunning, technisch ontwerp en uitvoeringsgereed ontwerp.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningbouw</span><span class="project-tag">Omgevingsvergunning</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added project-slide--bureau" id="project-mfa-gorssel" data-project="mfa-gorssel" data-artwork="render">
+          <div class="project-image"><img src="images/mfa-gorssel.webp" alt="Tender / onderwijs – Multifunctionele accommodatie Gorssel" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Multifunctionele accommodatie Gorssel</h2><span class="project-kind">Tender / onderwijs</span><span class="project-affiliation">Werkzaam aan dit project namens KRFT</span><span class="project-photo-credit">Projectbeeld KRFT · Bijdrage Michael van Geene</span><p class="project-description">Bij KRFT werkte Michael aan dit project: Onderzoek en ruimtelijke herconfiguratie van programma.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Tender  /  onderwijs</span><span class="project-tag">Gorssel</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added project-slide--bureau" id="project-het-baken-cruquius" data-project="het-baken-cruquius" data-artwork="render">
+          <div class="project-image"><img src="images/het-baken-cruquius.webp" alt="Tender / woningbouw – Het Baken – Cruquius, Amsterdam" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Het Baken – Cruquius, Amsterdam</h2><span class="project-kind">Tender / woningbouw</span><span class="project-affiliation">Werkzaam aan dit project namens KRFT</span><span class="project-photo-credit">Projectbeeld KRFT · Bijdrage Michael van Geene</span><p class="project-description">Bij KRFT werkte Michael aan dit project: Stedenbouw, plattegronden, diagrammen, maquette en visualisaties.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Tender  /  woningbouw</span><span class="project-tag">Amsterdam</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added project-slide--bureau" id="project-wisselspoor-daalcentraal" data-project="wisselspoor-daalcentraal" data-artwork="render">
+          <div class="project-image"><img src="images/wisselspoor-daalcentraal.webp" alt="Tender / stedenbouw – Wisselspoor / DaalCentraal, Utrecht" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Wisselspoor / DaalCentraal, Utrecht</h2><span class="project-kind">Tender / stedenbouw</span><span class="project-affiliation">Werkzaam aan dit project namens KRFT</span><span class="project-photo-credit">Projectbeeld KRFT · Bijdrage Michael van Geene</span><p class="project-description">Bij KRFT werkte Michael aan dit project: Gevelontwerp, stedelijke functies, diagrammen en axonometrieën.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Tender  /  stedenbouw</span><span class="project-tag">Utrecht</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added project-slide--bureau" id="project-pesthuis-leiden" data-project="pesthuis-leiden" data-artwork="render">
+          <div class="project-image"><img src="images/pesthuis-leiden.webp" alt="Transformatie / paviljoen – Pesthuis, Leiden" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Pesthuis, Leiden</h2><span class="project-kind">Transformatie / paviljoen</span><span class="project-affiliation">Werkzaam aan dit project namens KRFT</span><span class="project-photo-credit">Projectbeeld KRFT · Bijdrage Michael van Geene</span><p class="project-description">Bij KRFT werkte Michael aan dit project: VO, onderzoek, programma, massastudies en ruimtelijke varianten.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Transformatie  /  paviljoen</span><span class="project-tag">Leiden</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added" id="project-tiny-house-eindhoven" data-project="tiny-house-eindhoven" data-artwork="render">
+          <div class="project-image"><img src="images/tiny-house-eindhoven.webp" alt="Compact wonen – Tiny house, Eindhoven" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">Tiny house, Eindhoven</h2><span class="project-kind">Compact wonen</span><p class="project-description">Technische uitwerking van een tiny house met hergebruikte containers: plattegronden, gevels, constructieve aansluitingen en een Bouwbesluittoets.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Tiny house</span><span class="project-tag">Hergebruik</span><span class="project-tag">Technische uitwerking</span><span class="project-tag">Bouwbesluit</span><span class="project-tag">Eindhoven</span></div></figcaption>
+        </figure>
+        <figure class="project-slide project-slide--added project-slide--bureau" id="project-kc-zijdelwaard" data-project="kc-zijdelwaard" data-artwork="render">
+          <div class="project-image"><img src="images/kc-zijdelwaard.webp" alt="Kindcentrum – KC Zijdelwaard, Uithoorn" width="1600" height="1000" loading="lazy" decoding="async"></div>
+          <figcaption><h2 class="project-title">KC Zijdelwaard, Uithoorn</h2><span class="project-kind">Kindcentrum</span><span class="project-affiliation">Werkzaam aan dit project namens KRFT</span><span class="project-photo-credit">Projectbeeld KRFT · Bijdrage Michael van Geene</span><p class="project-description">Kindcentrum met onderwijs, kinderopvang en jeugdvoorzieningen. Michael werkte bij KRFT aan ontwerp, geveluitwerking en BIM-coördinatie.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Onderwijsgebouw</span><span class="project-tag">Gevelontwerp</span><span class="project-tag">BIM-coördinatie</span><span class="project-tag">Uithoorn</span></div></figcaption>
+        </figure>
         <figure class="project-slide" id="project-tilburg" data-project="tilburg" data-artwork="render">
           <div class="project-image"><img src="images/tilburg.webp" alt="Interieurvisualisatie in Tilburg met houten keukenkasten en een donkere werkbank" width="1400" height="788" decoding="async"></div>
           <figcaption><h2 class="project-title">Tilburg</h2><span class="project-kind">Tilburg · Interieurvisualisatie</span><p class="project-description">Interieurvisualisatie in Tilburg: een studie van materiaal, licht en sfeer rond een keuken met houten kasten en een donkere werkbank.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Interieurvisualisatie</span><span class="project-tag">Keuken</span><span class="project-tag">Materialisatie</span><span class="project-tag">Tilburg</span></div></figcaption>
@@ -1054,7 +2474,7 @@
       </div>
       <div class="gallery-controls">
         <button type="button" id="previous-project" aria-label="Vorig project">←</button>
-        <span id="project-counter" aria-live="polite" aria-atomic="true">02 / 29</span>
+        <span id="project-counter" aria-live="polite" aria-atomic="true">02 / 83</span>
         <button type="button" id="next-project" aria-label="Volgend project">→</button>
       </div>
     </section>

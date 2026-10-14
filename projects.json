@@ -21,7 +21,8 @@
       "Publiek gebouw",
       "KRFT",
       "Hoorn"
-    ]
+    ],
+    "inventoryId": "077"
   },
   {
     "slug": "wonderwoods-utrecht",
@@ -45,7 +46,8 @@
       "BIM-modellering",
       "Technische uitwerking",
       "Utrecht"
-    ]
+    ],
+    "inventoryId": "073"
   },
   {
     "slug": "mfc-de-bloesem-zetten",
@@ -71,7 +73,8 @@
       "Technisch ontwerp",
       "BIM-coördinatie",
       "Zetten"
-    ]
+    ],
+    "inventoryId": "078"
   },
   {
     "slug": "rottanova-rotterdam",
@@ -97,7 +100,8 @@
       "BIM-modellering",
       "Technische uitwerking",
       "Rotterdam"
-    ]
+    ],
+    "inventoryId": "072"
   },
   {
     "slug": "havenkade-nijmegen",
@@ -148,7 +152,8 @@
       "Circulaire woonbuurt",
       "Bouwkundige uitwerking",
       "Utrecht"
-    ]
+    ],
+    "inventoryId": "075"
   },
   {
     "slug": "rozengracht",
@@ -165,7 +170,8 @@
       "Transformatie",
       "Gevelrestauratie",
       "Amsterdam"
-    ]
+    ],
+    "inventoryId": "001"
   },
   {
     "slug": "gerard-doustraat",
@@ -180,7 +186,8 @@
       "Gevelontwerp",
       "Architectuurvisualisatie",
       "Amsterdam"
-    ]
+    ],
+    "inventoryId": "028"
   },
   {
     "slug": "wilhelminaplantsoen-69",
@@ -196,7 +203,8 @@
       "Dakopbouw",
       "Bouwkundige tekeningen",
       "Detaillering"
-    ]
+    ],
+    "inventoryId": "004"
   },
   {
     "slug": "bert-haanstrakade-428",
@@ -212,7 +220,8 @@
       "Balkon",
       "Bouwkundige uitwerking",
       "Amsterdam"
-    ]
+    ],
+    "inventoryId": "003"
   },
   {
     "slug": "westerdokdijk-567",
@@ -228,7 +237,8 @@
       "Gevelaanzichten",
       "Bouwkundige tekeningen",
       "Amsterdam"
-    ]
+    ],
+    "inventoryId": "010"
   },
   {
     "slug": "wilhelminastraat-26",
@@ -243,7 +253,8 @@
       "Woninguitbreiding",
       "Bouwkundige tekeningen",
       "Bestaande bouw"
-    ]
+    ],
+    "inventoryId": "006"
   },
   {
     "slug": "egelskopstraat-1",
@@ -258,7 +269,8 @@
       "Bouwkundige detaillering",
       "Balustrade",
       "Technische uitwerking"
-    ]
+    ],
+    "inventoryId": "007"
   },
   {
     "slug": "zwanenbloemlaan-204-206",
@@ -274,7 +286,8 @@
       "Bouwkundige tekeningen",
       "Bestaande bouw",
       "Amsterdam"
-    ]
+    ],
+    "inventoryId": "008"
   },
   {
     "slug": "rochussenstraat",
@@ -289,7 +302,8 @@
       "Bouwkundige uitwerking",
       "Technische tekeningen",
       "Bestaande bouw"
-    ]
+    ],
+    "inventoryId": "011"
   },
   {
     "slug": "meentweg-43",
@@ -305,7 +319,8 @@
       "Verduurzaming",
       "Spouwisolatie",
       "Bouwkundige detaillering"
-    ]
+    ],
+    "inventoryId": "009"
   },
   {
     "slug": "zwanenbloemlaan-202",
@@ -321,7 +336,8 @@
       "Bouwkundige tekeningen",
       "Architectuurvisualisatie",
       "Amsterdam"
-    ]
+    ],
+    "inventoryId": "012"
   },
   {
     "slug": "paltzerweg-64",
@@ -337,7 +353,8 @@
       "Woninguitbreiding",
       "Bouwkundige tekeningen",
       "Architectuurvisualisatie"
-    ]
+    ],
+    "inventoryId": "016"
   },
   {
     "slug": "hudigstraat-70",
@@ -354,7 +371,8 @@
       "Omgevingsvergunning",
       "Architectuurvisualisatie",
       "Amsterdam"
-    ]
+    ],
+    "inventoryId": "023"
   },
   {
     "slug": "hogeweg-28-3",
@@ -371,7 +389,8 @@
       "Omgevingsvergunning",
       "Bouwkundige detaillering",
       "Amsterdam"
-    ]
+    ],
+    "inventoryId": "038"
   },
   {
     "slug": "smedemanplein-15",
@@ -388,7 +407,8 @@
       "Vergunningstekeningen",
       "Gevelvisualisatie",
       "Amstelveen"
-    ]
+    ],
+    "inventoryId": "041"
   },
   {
     "slug": "lisdoddelaan-94b",
@@ -405,7 +425,8 @@
       "Bouwkundige tekeningen",
       "Architectuurvisualisatie",
       "Amsterdam"
-    ]
+    ],
+    "inventoryId": "034"
   },
   {
     "slug": "jj-allanstraat-172a-westzaan",
@@ -422,7 +443,8 @@
       "Bouwkundige uitwerking",
       "Gevelvisualisatie",
       "Westzaan"
-    ]
+    ],
+    "inventoryId": "040"
   },
   {
     "slug": "vegterstraat-6-8",
@@ -439,7 +461,8 @@
       "Dakterras",
       "Bouwkundige tekeningen",
       "Amsterdam"
-    ]
+    ],
+    "inventoryId": "036"
   },
   {
     "slug": "rijksstraatweg-219",
@@ -456,7 +479,8 @@
       "Definitief ontwerp",
       "Bouwkundige detaillering",
       "Duivendrecht"
-    ]
+    ],
+    "inventoryId": "037"
   },
   {
     "slug": "midwoldastraat-11",
@@ -472,7 +496,8 @@
       "Omgevingsvergunning",
       "Bouwkundige detaillering",
       "Arnhem"
-    ]
+    ],
+    "inventoryId": "029"
   },
   {
     "slug": "paradijsweg-104",
@@ -488,7 +513,8 @@
       "Omgevingsvergunning",
       "Bouwkundige detaillering",
       "Ter Aar"
-    ]
+    ],
+    "inventoryId": "035"
   },
   {
     "slug": "gj-wiefferingdreef-9",
@@ -505,7 +531,956 @@
       "Bouwkundige tekeningen",
       "Bouwkundige detaillering",
       "Weesp"
+    ],
+    "inventoryId": "017"
+  },
+  {
+    "slug": "amstelstraat-35",
+    "title": "New Times, Amstelstraat 35, Amsterdam",
+    "kind": "Horeca/interieur",
+    "batch": "remaining",
+    "description": "Werkzaamheden: Ontwerp en technische uitwerking horeca.",
+    "tags": [
+      "Horeca / interieur",
+      "Amsterdam"
+    ],
+    "inventoryId": "002",
+    "image": "images/amstelstraat-35.webp",
+    "artwork": "render",
+    "background": "full-image"
+  },
+  {
+    "slug": "mechelenstraat-10",
+    "title": "Mechelenstraat 10, Waalwijk",
+    "kind": "Interieurvisualisatie",
+    "batch": "remaining",
+    "description": "Werkzaamheden: 3D-modellen meubels en interieur, renders, feedback.",
+    "tags": [
+      "Interieurvisualisatie",
+      "Architectuurvisualisatie",
+      "Waalwijk"
+    ],
+    "inventoryId": "005",
+    "image": "images/mechelenstraat-10.webp",
+    "artwork": "render",
+    "background": "full-image"
+  },
+  {
+    "slug": "zandpad-133",
+    "title": "Zandpad 133, Breukelen",
+    "kind": "Ontwerpstudie",
+    "batch": "remaining",
+    "description": "Werkzaamheden: Inventarisatie, drie schetsontwerp- en interieurvarianten, tekeningen en render.",
+    "tags": [
+      "Ontwerpstudie",
+      "Architectuurvisualisatie",
+      "Schetsontwerp",
+      "Breukelen"
+    ],
+    "inventoryId": "013",
+    "image": null,
+    "artwork": "text",
+    "background": "project-information"
+  },
+  {
+    "slug": "grote-lijster-16",
+    "title": "Grote Lijster 16, Muiden",
+    "kind": "Fietsberging",
+    "batch": "remaining",
+    "description": "Werkzaamheden: Situatie, aanzichten, details, fotomontage en doorsnede.",
+    "tags": [
+      "Fietsberging",
+      "Bouwkundige detaillering",
+      "Muiden"
+    ],
+    "inventoryId": "014",
+    "image": null,
+    "artwork": "text",
+    "background": "project-information"
+  },
+  {
+    "slug": "lijnbaan-63",
+    "title": "Lijnbaan 63, Rotterdam",
+    "kind": "Omgevingsvergunning",
+    "batch": "remaining",
+    "description": "Werkzaamheden: Inventarisatie, gevelaanzicht, details, fotomontage en indiening.",
+    "tags": [
+      "Omgevingsvergunning",
+      "Bouwkundige detaillering",
+      "Rotterdam"
+    ],
+    "inventoryId": "015",
+    "image": null,
+    "artwork": "text",
+    "background": "project-information"
+  },
+  {
+    "slug": "zwanenbloemlaan-212",
+    "title": "Zwanenbloemlaan 212, Amsterdam",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM, vergunningtekeningen en render.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Omgevingsvergunning",
+      "Architectuurvisualisatie",
+      "Amsterdam"
+    ],
+    "inventoryId": "018",
+    "collaboration": "JVAI",
+    "image": "images/zwanenbloemlaan-212.webp",
+    "artwork": "render",
+    "background": "full-image"
+  },
+  {
+    "slug": "edward-masseystraat-12",
+    "title": "Edward Masseystraat 12",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM, vergunningtekeningen en render.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Omgevingsvergunning",
+      "Architectuurvisualisatie"
+    ],
+    "inventoryId": "021",
+    "collaboration": "JVAI",
+    "image": null,
+    "artwork": "text",
+    "background": "project-information"
+  },
+  {
+    "slug": "delfgaauwstraat-51-a-b-c",
+    "title": "Delfgaauwstraat 51 A/B/C",
+    "kind": "Woning / verkooptekeningen",
+    "batch": "remaining",
+    "description": "Werkzaamheden: Tekeningen, modellen en Funda-plattegronden.",
+    "tags": [
+      "Woning  /  verkooptekeningen"
+    ],
+    "inventoryId": "022",
+    "image": null,
+    "artwork": "text",
+    "background": "project-information"
+  },
+  {
+    "slug": "vrolikstraat-401d",
+    "title": "Vrolikstraat 401D, Amsterdam",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM, vergunningtekeningen, render en aanpassingen zonnepanelen.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Omgevingsvergunning",
+      "Architectuurvisualisatie",
+      "Amsterdam"
+    ],
+    "inventoryId": "024",
+    "collaboration": "JVAI",
+    "image": "images/vrolikstraat-401d.webp",
+    "artwork": "render",
+    "background": "full-image"
+  },
+  {
+    "slug": "moerkerkestraat-43-a01-b01-b02",
+    "title": "Moerkerkestraat 43 A01/B01/B02",
+    "kind": "Splitsing / inmeten",
+    "batch": "remaining",
+    "description": "Werkzaamheden: Inmeten, BIM, splitsingstekening en BVO/GO.",
+    "tags": [
+      "Splitsing  /  inmeten",
+      "BIM-modellering",
+      "Splitsingstekening",
+      "Inmeten"
+    ],
+    "inventoryId": "025",
+    "image": null,
+    "artwork": "text",
+    "background": "project-information"
+  },
+  {
+    "slug": "moerkerkestraat-45-a01-b01-b02",
+    "title": "Moerkerkestraat 45 A01/B01/B02",
+    "kind": "Splitsing / inmeten",
+    "batch": "remaining",
+    "description": "Werkzaamheden: Inmeten, BIM, splitsingstekening en BVO/GO.",
+    "tags": [
+      "Splitsing  /  inmeten",
+      "BIM-modellering",
+      "Splitsingstekening",
+      "Inmeten"
+    ],
+    "inventoryId": "026",
+    "image": null,
+    "artwork": "text",
+    "background": "project-information"
+  },
+  {
+    "slug": "gevelisolatie-bestaande-woning",
+    "title": "Gevelisolatie bestaande woning",
+    "kind": "Gevelisolatie",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM, nieuwe gevelaanzichten en detail.",
+    "tags": [
+      "Gevelisolatie",
+      "BIM-modellering"
+    ],
+    "inventoryId": "030",
+    "image": null,
+    "artwork": "text",
+    "background": "project-information"
+  },
+  {
+    "slug": "smederij-schetsontwerp",
+    "title": "Smederij – schetsontwerp",
+    "kind": "Ontwerpstudie",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM bestaande/nieuwe situatie en drie ontwerpopties.",
+    "tags": [
+      "Ontwerpstudie",
+      "BIM-modellering"
+    ],
+    "inventoryId": "031",
+    "image": null,
+    "artwork": "text",
+    "background": "project-information"
+  },
+  {
+    "slug": "swadenburgerdam-1826",
+    "title": "Swadenburgerdam 18–26",
+    "kind": "Ontwerp / tekenwerk",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM bestaande/nieuwe situatie, principedetail en materialisatie.",
+    "tags": [
+      "Ontwerp  /  tekenwerk",
+      "BIM-modellering"
+    ],
+    "inventoryId": "032",
+    "image": null,
+    "artwork": "text",
+    "background": "project-information"
+  },
+  {
+    "slug": "keukenvisualisatie-boekel",
+    "title": "Keukenvisualisatie Boekel",
+    "kind": "Interieurvisualisatie",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM, renders, materialisatie en feedback.",
+    "tags": [
+      "Interieurvisualisatie",
+      "BIM-modellering",
+      "Architectuurvisualisatie",
+      "Boekel"
+    ],
+    "inventoryId": "033",
+    "image": "images/keukenvisualisatie-boekel.webp",
+    "artwork": "render",
+    "background": "full-image"
+  },
+  {
+    "slug": "zwanenbloemlaan-232",
+    "title": "Zwanenbloemlaan 232, Amsterdam",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM, details, Bouwbesluit en render.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Bouwkundige detaillering",
+      "Architectuurvisualisatie",
+      "Amsterdam"
+    ],
+    "inventoryId": "039",
+    "collaboration": "JVAI",
+    "image": "images/zwanenbloemlaan-232.webp",
+    "artwork": "line",
+    "background": "transparent-filter"
+  },
+  {
+    "slug": "ruyschstraat-343a",
+    "title": "Ruyschstraat 343a, Amsterdam",
+    "kind": "HSB / dakopbouw",
+    "batch": "remaining",
+    "description": "Werkzaamheden: HSB-elementtekeningen voor uitvoering en prefabricage.",
+    "tags": [
+      "HSB  /  dakopbouw",
+      "Houtskeletbouw",
+      "Amsterdam"
+    ],
+    "inventoryId": "042",
+    "image": "images/ruyschstraat-343a.webp",
+    "artwork": "line",
+    "background": "transparent-filter"
+  },
+  {
+    "slug": "derde-oosterparkstraat-198d",
+    "title": "Derde Oosterparkstraat 198 / 198D, Amsterdam",
+    "kind": "HSB / dakopbouw",
+    "batch": "remaining",
+    "description": "Werkzaamheden: HSB-elementtekeningen voor uitvoering en prefabricage.",
+    "tags": [
+      "HSB  /  dakopbouw",
+      "Houtskeletbouw",
+      "Amsterdam"
+    ],
+    "inventoryId": "043",
+    "image": "images/derde-oosterparkstraat-198d.webp",
+    "artwork": "line",
+    "background": "transparent-filter"
+  },
+  {
+    "slug": "koopvaardersplantsoen-87",
+    "title": "Koopvaardersplantsoen 87",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM, details, Bouwbesluit, render en aanpassing opbouw.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Bouwkundige detaillering",
+      "Architectuurvisualisatie"
+    ],
+    "inventoryId": "044",
+    "collaboration": "JVAI",
+    "image": "images/koopvaardersplantsoen-87.webp",
+    "artwork": "render",
+    "background": "full-image"
+  },
+  {
+    "slug": "kanaalstraat-106-3",
+    "title": "Kanaalstraat 106-3",
+    "kind": "Dakhuis / dakopbouw",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM, details, Bouwbesluit en render.",
+    "tags": [
+      "Dakhuis  /  dakopbouw",
+      "BIM-modellering",
+      "Bouwkundige detaillering",
+      "Architectuurvisualisatie"
+    ],
+    "inventoryId": "045",
+    "collaboration": "JVAI",
+    "image": "images/kanaalstraat-106-3.webp",
+    "artwork": "line",
+    "background": "transparent-filter"
+  },
+  {
+    "slug": "nuovaweg-2",
+    "title": "Nuovaweg 2, Alphen aan de Rijn",
+    "kind": "HSB / woninguitbreiding",
+    "batch": "remaining",
+    "description": "Werkzaamheden: HSB-elementen voor drie aanbouwen, opbouw en twee dakkapellen.",
+    "tags": [
+      "HSB  /  woninguitbreiding",
+      "Houtskeletbouw",
+      "Alphen aan de Rijn"
+    ],
+    "inventoryId": "046",
+    "image": "images/nuovaweg-2.webp",
+    "artwork": "line",
+    "background": "transparent-filter"
+  },
+  {
+    "slug": "fritz-dietrich-kahlenbergstraat-11b",
+    "title": "Fritz Dietrich Kahlenbergstraat 11b, Amsterdam",
+    "kind": "Woningverbouwing / HSB",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM, details, Bouwbesluit, render en HSB-elementtekeningen.",
+    "tags": [
+      "Woningverbouwing  /  HSB",
+      "BIM-modellering",
+      "Houtskeletbouw",
+      "Bouwkundige detaillering",
+      "Amsterdam"
+    ],
+    "inventoryId": "047",
+    "collaboration": "JVAI",
+    "image": null,
+    "artwork": "text",
+    "background": "project-information"
+  },
+  {
+    "slug": "rijksstraatweg-hsb",
+    "title": "Rijksstraatweg – HSB-aanbouw en tuinhuis, Duivendrecht",
+    "kind": "HSB / aanbouw en tuinhuis",
+    "batch": "remaining",
+    "description": "Werkzaamheden: HSB-elementtekeningen voor uitvoering.",
+    "tags": [
+      "HSB  /  aanbouw en tuinhuis",
+      "Houtskeletbouw",
+      "Duivendrecht"
+    ],
+    "inventoryId": "048",
+    "image": null,
+    "artwork": "text",
+    "background": "project-information"
+  },
+  {
+    "slug": "willem-walravenhove-66",
+    "title": "Willem Walravenhove 66, Nieuwegein",
+    "kind": "HSB / dakopbouw",
+    "batch": "remaining",
+    "description": "Werkzaamheden: HSB-elementtekeningen voor uitvoering.",
+    "tags": [
+      "HSB  /  dakopbouw",
+      "Houtskeletbouw",
+      "Nieuwegein"
+    ],
+    "inventoryId": "049",
+    "image": "images/willem-walravenhove-66.webp",
+    "artwork": "line",
+    "background": "transparent-filter"
+  },
+  {
+    "slug": "zacharias-jansestraat-32-3",
+    "title": "Zacharias Jansestraat 32-3",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM, details, Bouwbesluit en render.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Bouwkundige detaillering",
+      "Architectuurvisualisatie"
+    ],
+    "inventoryId": "050",
+    "collaboration": "JVAI",
+    "image": "images/zacharias-jansestraat-32-3.webp",
+    "artwork": "render",
+    "background": "full-image"
+  },
+  {
+    "slug": "tilanusstraat-45-iv",
+    "title": "Tilanusstraat 45-IV",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM, details, Bouwbesluit en render.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Bouwkundige detaillering",
+      "Architectuurvisualisatie"
+    ],
+    "inventoryId": "051",
+    "collaboration": "JVAI",
+    "image": "images/tilanusstraat-45-iv.webp",
+    "artwork": "render",
+    "background": "full-image"
+  },
+  {
+    "slug": "hudigstraat-74",
+    "title": "Hudigstraat 74",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM, details, Bouwbesluit, render en ontwerpaanpassing.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Bouwkundige detaillering",
+      "Architectuurvisualisatie"
+    ],
+    "inventoryId": "052",
+    "collaboration": "JVAI",
+    "image": "images/hudigstraat-74.webp",
+    "artwork": "render",
+    "background": "full-image"
+  },
+  {
+    "slug": "brouwersgracht-905",
+    "title": "Brouwersgracht 905, Amsterdam",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: Digitaliseren, BIM en ontwerpaanpassingen.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Amsterdam"
+    ],
+    "inventoryId": "053",
+    "collaboration": "JVAI",
+    "image": "images/brouwersgracht-905.webp",
+    "artwork": "render",
+    "background": "full-image"
+  },
+  {
+    "slug": "brouwersgracht-847",
+    "title": "Brouwersgracht 847, Amsterdam",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM, details, Bouwbesluit en render.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Bouwkundige detaillering",
+      "Architectuurvisualisatie",
+      "Amsterdam"
+    ],
+    "inventoryId": "054",
+    "collaboration": "JVAI",
+    "image": "images/brouwersgracht-847.webp",
+    "artwork": "render",
+    "background": "full-image"
+  },
+  {
+    "slug": "pythagorasstraat-83-1",
+    "title": "Pythagorasstraat 83-1",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM, vergunningtekeningen, zichtlijnen, details en materialisatie.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Omgevingsvergunning",
+      "Bouwkundige detaillering"
+    ],
+    "inventoryId": "055",
+    "collaboration": "JVAI",
+    "image": "images/pythagorasstraat-83-1.webp",
+    "artwork": "render",
+    "background": "full-image"
+  },
+  {
+    "slug": "blauwpijpstraat-33",
+    "title": "Blauwpijpstraat 33",
+    "kind": "Dakopbouw",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM, details, Bouwbesluit en render.",
+    "tags": [
+      "Dakopbouw",
+      "BIM-modellering",
+      "Bouwkundige detaillering",
+      "Architectuurvisualisatie"
+    ],
+    "inventoryId": "056",
+    "collaboration": "JVAI",
+    "image": "images/blauwpijpstraat-33.webp",
+    "artwork": "render",
+    "background": "full-image"
+  },
+  {
+    "slug": "zwanenbloemlaan-208",
+    "title": "Zwanenbloemlaan 208, Amsterdam",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM, details, Bouwbesluit en render.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Bouwkundige detaillering",
+      "Architectuurvisualisatie",
+      "Amsterdam"
+    ],
+    "inventoryId": "057",
+    "collaboration": "JVAI",
+    "image": "images/zwanenbloemlaan-208.webp",
+    "artwork": "render",
+    "background": "full-image"
+  },
+  {
+    "slug": "vrolikstraat-277-4",
+    "title": "Vrolikstraat 277-4, Amsterdam",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM, details, Bouwbesluit en render.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Bouwkundige detaillering",
+      "Architectuurvisualisatie",
+      "Amsterdam"
+    ],
+    "inventoryId": "058",
+    "collaboration": "JVAI",
+    "image": "images/vrolikstraat-277-4.webp",
+    "artwork": "render",
+    "background": "full-image"
+  },
+  {
+    "slug": "govert-flinckstraat-168e",
+    "title": "Govert Flinckstraat 168E, Amsterdam",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM, details, Bouwbesluit en zichtlijnen.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Bouwkundige detaillering",
+      "Amsterdam"
+    ],
+    "inventoryId": "059",
+    "collaboration": "JVAI",
+    "image": null,
+    "artwork": "text",
+    "background": "project-information"
+  },
+  {
+    "slug": "jacob-de-graeflaan-127",
+    "title": "Jacob de Graeflaan 127",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: Digitaliseren, BIM, vergunningtekeningen en Bouwbesluit.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Omgevingsvergunning"
+    ],
+    "inventoryId": "060",
+    "collaboration": "JVAI",
+    "image": null,
+    "artwork": "text",
+    "background": "project-information"
+  },
+  {
+    "slug": "agricolastraat-152",
+    "title": "Agricolastraat 152, Wijk bij Duurstede",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM bestaande situatie en schetsontwerp.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Schetsontwerp",
+      "Wijk bij Duurstede"
+    ],
+    "inventoryId": "061",
+    "collaboration": "BMA Ontwerpers",
+    "image": "images/agricolastraat-152.webp",
+    "artwork": "line",
+    "background": "transparent-filter",
+    "imageCredit": "Ontwerp © Peter Bergboer · BMA Ontwerpers"
+  },
+  {
+    "slug": "faunalaan-42",
+    "title": "Faunalaan 42, Driebergen",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM bestaande situatie en schetsontwerp.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Schetsontwerp",
+      "Driebergen"
+    ],
+    "inventoryId": "062",
+    "collaboration": "BMA Ontwerpers",
+    "image": "images/faunalaan-42.webp",
+    "artwork": "line",
+    "background": "transparent-filter",
+    "imageCredit": "Ontwerp © Peter Bergboer · BMA Ontwerpers"
+  },
+  {
+    "slug": "bachlaan-45",
+    "title": "Bachlaan 45, Veenendaal",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM bestaande/nieuwe situatie en render.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Architectuurvisualisatie",
+      "Veenendaal"
+    ],
+    "inventoryId": "063",
+    "collaboration": "BMA Ontwerpers",
+    "image": "images/bachlaan-45.webp",
+    "artwork": "line",
+    "background": "transparent-filter",
+    "imageCredit": "Ontwerp © Peter Bergboer · BMA Ontwerpers"
+  },
+  {
+    "slug": "van-der-leelaan-18",
+    "title": "Van der Leelaan 18, Doorn",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM bestaande/nieuwe situatie en render.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Architectuurvisualisatie",
+      "Doorn"
+    ],
+    "inventoryId": "064",
+    "collaboration": "BMA Ontwerpers",
+    "image": "images/van-der-leelaan-18.webp",
+    "artwork": "render",
+    "background": "full-image",
+    "imageCredit": "Ontwerp © Peter Bergboer · BMA Ontwerpers"
+  },
+  {
+    "slug": "doornenburg-5",
+    "title": "Doornenburg 5, Veenendaal",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM nieuwe situatie en render.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Architectuurvisualisatie",
+      "Veenendaal"
+    ],
+    "inventoryId": "065",
+    "collaboration": "BMA Ontwerpers",
+    "image": null,
+    "artwork": "text",
+    "background": "project-information"
+  },
+  {
+    "slug": "pleinesbos-65",
+    "title": "Pleinesbos 65, Vleuten",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM bestaande/nieuwe situatie en render.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Architectuurvisualisatie",
+      "Vleuten"
+    ],
+    "inventoryId": "066",
+    "collaboration": "BMA Ontwerpers",
+    "image": "images/pleinesbos-65.webp",
+    "artwork": "line",
+    "background": "transparent-filter",
+    "imageCredit": "Ontwerp © Peter Bergboer · BMA Ontwerpers"
+  },
+  {
+    "slug": "marsjes-18",
+    "title": "Marsjes 18, Hellendoorn",
+    "kind": "BIM / woningontwerp",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM bestaande situatie.",
+    "tags": [
+      "BIM  /  woningontwerp",
+      "BIM-modellering",
+      "Hellendoorn"
+    ],
+    "inventoryId": "067",
+    "collaboration": "BMA Ontwerpers",
+    "image": "images/marsjes-18.webp",
+    "artwork": "line",
+    "background": "transparent-filter",
+    "imageCredit": "Ontwerp © Peter Bergboer · BMA Ontwerpers"
+  },
+  {
+    "slug": "cuneralaan-34",
+    "title": "Cuneralaan 34, Rhenen",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: Bestemmingsonderzoek, BIM, SO/VO, vergunning, daglicht/ventilatie en renders.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Omgevingsvergunning",
+      "Architectuurvisualisatie",
+      "Rhenen"
+    ],
+    "inventoryId": "068",
+    "collaboration": "BMA Ontwerpers",
+    "image": "images/cuneralaan-34.webp",
+    "artwork": "render",
+    "background": "full-image",
+    "imageCredit": "Ontwerp © Peter Bergboer · BMA Ontwerpers"
+  },
+  {
+    "slug": "debussystraat-39",
+    "title": "Debussystraat 39, Amersfoort",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM bestaande situatie, SO en renders.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Architectuurvisualisatie",
+      "Amersfoort"
+    ],
+    "inventoryId": "069",
+    "collaboration": "BMA Ontwerpers",
+    "image": "images/debussystraat-39.webp",
+    "artwork": "line",
+    "background": "transparent-filter",
+    "imageCredit": "Ontwerp © Peter Bergboer · BMA Ontwerpers"
+  },
+  {
+    "slug": "hobbemastraat-27",
+    "title": "Hobbemastraat 27, Amersfoort",
+    "kind": "Woningverbouwing",
+    "batch": "remaining",
+    "description": "Werkzaamheden: BIM, SO/VO, mansardekap en renders.",
+    "tags": [
+      "Woningverbouwing",
+      "BIM-modellering",
+      "Architectuurvisualisatie",
+      "Amersfoort"
+    ],
+    "inventoryId": "070",
+    "collaboration": "BMA Ontwerpers",
+    "image": "images/hobbemastraat-27.webp",
+    "artwork": "line",
+    "background": "transparent-filter",
+    "imageCredit": "Ontwerp © Peter Bergboer · BMA Ontwerpers"
+  },
+  {
+    "slug": "nudepark",
+    "title": "Nudepark, Wageningen",
+    "kind": "Bouwkundige uitwerking",
+    "batch": "remaining",
+    "description": "Werkzaamheden: Details.",
+    "tags": [
+      "Bouwkundige uitwerking",
+      "Bouwkundige detaillering",
+      "Wageningen"
+    ],
+    "inventoryId": "071",
+    "collaboration": "BMA Ontwerpers",
+    "image": null,
+    "artwork": "text",
+    "background": "project-information"
+  },
+  {
+    "slug": "vd-dordrecht",
+    "title": "V&D – transformatie, Dordrecht",
+    "kind": "Transformatie",
+    "batch": "remaining",
+    "description": "Bij INBO werkte Michael aan dit project: Omgevingsvergunning, woningbouw en commerciële functies.",
+    "tags": [
+      "Transformatie",
+      "Omgevingsvergunning",
+      "Dordrecht"
+    ],
+    "inventoryId": "074",
+    "employer": "INBO",
+    "contribution": "Omgevingsvergunning, woningbouw en commerciële functies",
+    "image": null,
+    "artwork": "text",
+    "background": "project-information"
+  },
+  {
+    "slug": "heijmans-woonconcept",
+    "title": "Heijmans WoonConcept",
+    "kind": "Woningbouw",
+    "batch": "remaining",
+    "description": "Werkzaamheden bij INBO aan meerdere projecten binnen Heijmans WoonConcept: omgevingsvergunning, technisch ontwerp en uitvoeringsgereed ontwerp.",
+    "tags": [
+      "Woningbouw",
+      "Omgevingsvergunning"
+    ],
+    "inventoryId": "076",
+    "employer": "INBO",
+    "contribution": "Omgevingsvergunning, TO en UO; individuele locaties ontbreken",
+    "image": null,
+    "artwork": "text",
+    "background": "project-information"
+  },
+  {
+    "slug": "mfa-gorssel",
+    "title": "Multifunctionele accommodatie Gorssel",
+    "kind": "Tender / onderwijs",
+    "batch": "remaining",
+    "description": "Bij KRFT werkte Michael aan dit project: Onderzoek en ruimtelijke herconfiguratie van programma.",
+    "tags": [
+      "Tender  /  onderwijs",
+      "Gorssel"
+    ],
+    "inventoryId": "079",
+    "employer": "KRFT",
+    "contribution": "Onderzoek en ruimtelijke herconfiguratie van programma",
+    "image": "images/mfa-gorssel.webp",
+    "artwork": "render",
+    "background": "full-image",
+    "imageCredit": "Projectbeeld KRFT · Bijdrage Michael van Geene"
+  },
+  {
+    "slug": "het-baken-cruquius",
+    "title": "Het Baken – Cruquius, Amsterdam",
+    "kind": "Tender / woningbouw",
+    "batch": "remaining",
+    "description": "Bij KRFT werkte Michael aan dit project: Stedenbouw, plattegronden, diagrammen, maquette en visualisaties.",
+    "tags": [
+      "Tender  /  woningbouw",
+      "Amsterdam"
+    ],
+    "inventoryId": "080",
+    "employer": "KRFT",
+    "contribution": "Stedenbouw, plattegronden, diagrammen, maquette en visualisaties",
+    "image": "images/het-baken-cruquius.webp",
+    "artwork": "render",
+    "background": "full-image",
+    "imageCredit": "Projectbeeld KRFT · Bijdrage Michael van Geene"
+  },
+  {
+    "slug": "wisselspoor-daalcentraal",
+    "title": "Wisselspoor / DaalCentraal, Utrecht",
+    "kind": "Tender / stedenbouw",
+    "batch": "remaining",
+    "description": "Bij KRFT werkte Michael aan dit project: Gevelontwerp, stedelijke functies, diagrammen en axonometrieën.",
+    "tags": [
+      "Tender  /  stedenbouw",
+      "Utrecht"
+    ],
+    "inventoryId": "081",
+    "employer": "KRFT",
+    "contribution": "Gevelontwerp, stedelijke functies, diagrammen en axonometrieën",
+    "image": "images/wisselspoor-daalcentraal.webp",
+    "artwork": "render",
+    "background": "full-image",
+    "imageCredit": "Projectbeeld KRFT · Bijdrage Michael van Geene"
+  },
+  {
+    "slug": "pesthuis-leiden",
+    "title": "Pesthuis, Leiden",
+    "kind": "Transformatie / paviljoen",
+    "batch": "remaining",
+    "description": "Bij KRFT werkte Michael aan dit project: VO, onderzoek, programma, massastudies en ruimtelijke varianten.",
+    "tags": [
+      "Transformatie  /  paviljoen",
+      "Leiden"
+    ],
+    "inventoryId": "082",
+    "employer": "KRFT",
+    "contribution": "VO, onderzoek, programma, massastudies en ruimtelijke varianten",
+    "image": "images/pesthuis-leiden.webp",
+    "artwork": "render",
+    "background": "full-image",
+    "imageCredit": "Projectbeeld KRFT · Bijdrage Michael van Geene"
+  },
+  {
+    "slug": "tiny-house-eindhoven",
+    "title": "Tiny house, Eindhoven",
+    "kind": "Compact wonen",
+    "batch": "remaining",
+    "image": "images/tiny-house-eindhoven.webp",
+    "artwork": "render",
+    "background": "full-image",
+    "description": "Technische uitwerking van een tiny house met hergebruikte containers: plattegronden, gevels, constructieve aansluitingen en een Bouwbesluittoets.",
+    "tags": [
+      "Tiny house",
+      "Hergebruik",
+      "Technische uitwerking",
+      "Bouwbesluit",
+      "Eindhoven"
     ]
+  },
+  {
+    "slug": "kc-zijdelwaard",
+    "title": "KC Zijdelwaard, Uithoorn",
+    "kind": "Kindcentrum",
+    "batch": "bureau-ervaring",
+    "employer": "KRFT",
+    "image": "images/kc-zijdelwaard.webp",
+    "artwork": "render",
+    "background": "full-image",
+    "description": "Kindcentrum met onderwijs, kinderopvang en jeugdvoorzieningen. Michael werkte bij KRFT aan ontwerp, geveluitwerking en BIM-coördinatie.",
+    "tags": [
+      "Onderwijsgebouw",
+      "Gevelontwerp",
+      "BIM-coördinatie",
+      "Uithoorn"
+    ],
+    "contribution": "Ontwerp, geveluitwerking en BIM-coördinatie",
+    "imageCredit": "Projectbeeld KRFT · Bijdrage Michael van Geene"
   },
   {
     "slug": "tilburg",
