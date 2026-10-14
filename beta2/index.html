@@ -39,6 +39,13 @@ dialog{padding:0;border:1px solid #333;background:#101010;color:#eee;max-width:1
 .category-name{font-size:10px;letter-spacing:.06em;margin:0 0 10px}
 @media(max-width:700px){.caption{margin-top:14px}}
 .subfilters{margin-top:10px;gap:3px}.subfilters[hidden]{display:none}.subfilters button{font-size:10px;padding:8px 10px;border-color:#252525}.subfilters button[aria-pressed=true]{background:#252520;color:#f3f3ee;border-color:#76766e}.subfilters button[aria-pressed=true]:hover{color:#f3f3ee}.subfilters button:before{background:var(--sector)}
+
+/* The logo's outer triangle forms the previous and next controls. */
+.controls button{display:grid;place-items:center;width:44px;height:44px;border:0;border-radius:0;padding:0;background:transparent;color:#aaa}
+.controls button svg{display:block;width:34px;height:34px;pointer-events:none}
+.controls button:hover{background:transparent;color:#f3f3ee}
+.controls button:active{color:#fff}
+@media(max-width:700px){.controls button{width:44px;height:44px}.controls button svg{width:30px;height:30px}}
 </style>
 </head>
 <body>
@@ -47,7 +54,7 @@ dialog{padding:0;border:1px solid #333;background:#101010;color:#eee;max-width:1
 <main>
 <nav class="filters" aria-label="Projectcategorieën"><button data-filter="all" aria-pressed="true">Alle projecten <small></small></button><button data-filter="home" aria-pressed="false">Woningverbouwing & uitbreiding <small></small></button><button data-filter="technical" aria-pressed="false">Technisch ontwerp & BIM <small></small></button><button data-filter="interior" aria-pressed="false">Interieur & visualisatie <small></small></button></nav><nav class="filters subfilters" aria-label="Onderdelen woningverbouwing en uitbreiding"><button data-filter="extensions" style="--sector:#b7b5ac" aria-pressed="false">Aanbouw & uitbouw <small></small></button><button data-filter="roof" style="--sector:#c5c3bb" aria-pressed="false">Dakopbouw & dakuitbreiding <small></small></button><button data-filter="renovation" style="--sector:#96968e" aria-pressed="false">Verbouwing & renovatie <small></small></button><button data-filter="outbuildings" style="--sector:#d4cfbc" aria-pressed="false">Tuinkamers & bijgebouwen <small></small></button><button data-filter="splitting" style="--sector:#a6b1a4" aria-pressed="false">Woningsplitsing & herindeling <small></small></button></nav>
 <section class="stage" tabindex="0" aria-label="Volledige projectring met negen zichtbare projectbeelden. Gebruik de pijltjestoetsen, scroll of sleep door de projecten."><div class="orbit"></div></section>
-<section class="caption" aria-label="Geselecteerd project"><p class="category-name" id="category-name"></p><div class="caption-top"><h1 id="project-title">Projecten laden…</h1><div class="controls"><button id="previous" aria-label="Vorig project">←</button><span class="counter" id="counter"></span><button id="next" aria-label="Volgend project">→</button></div></div><p class="description" id="description"></p><p class="credit" id="credit"></p><div class="tags" id="tags"></div><span id="announcement" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)"></span></section>
+<section class="caption" aria-label="Geselecteerd project"><p class="category-name" id="category-name"></p><div class="caption-top"><h1 id="project-title">Projecten laden…</h1><div class="controls"><button id="previous" aria-label="Vorig project"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><polygon points="32,5 6,20 32,35" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></button><span class="counter" id="counter"></span><button id="next" aria-label="Volgend project"><svg viewBox="0 0 40 40" aria-hidden="true" focusable="false"><polygon points="8,5 34,20 8,35" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round"/></svg></button></div></div><p class="description" id="description"></p><p class="credit" id="credit"></p><div class="tags" id="tags"></div><span id="announcement" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)"></span></section>
 <p class="hint">Kies een sector om hem naar voren te draaien · scroll of sleep door de hele ring</p>
 </main>
 <footer><span class="footer-name">Voor iedereen die droomt.</span><a href="mailto:michael@studiovangeene.nl">michael@studiovangeene.nl ↗</a></footer>
