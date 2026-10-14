@@ -110,15 +110,6 @@
     "alt": "Visualisatie van de nieuwe woonbuurt Ivoordreef in Utrecht, ontworpen door JVST met landschap van Dijk&co; visualisatie MdB3D"
   },
   {
-    "slug": "tilburg",
-    "title": "Tilburg",
-    "kind": "Interieurvisualisatie",
-    "image": "images/tilburg.webp",
-    "batch": "initial",
-    "artwork": "render",
-    "background": "full-image"
-  },
-  {
     "slug": "rozengracht",
     "title": "Rozengracht, Amsterdam",
     "kind": "Gevelvisualisatie",
@@ -223,6 +214,113 @@
     "kind": "Uitbouw achtergevel",
     "image": "images/paltzerweg-64.jpg",
     "batch": "01",
+    "artwork": "render",
+    "background": "full-image"
+  },
+  {
+    "slug": "hudigstraat-70",
+    "title": "D.L. Hudigstraat 70, Amsterdam",
+    "kind": "Dakopbouw",
+    "image": "images/hudigstraat-70.webp",
+    "batch": "02",
+    "artwork": "render",
+    "background": "full-image",
+    "collaboration": "JVAI"
+  },
+  {
+    "slug": "hogeweg-28-3",
+    "title": "Hogeweg 28-3, Amsterdam",
+    "kind": "Dakuitbreiding",
+    "image": "images/hogeweg-28-3.webp",
+    "batch": "02",
+    "artwork": "render",
+    "background": "full-image",
+    "collaboration": "JVAI"
+  },
+  {
+    "slug": "smedemanplein-15",
+    "title": "Smedemanplein 15, Amstelveen",
+    "kind": "Woninguitbreiding",
+    "image": "images/smedemanplein-15.webp",
+    "batch": "02",
+    "artwork": "render",
+    "background": "full-image",
+    "collaboration": "JVAI"
+  },
+  {
+    "slug": "lisdoddelaan-94b",
+    "title": "Lisdoddelaan 94b, Amsterdam",
+    "kind": "Woninguitbreiding",
+    "image": "images/lisdoddelaan-94b.webp",
+    "batch": "02",
+    "artwork": "render",
+    "background": "full-image",
+    "collaboration": "JVAI"
+  },
+  {
+    "slug": "jj-allanstraat-172a-westzaan",
+    "title": "J.J. Allanstraat 172a, Westzaan",
+    "kind": "Transformatie en uitbreiding",
+    "image": "images/jj-allanstraat-172a-westzaan.webp",
+    "batch": "02",
+    "artwork": "render",
+    "background": "full-image",
+    "collaboration": "JVAI"
+  },
+  {
+    "slug": "vegterstraat-6-8",
+    "title": "J.J.M. Vegterstraat 6–8, Amsterdam",
+    "kind": "Dakuitbreiding",
+    "image": "images/vegterstraat-6-8.webp",
+    "batch": "02",
+    "artwork": "render",
+    "background": "full-image",
+    "collaboration": "JVAI"
+  },
+  {
+    "slug": "rijksstraatweg-219",
+    "title": "Rijksstraatweg 219, Duivendrecht",
+    "kind": "Uitbouw achtergevel",
+    "image": "images/rijksstraatweg-219.webp",
+    "batch": "02",
+    "artwork": "render",
+    "background": "full-image",
+    "collaboration": "JVAI"
+  },
+  {
+    "slug": "midwoldastraat-11",
+    "title": "Midwoldastraat 11, Arnhem",
+    "kind": "Woninguitbreiding",
+    "image": "images/midwoldastraat-11.webp",
+    "batch": "02",
+    "artwork": "render",
+    "background": "full-image"
+  },
+  {
+    "slug": "paradijsweg-104",
+    "title": "Paradijsweg 104, Ter Aar",
+    "kind": "Erfafscheiding",
+    "image": "images/paradijsweg-104.webp",
+    "batch": "02",
+    "artwork": "line",
+    "background": "transparent-filter"
+  },
+  {
+    "slug": "gj-wiefferingdreef-9",
+    "title": "G.J. Wiefferingdreef 9, Weesp",
+    "kind": "Dakopbouw",
+    "image": "images/gj-wiefferingdreef-9.webp",
+    "batch": "02",
+    "artwork": "line",
+    "background": "transparent-filter",
+    "collaboration": "JVAI"
+  },
+  {
+    "slug": "tilburg",
+    "title": "Tilburg",
+    "kind": "Interieurvisualisatie",
+    "image": "images/tilburg.webp",
+    "batch": "initial",
     "artwork": "render",
     "background": "full-image"
   }
