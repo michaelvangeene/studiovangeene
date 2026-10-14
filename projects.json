@@ -14,7 +14,14 @@
     "photographer": "Stijn Bollaert",
     "projectSource": "https://krft.nl/projects/ikec-hoorn",
     "imageSource": "https://luning.nl/projecten/ikec-hoorn/",
-    "alt": "Gerealiseerd IKEC De Zevensprong in Hoorn, ontworpen door KRFT; fotografie Stijn Bollaert"
+    "alt": "Gerealiseerd IKEC De Zevensprong in Hoorn, ontworpen door KRFT; fotografie Stijn Bollaert",
+    "description": "Een integraal kind- en expertisecentrum in Hoorn, ontworpen door KRFT. Michael werkte aan dit project als medewerker van KRFT.",
+    "tags": [
+      "Onderwijsgebouw",
+      "Publiek gebouw",
+      "KRFT",
+      "Hoorn"
+    ]
   },
   {
     "slug": "wonderwoods-utrecht",
@@ -31,7 +38,14 @@
     "photographer": "Giovanni Nardi",
     "projectSource": "https://inbo.com/nl/projects/biodiversiteit-in-twee-torens-wonderwoods-utrecht/",
     "imageSource": "https://inbo.com/nl/projects/biodiversiteit-in-twee-torens-wonderwoods-utrecht/",
-    "alt": "Gerealiseerde groene woontoren van Wonderwoods in Utrecht, architectuur Stefano Boeri Architetti met INBO als co-architect en engineer; fotografie Giovanni Nardi"
+    "alt": "Gerealiseerde groene woontoren van Wonderwoods in Utrecht, architectuur Stefano Boeri Architetti met INBO als co-architect en engineer; fotografie Giovanni Nardi",
+    "description": "Groene woontoren in Utrecht van Stefano Boeri Architetti, met INBO als co-architect en engineer. Michaels bijdrage bij INBO: BIM-modellering en technische uitwerking.",
+    "tags": [
+      "Woningbouw",
+      "BIM-modellering",
+      "Technische uitwerking",
+      "Utrecht"
+    ]
   },
   {
     "slug": "mfc-de-bloesem-zetten",
@@ -50,7 +64,14 @@
     "projectSource": "https://krft.nl/projects/multifunctioneel-centrum-zetten-nl",
     "imageSource": "https://bbn.nl/project/mfc-wanmolen-zetten/",
     "statusSource": "https://luning.nl/projecten/mfc-wanmolen-zetten/",
-    "alt": "Visualisatie van MFC De Bloesem, voorheen De Wanmolen, in Zetten, naar ontwerp van KRFT"
+    "alt": "Visualisatie van MFC De Bloesem, voorheen De Wanmolen, in Zetten, naar ontwerp van KRFT",
+    "description": "Multifunctioneel centrum in Zetten naar ontwerp van KRFT. Michael werkte bij KRFT aan het technisch ontwerp en de BIM-coördinatie.",
+    "tags": [
+      "Multifunctioneel centrum",
+      "Technisch ontwerp",
+      "BIM-coördinatie",
+      "Zetten"
+    ]
   },
   {
     "slug": "rottanova-rotterdam",
@@ -69,7 +90,14 @@
     "projectSource": "https://inbo.com/nl/projects/rottanova-rotterdam/",
     "imageSource": "https://inbo.com/nl/projects/rottanova-rotterdam/",
     "statusSource": "https://www.jpvaneesteren.nl/projecten/rottanova-rotterdam",
-    "alt": "Visualisatie van de twee woontorens van RottaNova in Rotterdam, ontworpen door Frits van Dongen Architecten en technisch uitgewerkt door INBO; visualisatie Parallel"
+    "alt": "Visualisatie van de twee woontorens van RottaNova in Rotterdam, ontworpen door Frits van Dongen Architecten en technisch uitgewerkt door INBO; visualisatie Parallel",
+    "description": "Twee woontorens in Rotterdam naar ontwerp van Frits van Dongen Architecten, met engineering door INBO. Michael verzorgde bij INBO BIM-modellering en technische uitwerking.",
+    "tags": [
+      "Woningbouw",
+      "BIM-modellering",
+      "Technische uitwerking",
+      "Rotterdam"
+    ]
   },
   {
     "slug": "havenkade-nijmegen",
@@ -88,7 +116,13 @@
     "projectSource": "https://www.trebbe.nl/project/nijmegen-havenkade/",
     "imageSource": "https://www.trebbe.nl/project/nijmegen-havenkade/",
     "statusSource": "https://www.ataindex.nl/project/havenkade-nijmegen/",
-    "alt": "Gerealiseerde woongebouwen van Havenkade aan de Waalhaven in Nijmegen; fotografie Aiste Rakauskaite"
+    "alt": "Gerealiseerde woongebouwen van Havenkade aan de Waalhaven in Nijmegen; fotografie Aiste Rakauskaite",
+    "description": "Woongebouwen aan de Waalhaven in Nijmegen, ontworpen door JURY!, Thijs Asselbergs architectuurcentrale en Van Ommeren Architecten. Michael werkte aan dit project als medewerker van INBO.",
+    "tags": [
+      "Woningbouw",
+      "INBO",
+      "Nijmegen"
+    ]
   },
   {
     "slug": "ivoordreef-utrecht",
@@ -107,7 +141,14 @@
     "projectSource": "https://jvst.nl/project/Ivoordreef",
     "imageSource": "https://jvst.nl/project/Ivoordreef",
     "statusSource": "https://www.eracontourbouwt.nl/projecten/ivoordreef",
-    "alt": "Visualisatie van de nieuwe woonbuurt Ivoordreef in Utrecht, ontworpen door JVST met landschap van Dijk&co; visualisatie MdB3D"
+    "alt": "Visualisatie van de nieuwe woonbuurt Ivoordreef in Utrecht, ontworpen door JVST met landschap van Dijk&co; visualisatie MdB3D",
+    "description": "Circulaire woonbuurt in Utrecht naar ontwerp van JVST, met landschap van Dijk&co. Michael werkte bij INBO aan de bouwkundige uitwerking.",
+    "tags": [
+      "Woningbouw",
+      "Circulaire woonbuurt",
+      "Bouwkundige uitwerking",
+      "Utrecht"
+    ]
   },
   {
     "slug": "rozengracht",
@@ -116,7 +157,15 @@
     "image": "images/rozengracht.webp",
     "batch": "initial",
     "artwork": "render",
-    "background": "full-image"
+    "background": "full-image",
+    "description": "Ontwerp voor de transformatie van coffeeshop Flower Power aan de Rozengracht 139 in Amsterdam: interieur van begane grond en kelder, met restauratie van de gevel.",
+    "tags": [
+      "Horeca-interieur",
+      "Coffeeshop",
+      "Transformatie",
+      "Gevelrestauratie",
+      "Amsterdam"
+    ]
   },
   {
     "slug": "gerard-doustraat",
@@ -125,7 +174,13 @@
     "image": "images/gerard-doustraat.webp",
     "batch": "initial",
     "artwork": "render",
-    "background": "full-image"
+    "background": "full-image",
+    "description": "Gevelvisualisatie voor Gerard Doustraat in Amsterdam, als beeldstudie van de architectonische uitstraling.",
+    "tags": [
+      "Gevelontwerp",
+      "Architectuurvisualisatie",
+      "Amsterdam"
+    ]
   },
   {
     "slug": "wilhelminaplantsoen-69",
@@ -134,7 +189,14 @@
     "image": "images/wilhelminaplantsoen-69.webp",
     "batch": "01",
     "artwork": "line",
-    "background": "transparent-filter"
+    "background": "transparent-filter",
+    "description": "Bouwkundige uitwerking van een aanbouw en dakopbouw, met tekeningen en aansluitdetails voor de uitbreiding van de bestaande woning.",
+    "tags": [
+      "Aanbouw",
+      "Dakopbouw",
+      "Bouwkundige tekeningen",
+      "Detaillering"
+    ]
   },
   {
     "slug": "bert-haanstrakade-428",
@@ -143,7 +205,14 @@
     "image": "images/bert-haanstrakade-428.webp",
     "batch": "01",
     "artwork": "line",
-    "background": "transparent-filter"
+    "background": "transparent-filter",
+    "description": "Bouwkundige uitwerking van een dakopbouw aan de Bert Haanstrakade, inclusief het balkon en de aansluiting op de bestaande woning.",
+    "tags": [
+      "Dakopbouw",
+      "Balkon",
+      "Bouwkundige uitwerking",
+      "Amsterdam"
+    ]
   },
   {
     "slug": "westerdokdijk-567",
@@ -152,7 +221,14 @@
     "image": "images/westerdokdijk-567.webp",
     "batch": "01",
     "artwork": "line",
-    "background": "transparent-filter"
+    "background": "transparent-filter",
+    "description": "Uitwerking van een tuinkamer aan de Westerdokdijk, met gevelaanzichten en de aansluiting op het terras.",
+    "tags": [
+      "Tuinkamer",
+      "Gevelaanzichten",
+      "Bouwkundige tekeningen",
+      "Amsterdam"
+    ]
   },
   {
     "slug": "wilhelminastraat-26",
@@ -161,7 +237,13 @@
     "image": "images/wilhelminastraat-26.webp",
     "batch": "01",
     "artwork": "line",
-    "background": "transparent-filter"
+    "background": "transparent-filter",
+    "description": "Bouwkundige tekeningen voor een woninguitbreiding, met de bestaande en nieuwe situatie in één samenhangende set.",
+    "tags": [
+      "Woninguitbreiding",
+      "Bouwkundige tekeningen",
+      "Bestaande bouw"
+    ]
   },
   {
     "slug": "egelskopstraat-1",
@@ -170,7 +252,13 @@
     "image": "images/egelskopstraat-1.webp",
     "batch": "01",
     "artwork": "line",
-    "background": "transparent-filter"
+    "background": "transparent-filter",
+    "description": "Bouwkundige detaillering voor Egelskopstraat 1, met aandacht voor de aansluiting van de balustrade.",
+    "tags": [
+      "Bouwkundige detaillering",
+      "Balustrade",
+      "Technische uitwerking"
+    ]
   },
   {
     "slug": "zwanenbloemlaan-204-206",
@@ -179,7 +267,14 @@
     "image": "images/zwanenbloemlaan-204-206.webp",
     "batch": "01",
     "artwork": "line",
-    "background": "transparent-filter"
+    "background": "transparent-filter",
+    "description": "Bouwkundige uitwerking van dakuitbreidingen voor twee woningen aan de Zwanenbloemlaan in Amsterdam.",
+    "tags": [
+      "Dakuitbreiding",
+      "Bouwkundige tekeningen",
+      "Bestaande bouw",
+      "Amsterdam"
+    ]
   },
   {
     "slug": "rochussenstraat",
@@ -188,7 +283,13 @@
     "image": "images/rochussenstraat.webp",
     "batch": "01",
     "artwork": "line",
-    "background": "transparent-filter"
+    "background": "transparent-filter",
+    "description": "Bouwkundige uitwerking voor Rochussenstraat, vastgelegd in een set technische tekeningen.",
+    "tags": [
+      "Bouwkundige uitwerking",
+      "Technische tekeningen",
+      "Bestaande bouw"
+    ]
   },
   {
     "slug": "meentweg-43",
@@ -197,7 +298,14 @@
     "image": "images/meentweg-43.webp",
     "batch": "01",
     "artwork": "line",
-    "background": "transparent-filter"
+    "background": "transparent-filter",
+    "description": "Uitwerking van renovatie en verduurzaming aan Meentweg 43, met spouwisolatie en aangepaste bouwkundige details.",
+    "tags": [
+      "Renovatie",
+      "Verduurzaming",
+      "Spouwisolatie",
+      "Bouwkundige detaillering"
+    ]
   },
   {
     "slug": "zwanenbloemlaan-202",
@@ -206,7 +314,14 @@
     "image": "images/zwanenbloemlaan-202-cutout.svg",
     "batch": "01",
     "artwork": "render",
-    "background": "transparent"
+    "background": "transparent",
+    "description": "Woninguitbreiding aan de Zwanenbloemlaan in Amsterdam, uitgewerkt in bouwkundige tekeningen en een ruimtelijke visualisatie.",
+    "tags": [
+      "Woninguitbreiding",
+      "Bouwkundige tekeningen",
+      "Architectuurvisualisatie",
+      "Amsterdam"
+    ]
   },
   {
     "slug": "paltzerweg-64",
@@ -215,7 +330,14 @@
     "image": "images/paltzerweg-64.jpg",
     "batch": "01",
     "artwork": "render",
-    "background": "full-image"
+    "background": "full-image",
+    "description": "Uitbouw aan de achtergevel, uitgewerkt in bouwkundige tekeningen en een visualisatie van de nieuwe buitenruimte.",
+    "tags": [
+      "Uitbouw",
+      "Woninguitbreiding",
+      "Bouwkundige tekeningen",
+      "Architectuurvisualisatie"
+    ]
   },
   {
     "slug": "hudigstraat-70",
@@ -225,7 +347,14 @@
     "batch": "02",
     "artwork": "render",
     "background": "full-image",
-    "collaboration": "JVAI"
+    "collaboration": "JVAI",
+    "description": "Dakopbouw aan D.L. Hudigstraat 70 in Amsterdam, met tekeningen en een visualisatie voor de omgevingsvergunning, in samenwerking met JVAI.",
+    "tags": [
+      "Dakopbouw",
+      "Omgevingsvergunning",
+      "Architectuurvisualisatie",
+      "Amsterdam"
+    ]
   },
   {
     "slug": "hogeweg-28-3",
@@ -235,7 +364,14 @@
     "batch": "02",
     "artwork": "render",
     "background": "full-image",
-    "collaboration": "JVAI"
+    "collaboration": "JVAI",
+    "description": "Dakuitbreiding aan Hogeweg 28-3 in Amsterdam, met plattegronden, doorsneden en principedetails voor de omgevingsvergunning, in samenwerking met JVAI.",
+    "tags": [
+      "Dakuitbreiding",
+      "Omgevingsvergunning",
+      "Bouwkundige detaillering",
+      "Amsterdam"
+    ]
   },
   {
     "slug": "smedemanplein-15",
@@ -245,7 +381,14 @@
     "batch": "02",
     "artwork": "render",
     "background": "full-image",
-    "collaboration": "JVAI"
+    "collaboration": "JVAI",
+    "description": "Woninguitbreiding in Amstelveen, uitgewerkt in vergunningstekeningen en een gevelvisualisatie, in samenwerking met JVAI.",
+    "tags": [
+      "Woninguitbreiding",
+      "Vergunningstekeningen",
+      "Gevelvisualisatie",
+      "Amstelveen"
+    ]
   },
   {
     "slug": "lisdoddelaan-94b",
@@ -255,7 +398,14 @@
     "batch": "02",
     "artwork": "render",
     "background": "full-image",
-    "collaboration": "JVAI"
+    "collaboration": "JVAI",
+    "description": "Woninguitbreiding aan Lisdoddelaan 94b in Amsterdam, met gevels, plattegronden en een ruimtelijke visualisatie, in samenwerking met JVAI.",
+    "tags": [
+      "Woninguitbreiding",
+      "Bouwkundige tekeningen",
+      "Architectuurvisualisatie",
+      "Amsterdam"
+    ]
   },
   {
     "slug": "jj-allanstraat-172a-westzaan",
@@ -265,7 +415,14 @@
     "batch": "02",
     "artwork": "render",
     "background": "full-image",
-    "collaboration": "JVAI"
+    "collaboration": "JVAI",
+    "description": "Transformatie en uitbreiding in Westzaan, uitgewerkt in bouwkundige tekeningen en gevelvisualisaties, in samenwerking met JVAI.",
+    "tags": [
+      "Transformatie",
+      "Bouwkundige uitwerking",
+      "Gevelvisualisatie",
+      "Westzaan"
+    ]
   },
   {
     "slug": "vegterstraat-6-8",
@@ -275,7 +432,14 @@
     "batch": "02",
     "artwork": "render",
     "background": "full-image",
-    "collaboration": "JVAI"
+    "collaboration": "JVAI",
+    "description": "Dakuitbreidingen voor twee woningen in Amsterdam, met tekeningen en een visualisatie van de opbouw en het terras, in samenwerking met JVAI.",
+    "tags": [
+      "Dakuitbreiding",
+      "Dakterras",
+      "Bouwkundige tekeningen",
+      "Amsterdam"
+    ]
   },
   {
     "slug": "rijksstraatweg-219",
@@ -285,7 +449,14 @@
     "batch": "02",
     "artwork": "render",
     "background": "full-image",
-    "collaboration": "JVAI"
+    "collaboration": "JVAI",
+    "description": "Uitbouw aan de achtergevel in Duivendrecht, met een definitief ontwerp, bouwkundige details en een visualisatie, in samenwerking met JVAI.",
+    "tags": [
+      "Uitbouw",
+      "Definitief ontwerp",
+      "Bouwkundige detaillering",
+      "Duivendrecht"
+    ]
   },
   {
     "slug": "midwoldastraat-11",
@@ -294,7 +465,14 @@
     "image": "images/midwoldastraat-11.webp",
     "batch": "02",
     "artwork": "render",
-    "background": "full-image"
+    "background": "full-image",
+    "description": "Woninguitbreiding in Arnhem, uitgewerkt in vergunningstekeningen en details, met een ruimtelijke impressie van de uitbouw.",
+    "tags": [
+      "Woninguitbreiding",
+      "Omgevingsvergunning",
+      "Bouwkundige detaillering",
+      "Arnhem"
+    ]
   },
   {
     "slug": "paradijsweg-104",
@@ -303,7 +481,14 @@
     "image": "images/paradijsweg-104.webp",
     "batch": "02",
     "artwork": "line",
-    "background": "transparent-filter"
+    "background": "transparent-filter",
+    "description": "Uitwerking van een erfafscheiding in Ter Aar, met aanzichten en een principedetail voor de omgevingsvergunning.",
+    "tags": [
+      "Erfafscheiding",
+      "Omgevingsvergunning",
+      "Bouwkundige detaillering",
+      "Ter Aar"
+    ]
   },
   {
     "slug": "gj-wiefferingdreef-9",
@@ -313,7 +498,14 @@
     "batch": "02",
     "artwork": "line",
     "background": "transparent-filter",
-    "collaboration": "JVAI"
+    "collaboration": "JVAI",
+    "description": "Dakopbouw in Weesp, met gevelaanzichten, doorsneden en details voor de aansluiting op de bestaande woning, in samenwerking met JVAI.",
+    "tags": [
+      "Dakopbouw",
+      "Bouwkundige tekeningen",
+      "Bouwkundige detaillering",
+      "Weesp"
+    ]
   },
   {
     "slug": "tilburg",
@@ -322,6 +514,13 @@
     "image": "images/tilburg.webp",
     "batch": "initial",
     "artwork": "render",
-    "background": "full-image"
+    "background": "full-image",
+    "description": "Interieurvisualisatie in Tilburg: een studie van materiaal, licht en sfeer rond een keuken met houten kasten en een donkere werkbank.",
+    "tags": [
+      "Interieurvisualisatie",
+      "Keuken",
+      "Materialisatie",
+      "Tilburg"
+    ]
   }
 ]
