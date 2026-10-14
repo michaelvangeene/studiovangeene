@@ -121,6 +121,7 @@
       .project-gallery { --slide-width: 72vw; --slide-gap: 6vw; }
       main { padding-top: 13svh; }
       .studio-contact { margin: 0; }
+      .studio-contact h2 { max-width: calc(100vw - 184px); margin-inline: auto; }
       .studio-contact h1 { font-size: clamp(1rem, 4.6vw, 1.5rem); letter-spacing: .06em; }
     }
 
@@ -203,7 +204,7 @@
 
   <main>
     <section class="project-gallery" aria-label="Werk van Studio van Geene en projecten waaraan Michael werkte bij KRFT en INBO">
-      <div class="project-track" tabindex="0" aria-label="Projectbeelden, swipe of gebruik de pijlen">
+      <div class="project-track" tabindex="0" aria-label="Projectbeelden, swipe, scroll met het muiswiel of gebruik de pijlen">
         <!-- Gerealiseerde projecten waaraan Michael werkte bij KRFT en INBO. -->
         <figure class="project-slide project-slide--bureau" data-project="ikec-de-zevensprong" data-artwork="photo" data-employer="KRFT">
           <div class="project-image"><img src="https://luning.nl/wp-content/uploads/2025/10/KR-IKEC-0080-%C2%A9StijnBollaert-SR.jpg" alt="Gerealiseerd IKEC De Zevensprong in Hoorn, ontworpen door KRFT; fotografie Stijn Bollaert" width="1400" height="875" loading="lazy" decoding="async" referrerpolicy="no-referrer"></div>
@@ -295,11 +296,11 @@
   </main>
 
   <!-- WhatsApp-knop rechtsonder -->
-<a href="https://wa.me/31626130070?text=Hoi!%20Voor%20een%20snelle%20offerte%20stuur%20ik%20mijn%20postcode%2C%20omschrijving%20van%20de%20verbouwing%20en%20telefoonnummer%20mee." 
+<a class="whatsapp-contact" aria-label="Neem contact op via WhatsApp" rel="noopener noreferrer" href="https://wa.me/31626130070?text=Hoi!%20Voor%20een%20snelle%20offerte%20stuur%20ik%20mijn%20postcode%2C%20omschrijving%20van%20de%20verbouwing%20en%20telefoonnummer%20mee." 
    target="_blank"
    style="
        position: fixed;
-       bottom: calc(140px + env(safe-area-inset-bottom, 0px));
+       bottom: calc(20px + env(safe-area-inset-bottom, 0px));
        right: 20px;
        z-index: 1000;
        height: 64px;
@@ -324,10 +325,16 @@
       const track = document.querySelector('.project-track');
       const slides = Array.from(track.querySelectorAll('.project-slide'));
       const counter = document.getElementById('project-counter');
-      track.closest('.project-gallery').classList.add('gallery-enhanced');
+      const gallery = track.closest('.project-gallery');
+      gallery.classList.add('gallery-enhanced');
       const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
       let active = 1;
       let frame = 0;
+      let wheelTarget = null;
+      let wheelAmount = 0;
+      let wheelDirection = 0;
+      let wheelAt = -Infinity;
+      let wheelReset = 0;
       const position = index => slides[index].offsetLeft - track.offsetLeft
         - (track.clientWidth - slides[index].clientWidth) / 2;
       function show(index, animate = true) {
@@ -350,15 +357,68 @@
       track.addEventListener('scroll', () => {
         if (!frame) frame = requestAnimationFrame(update);
       }, { passive: true });
-      document.getElementById('previous-project').addEventListener('click', () => show(active - 1));
-      document.getElementById('next-project').addEventListener('click', () => show(active + 1));
+      function resetWheel() {
+        clearTimeout(wheelReset);
+        wheelReset = 0;
+        wheelTarget = null;
+        wheelAmount = 0;
+        wheelDirection = 0;
+        wheelAt = -Infinity;
+      }
+      gallery.addEventListener('wheel', event => {
+        // Keep browser zoom and native horizontal trackpad scrolling available.
+        if (event.ctrlKey || event.metaKey || event.shiftKey || !event.deltaY
+            || Math.abs(event.deltaX) > Math.abs(event.deltaY)) {
+          resetWheel();
+          return;
+        }
+        const direction = Math.sign(event.deltaY);
+        const maxScroll = track.scrollWidth - track.clientWidth;
+        // Allow the page to scroll once the first or last image has been reached.
+        if ((direction < 0 && track.scrollLeft <= 1)
+            || (direction > 0 && track.scrollLeft >= maxScroll - 1)
+            || !event.cancelable) return;
+        event.preventDefault();
+        clearTimeout(wheelReset);
+        wheelReset = setTimeout(resetWheel, 800);
+        if (direction !== wheelDirection) {
+          wheelAmount = 0;
+          wheelAt = -Infinity;
+        }
+        wheelDirection = direction;
+        const now = performance.now();
+        // Limit repeated wheel events while an image is moving into position.
+        if (now - wheelAt < 240) return;
+        const unit = event.deltaMode === 1 ? 16
+          : event.deltaMode === 2 ? track.clientWidth : 1;
+        wheelAmount += event.deltaY * unit;
+        if (Math.abs(wheelAmount) < 40) return;
+        wheelAmount = 0;
+        wheelAt = now;
+        wheelTarget = Math.max(0, Math.min(slides.length - 1,
+          (wheelTarget === null ? active : wheelTarget) + direction));
+        show(wheelTarget);
+      }, { passive: false });
+      track.addEventListener('pointerdown', resetWheel, { passive: true });
+      document.getElementById('previous-project').addEventListener('click', () => {
+        resetWheel();
+        show(active - 1);
+      });
+      document.getElementById('next-project').addEventListener('click', () => {
+        resetWheel();
+        show(active + 1);
+      });
       track.addEventListener('keydown', event => {
         if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {
           event.preventDefault();
+          resetWheel();
           show(active + (event.key === 'ArrowRight' ? 1 : -1));
         }
       });
-      window.addEventListener('resize', () => show(active, false));
+      window.addEventListener('resize', () => {
+        resetWheel();
+        show(active, false);
+      });
       show(active, false);
       update();
     })();
