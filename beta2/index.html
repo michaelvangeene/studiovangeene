@@ -38,13 +38,14 @@ dialog{padding:0;border:1px solid #333;background:#101010;color:#eee;max-width:1
 .caption{margin-top:8px}
 .category-name{font-size:10px;letter-spacing:.06em;margin:0 0 10px}
 @media(max-width:700px){.caption{margin-top:14px}}
+.subfilters{margin-top:10px;gap:3px}.subfilters[hidden]{display:none}.subfilters button{font-size:10px;padding:8px 10px;border-color:#252525}.subfilters button[aria-pressed=true]{background:#252520;color:#f3f3ee;border-color:#76766e}.subfilters button[aria-pressed=true]:hover{color:#f3f3ee}.subfilters button:before{background:var(--sector)}
 </style>
 </head>
 <body>
 <svg width="0" height="0" aria-hidden="true" style="position:absolute"><defs><filter id="white-lines" color-interpolation-filters="sRGB"><feColorMatrix type="matrix" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 -.2126 -.7152 -.0722 0 1"/><feComponentTransfer><feFuncA type="linear" slope="3.8" intercept="-.03"/></feComponentTransfer><feComposite in2="SourceAlpha" operator="in"/></filter></defs></svg>
 <header><a class="wordmark" href="/">Studio van Geene</a><div class="version"><span>Beta 2</span><a href="/">Naar de website ↗</a></div></header>
 <main>
-<nav class="filters" aria-label="Projectcategorieën"><button data-filter="all" aria-pressed="true">Alle projecten <small></small></button><button data-filter="home" aria-pressed="false">Huisuitbreidingen <small></small></button><button data-filter="technical" aria-pressed="false">Complex technisch ontwerp <small></small></button><button data-filter="interior" aria-pressed="false">Interieur <small></small></button></nav>
+<nav class="filters" aria-label="Projectcategorieën"><button data-filter="all" aria-pressed="true">Alle projecten <small></small></button><button data-filter="home" aria-pressed="false">Woningverbouwing & uitbreiding <small></small></button><button data-filter="technical" aria-pressed="false">Technisch ontwerp & BIM <small></small></button><button data-filter="interior" aria-pressed="false">Interieur & visualisatie <small></small></button></nav><nav class="filters subfilters" aria-label="Onderdelen woningverbouwing en uitbreiding"><button data-filter="extensions" style="--sector:#b7b5ac" aria-pressed="false">Aanbouw & uitbouw <small></small></button><button data-filter="roof" style="--sector:#c5c3bb" aria-pressed="false">Dakopbouw & dakuitbreiding <small></small></button><button data-filter="renovation" style="--sector:#96968e" aria-pressed="false">Verbouwing & renovatie <small></small></button><button data-filter="outbuildings" style="--sector:#d4cfbc" aria-pressed="false">Tuinkamers & bijgebouwen <small></small></button><button data-filter="splitting" style="--sector:#a6b1a4" aria-pressed="false">Woningsplitsing & herindeling <small></small></button></nav>
 <section class="stage" tabindex="0" aria-label="Volledige projectring met negen zichtbare projectbeelden. Gebruik de pijltjestoetsen, scroll of sleep door de projecten."><div class="orbit"></div></section>
 <section class="caption" aria-label="Geselecteerd project"><p class="category-name" id="category-name"></p><div class="caption-top"><h1 id="project-title">Projecten laden…</h1><div class="controls"><button id="previous" aria-label="Vorig project">←</button><span class="counter" id="counter"></span><button id="next" aria-label="Volgend project">→</button></div></div><p class="description" id="description"></p><p class="credit" id="credit"></p><div class="tags" id="tags"></div><span id="announcement" aria-live="polite" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)"></span></section>
 <p class="hint">Kies een sector om hem naar voren te draaien · scroll of sleep door de hele ring</p>
@@ -67,13 +68,21 @@ dialog{padding:0;border:1px solid #333;background:#101010;color:#eee;max-width:1
  const credits=p=>[p.employer?'Werkzaam aan dit project namens '+p.employer:p.collaboration?'In samenwerking met '+p.collaboration:'',p.architects?'Architectuur: '+p.architects:'',p.imageCredit||(p.photographer?'Fotografie © '+p.photographer:'')].filter(Boolean).join(' · ');
  function fillTags(node,p){node.replaceChildren(...(p.tags||[]).map(t=>{const span=document.createElement('span');span.textContent=t;return span;}));}
  let cards=[];
- const sectorDefinitions=[
-  {name:'home',label:'Huisuitbreidingen',color:'#b7b5ac'},
-  {name:'technical',label:'Complex technisch ontwerp',color:'#67b7a7'},
-  {name:'interior',label:'Interieur',color:'#c6a17e'}
- ];
+ const sectorDefinitions=[{"name":"extensions","label":"Aanbouw & uitbouw","color":"#b7b5ac","parent":"home"},{"name":"roof","label":"Dakopbouw & dakuitbreiding","color":"#c5c3bb","parent":"home"},{"name":"renovation","label":"Verbouwing & renovatie","color":"#96968e","parent":"home"},{"name":"outbuildings","label":"Tuinkamers & bijgebouwen","color":"#d4cfbc","parent":"home"},{"name":"splitting","label":"Woningsplitsing & herindeling","color":"#a6b1a4","parent":"home"},{"name":"technical","label":"Technisch ontwerp & BIM","color":"#67b7a7","parent":"technical"},{"name":"interior","label":"Interieur & visualisatie","color":"#c6a17e","parent":"interior"}];
  let sectors=[],sectorSvg=null;
- function primaryCategory(p){const c=categories(p);return c.includes('interior')?'interior':c.includes('technical')?'technical':'home';}
+ function primaryCategory(p){
+  const c=categories(p);
+  if(c.includes('interior'))return 'interior';
+  if(c.includes('technical'))return 'technical';
+  const type=[p.kind,...(p.tags||[])].join(' ').toLowerCase();
+  if(/splitsing|splitsen|verkooptekeningen/.test(type))return 'splitting';
+  if(/dakopbouw|dakuitbreiding|dakhuis|mansardekap/.test(type))return 'roof';
+  if(/tuinkamer|tuinhuis|bijgebouw|berging|erfafscheiding/.test(type))return 'outbuildings';
+  if(/aanbouw|uitbouw|woninguitbreiding|transformatie en uitbreiding/.test(type))return 'extensions';
+  return 'renovation';
+ }
+ function sectorFor(name){return sectors.find(s=>s.name===name);}
+ function parentCategory(name){return sectorFor(name)?.parent||name;}
  function prepareRing(){
   sectors=[];items=[];
   for(const definition of sectorDefinitions){
@@ -83,7 +92,7 @@ dialog{padding:0;border:1px solid #333;background:#101010;color:#eee;max-width:1
    sectors.push({...definition,start,end:items.length-1,count:group.length,focus:start});
   }
   buildRing();position=target=0;lastIndex=-1;
-  buttons.forEach(b=>{b.querySelector('small').textContent=b.dataset.filter==='all'?items.length:sectors.find(s=>s.name===b.dataset.filter)?.count||0;});
+  buttons.forEach(b=>{b.querySelector('small').textContent=b.dataset.filter==='all'?items.length:b.dataset.filter==='home'?sectors.filter(s=>s.parent==='home').reduce((n,s)=>n+s.count,0):sectorFor(b.dataset.filter)?.count||0;});
   paint();kick();
  }
  function buildSectors(){
@@ -114,7 +123,12 @@ dialog{padding:0;border:1px solid #333;background:#101010;color:#eee;max-width:1
    sector.group.dataset.active=String(current===sector.name);
 
   }
-  buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===(filter==='all'?'all':current))));
+  buttons.forEach(b=>{
+   const name=b.dataset.filter;
+   const selected=b.closest('.subfilters')?name===current:name===(filter==='all'?'all':parentCategory(current));
+   b.setAttribute('aria-pressed',String(selected));
+  });
+  document.querySelector('.subfilters').hidden=parentCategory(current)!=='home';
  }
  function buildRing(){
   orbit.replaceChildren();
@@ -122,7 +136,7 @@ dialog{padding:0;border:1px solid #333;background:#101010;color:#eee;max-width:1
   buildSectors();
  }
  function bind(card,p){if(card.dataset.bound===p.slug)return;card.dataset.bound=p.slug;card.dataset.slug=p.slug;card.dataset.artwork=p.artwork;card.setAttribute('aria-label',p.title);card.replaceChildren();if(p.image){const img=document.createElement('img');img.src=imageUrl(p);img.alt=p.title;img.draggable=false;img.decoding='async';card.append(img);}}
- function setCaption(index){const p=items[index];title.textContent=p.title;description.textContent=p.description||p.kind;credit.textContent=credits(p);fillTags(tags,p);counter.textContent=String(index+1).padStart(2,'0')+' / '+String(items.length).padStart(2,'0');lastIndex=index;const sector=sectors.find(s=>s.name===primaryCategory(p));const categoryNode=document.getElementById('category-name');categoryNode.textContent=sector.label;categoryNode.style.color=sector.color;}
+ function setCaption(index){const p=items[index];title.textContent=p.title;description.textContent=p.description||p.kind;credit.textContent=credits(p);fillTags(tags,p);counter.textContent=String(index+1).padStart(2,'0')+' / '+String(items.length).padStart(2,'0');lastIndex=index;const sector=sectors.find(s=>s.name===primaryCategory(p));const categoryNode=document.getElementById('category-name');categoryNode.textContent=sector.label+(p.kind&&p.kind.toLowerCase()!==sector.label.toLowerCase()?' · '+p.kind:'');categoryNode.style.color=sector.color;}
  function ringGeometry(distance,count,width,height){
   const a=Math.abs(distance),sign=Math.sign(distance);
   // Spread nine front panels out; compress the rest around the rear arc.
@@ -174,14 +188,14 @@ dialog{padding:0;border:1px solid #333;background:#101010;color:#eee;max-width:1
  function choose(name){
   if(!items.length)return;clearTimeout(snapTimer);filter=name;
   if(name!=='all'){
-   const sector=sectors.find(s=>s.name===name);if(!sector)return;
+   const sector=name==='home'?sectors.find(s=>s.parent==='home'):sectorFor(name);if(!sector)return;
    const current=mod(target,items.length);
    const delta=mod(sector.focus-current+items.length/2,items.length)-items.length/2;
    target+=delta;kick();
   }else paint();
  }
  buttons.forEach(b=>b.addEventListener('click',()=>choose(b.dataset.filter)));
- function openDetail(){const p=items[mod(Math.round(position),items.length)];if(!p)return;const img=detail.querySelector('img');img.hidden=!p.image;if(p.image){img.src=imageUrl(p);img.alt=p.title;img.classList.toggle('line',p.artwork==='line');}else{img.removeAttribute('src');}detail.querySelector('h2').textContent=p.title;detail.querySelector('.detail-description').textContent=p.description||p.kind;detail.querySelector('.credit').textContent=credits(p);fillTags(detail.querySelector('.tags'),p);detail.showModal();}
+ function openDetail(){const p=items[mod(Math.round(position),items.length)];if(!p)return;const img=detail.querySelector('img');img.hidden=!p.image;if(p.image){img.src=imageUrl(p);img.alt=p.title;img.classList.toggle('line',p.artwork==='line');}else{img.removeAttribute('src');}detail.querySelector('h2').textContent=(p.kind?p.kind+' — ':'')+p.title;detail.querySelector('.detail-description').textContent=p.description||p.kind;detail.querySelector('.credit').textContent=credits(p);fillTags(detail.querySelector('.tags'),p);detail.showModal();}
  detail.querySelector('.close').addEventListener('click',()=>detail.close());detail.addEventListener('click',e=>{if(e.target===detail){const r=detail.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)detail.close();}});
  addEventListener('resize',()=>{cameraGoalX=cameraGoalY=0;paint();kick();});reduced.addEventListener('change',()=>{cameraGoalX=cameraGoalY=0;kick();});document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(frame);frame=0;}else{lastTime=0;kick();}});
  fetch('/projects.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('Projectgegevens niet beschikbaar');return r.json();}).then(data=>{projects=data.filter(p=>p.slug!=='pesthuis-leiden');prepareRing();}).catch(()=>{title.textContent='De projecten kunnen niet worden geladen.';description.textContent='Ververs de pagina om het opnieuw te proberen.';cards.forEach(c=>c.hidden=true);});
