@@ -31,15 +31,13 @@ dialog{padding:0;border:1px solid #333;background:#101010;color:#eee;max-width:1
 .sector-rail{stroke-width:3;opacity:.55;transition:opacity .2s}
 .sector-hit{stroke:transparent;stroke-width:24;pointer-events:stroke;cursor:pointer}
 .sector-map g[data-active=true] .sector-rail{stroke-width:5;opacity:1}
-.sector-label{position:absolute;z-index:300;transform:translate(-50%,-50%);border:0;border-radius:3px;background:#080808e8;padding:5px 8px;font-size:11px;line-height:1.4;max-width:190px;text-align:center;pointer-events:auto}
-.sector-label small{font-size:9px;opacity:.65;margin-left:5px}
 .filters button[data-filter=home]{--sector:#b7b5ac}
 .filters button[data-filter=technical]{--sector:#67b7a7}
 .filters button[data-filter=interior]{--sector:#c6a17e}
 .filters button:not([data-filter=all]):before{content:"";display:inline-block;width:6px;height:6px;border-radius:50%;background:var(--sector);margin-right:7px;vertical-align:middle}
 .caption{margin-top:8px}
 .category-name{font-size:10px;letter-spacing:.06em;margin:0 0 10px}
-@media(max-width:700px){.sector-label{font-size:10px;max-width:140px;padding:4px 6px}.caption{margin-top:14px}}
+@media(max-width:700px){.caption{margin-top:14px}}
 </style>
 </head>
 <body>
@@ -97,10 +95,7 @@ dialog{padding:0;border:1px solid #333;background:#101010;color:#eee;max-width:1
    const rail=document.createElementNS(ns,'path');rail.classList.add('sector-rail');rail.setAttribute('stroke',sector.color);
    const hit=document.createElementNS(ns,'path');hit.classList.add('sector-hit');hit.addEventListener('click',()=>{if(!dragged)choose(sector.name);});
    group.append(rail,hit);sectorSvg.append(group);
-   const label=document.createElement('button');label.type='button';label.className='sector-label';label.style.color=sector.color;
-   label.textContent=sector.label;const n=document.createElement('small');n.textContent=sector.count;label.append(n);
-   label.setAttribute('aria-label',sector.label+' naar voren draaien');label.addEventListener('click',()=>{if(!dragged)choose(sector.name);});orbit.append(label);
-   Object.assign(sector,{group,rail,hit,labelNode:label});
+   Object.assign(sector,{group,rail,hit});
   }
  }
  function paintSectors(width,height){
@@ -117,11 +112,7 @@ dialog{padding:0;border:1px solid #333;background:#101010;color:#eee;max-width:1
    for(let n=0;n<=steps;n++){const p=point(from+(to-from)*n/steps);path+=(n?'L':'M')+p.x.toFixed(2)+','+p.y.toFixed(2);}
    sector.rail.setAttribute('d',path);sector.hit.setAttribute('d',path);
    sector.group.dataset.active=String(current===sector.name);
-   const p=point((sector.start+sector.end)/2);
-   const half=width<=700?72:98;
-   sector.labelNode.style.left=Math.max(half,Math.min(width-half,p.x))+'px';
-   sector.labelNode.style.top=(p.y+18)+'px';
-   sector.labelNode.setAttribute('aria-pressed',String(current===sector.name));
+
   }
   buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===(filter==='all'?'all':current))));
  }
@@ -130,7 +121,7 @@ dialog{padding:0;border:1px solid #333;background:#101010;color:#eee;max-width:1
   cards=items.map((p,index)=>{const card=document.createElement('button');card.className='orbit-card';card.type='button';card.dataset.bound='';card.dataset.index=index;card.addEventListener('click',()=>{if(dragged)return;const absolute=Number(card.dataset.absolute);if(Math.round(position)===absolute)openDetail();else{target=absolute;kick();}});orbit.append(card);return card;});
   buildSectors();
  }
- function bind(card,p){if(card.dataset.bound===p.slug)return;card.dataset.bound=p.slug;card.dataset.slug=p.slug;card.dataset.artwork=p.artwork;card.setAttribute('aria-label',p.title);card.replaceChildren();if(p.image){const img=document.createElement('img');img.src=imageUrl(p);img.alt=p.title;img.draggable=false;img.decoding='async';card.append(img);}else{const wrap=document.createElement('div');wrap.className='project-placeholder';const small=document.createElement('small');small.textContent=p.kind;const strong=document.createElement('strong');strong.textContent=p.title;wrap.append(small,strong);card.append(wrap);}}
+ function bind(card,p){if(card.dataset.bound===p.slug)return;card.dataset.bound=p.slug;card.dataset.slug=p.slug;card.dataset.artwork=p.artwork;card.setAttribute('aria-label',p.title);card.replaceChildren();if(p.image){const img=document.createElement('img');img.src=imageUrl(p);img.alt=p.title;img.draggable=false;img.decoding='async';card.append(img);}}
  function setCaption(index){const p=items[index];title.textContent=p.title;description.textContent=p.description||p.kind;credit.textContent=credits(p);fillTags(tags,p);counter.textContent=String(index+1).padStart(2,'0')+' / '+String(items.length).padStart(2,'0');lastIndex=index;const sector=sectors.find(s=>s.name===primaryCategory(p));const categoryNode=document.getElementById('category-name');categoryNode.textContent=sector.label;categoryNode.style.color=sector.color;}
  function ringGeometry(distance,count,width,height){
   const a=Math.abs(distance),sign=Math.sign(distance);
