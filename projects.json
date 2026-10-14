@@ -4,90 +4,116 @@
     "title": "Tilburg",
     "kind": "Interieurvisualisatie",
     "image": "images/tilburg.webp",
-    "batch": "initial"
+    "batch": "initial",
+    "artwork": "render",
+    "background": "full-image"
   },
   {
     "slug": "rozengracht",
     "title": "Rozengracht, Amsterdam",
     "kind": "Gevelvisualisatie",
     "image": "images/rozengracht.webp",
-    "batch": "initial"
+    "batch": "initial",
+    "artwork": "render",
+    "background": "full-image"
   },
   {
     "slug": "gerard-doustraat",
     "title": "Gerard Doustraat, Amsterdam",
     "kind": "Gevelvisualisatie",
     "image": "images/gerard-doustraat.webp",
-    "batch": "initial"
+    "batch": "initial",
+    "artwork": "render",
+    "background": "full-image"
   },
   {
     "slug": "wilhelminaplantsoen-69",
     "title": "Wilhelminaplantsoen 69",
     "kind": "Aanbouw en dakopbouw",
     "image": "images/wilhelminaplantsoen-69.webp",
-    "batch": "01"
+    "batch": "01",
+    "artwork": "line",
+    "background": "transparent-filter"
   },
   {
     "slug": "bert-haanstrakade-428",
     "title": "Bert Haanstrakade 428",
     "kind": "Dakopbouw",
     "image": "images/bert-haanstrakade-428.webp",
-    "batch": "01"
+    "batch": "01",
+    "artwork": "line",
+    "background": "transparent-filter"
   },
   {
     "slug": "westerdokdijk-567",
     "title": "Westerdokdijk 567",
     "kind": "Tuinkamer",
     "image": "images/westerdokdijk-567.webp",
-    "batch": "01"
+    "batch": "01",
+    "artwork": "line",
+    "background": "transparent-filter"
   },
   {
     "slug": "wilhelminastraat-26",
     "title": "Wilhelminastraat 26",
     "kind": "Woninguitbreiding",
     "image": "images/wilhelminastraat-26.webp",
-    "batch": "01"
+    "batch": "01",
+    "artwork": "line",
+    "background": "transparent-filter"
   },
   {
     "slug": "egelskopstraat-1",
     "title": "Egelskopstraat 1",
     "kind": "Bouwkundige detaillering",
     "image": "images/egelskopstraat-1.webp",
-    "batch": "01"
+    "batch": "01",
+    "artwork": "line",
+    "background": "transparent-filter"
   },
   {
     "slug": "zwanenbloemlaan-204-206",
     "title": "Zwanenbloemlaan 204–206",
     "kind": "Dakuitbreiding",
     "image": "images/zwanenbloemlaan-204-206.webp",
-    "batch": "01"
+    "batch": "01",
+    "artwork": "line",
+    "background": "transparent-filter"
   },
   {
     "slug": "rochussenstraat",
     "title": "Rochussenstraat",
     "kind": "Bouwkundige uitwerking",
     "image": "images/rochussenstraat.webp",
-    "batch": "01"
+    "batch": "01",
+    "artwork": "line",
+    "background": "transparent-filter"
   },
   {
     "slug": "meentweg-43",
     "title": "Meentweg 43",
     "kind": "Renovatie en verduurzaming",
     "image": "images/meentweg-43.webp",
-    "batch": "01"
+    "batch": "01",
+    "artwork": "line",
+    "background": "transparent-filter"
   },
   {
     "slug": "zwanenbloemlaan-202",
     "title": "Zwanenbloemlaan 202",
     "kind": "Woninguitbreiding",
-    "image": "images/zwanenbloemlaan-202.webp",
-    "batch": "01"
+    "image": "images/zwanenbloemlaan-202-cutout.svg",
+    "batch": "01",
+    "artwork": "render",
+    "background": "transparent"
   },
   {
     "slug": "paltzerweg-64",
     "title": "Paltzerweg 64",
     "kind": "Uitbouw achtergevel",
     "image": "images/paltzerweg-64.webp",
-    "batch": "01"
+    "batch": "01",
+    "artwork": "render",
+    "background": "full-image"
   }
 ]
