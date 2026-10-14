@@ -104,17 +104,20 @@
     }
 
 
-    .project-image { position: relative; overflow: hidden; isolation: isolate; }
+    .project-image {
+      --halftone-size: clamp(3px, .45vw, 10px);
+      position: relative; overflow: hidden; isolation: isolate; background: #000;
+    }
     .gallery-enhanced .project-slide:not(.is-active) .project-image {
       filter: grayscale(1) contrast(8);
     }
     .gallery-enhanced .project-slide:not(.is-active) .project-image img {
-      filter: brightness(.85) blur(.6px);
+      filter: brightness(1.2) blur(calc(var(--halftone-size) * .12));
     }
     .project-image::after {
       content: ""; position: absolute; inset: 0; pointer-events: none;
-      background: radial-gradient(circle, #000 0%, #888 38%, #fff 70%) 0 0 / 5px 5px;
-      mix-blend-mode: screen; opacity: 0;
+      background: radial-gradient(circle, #fff 0%, #888 38%, #000 70%) 0 0 / var(--halftone-size) var(--halftone-size);
+      mix-blend-mode: multiply; opacity: 0;
     }
     .gallery-enhanced .project-slide:not(.is-active) .project-image::after { opacity: 1; }
 
