@@ -164,6 +164,11 @@
     .project-card-label { margin-top: auto; }
     .project-slide--added figcaption > .project-affiliation, .project-slide--added figcaption > .project-photo-credit { display: block; margin-top: 4px; }
     .project-slide--batch03 .project-image img { object-fit: contain; }
+
+    /* Keep project images comfortably sized on wide desktop screens. */
+    @media (min-width: 1200px) {
+      .project-gallery { --slide-width: min(48vw, 900px); }
+    }
   </style>
 
   
