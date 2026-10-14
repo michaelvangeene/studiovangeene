@@ -1429,24 +1429,6 @@
     "imageCredit": "Projectbeeld KRFT · Bijdrage Michael van Geene"
   },
   {
-    "slug": "pesthuis-leiden",
-    "title": "Pesthuis, Leiden",
-    "kind": "Transformatie / paviljoen",
-    "batch": "remaining",
-    "description": "Bij KRFT werkte Michael aan dit project: VO, onderzoek, programma, massastudies en ruimtelijke varianten.",
-    "tags": [
-      "Transformatie  /  paviljoen",
-      "Leiden"
-    ],
-    "inventoryId": "082",
-    "employer": "KRFT",
-    "contribution": "VO, onderzoek, programma, massastudies en ruimtelijke varianten",
-    "image": "images/pesthuis-leiden.webp",
-    "artwork": "render",
-    "background": "full-image",
-    "imageCredit": "Projectbeeld KRFT · Bijdrage Michael van Geene"
-  },
-  {
     "slug": "tiny-house-eindhoven",
     "title": "Tiny house, Eindhoven",
     "kind": "Compact wonen",
