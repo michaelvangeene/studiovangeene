@@ -100,7 +100,7 @@ dialog{padding:0;border:1px solid #333;background:#101010;color:#eee;max-width:1
    const label=document.createElement('button');label.type='button';label.className='sector-label';label.style.color=sector.color;
    label.textContent=sector.label;const n=document.createElement('small');n.textContent=sector.count;label.append(n);
    label.setAttribute('aria-label',sector.label+' naar voren draaien');label.addEventListener('click',()=>{if(!dragged)choose(sector.name);});orbit.append(label);
-   Object.assign(sector,{group,rail,hit,label});
+   Object.assign(sector,{group,rail,hit,labelNode:label});
   }
  }
  function paintSectors(width,height){
@@ -119,9 +119,9 @@ dialog{padding:0;border:1px solid #333;background:#101010;color:#eee;max-width:1
    sector.group.dataset.active=String(current===sector.name);
    const p=point((sector.start+sector.end)/2);
    const half=width<=700?72:98;
-   sector.label.style.left=Math.max(half,Math.min(width-half,p.x))+'px';
-   sector.label.style.top=(p.y+18)+'px';
-   sector.label.setAttribute('aria-pressed',String(current===sector.name));
+   sector.labelNode.style.left=Math.max(half,Math.min(width-half,p.x))+'px';
+   sector.labelNode.style.top=(p.y+18)+'px';
+   sector.labelNode.setAttribute('aria-pressed',String(current===sector.name));
   }
   buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.filter===(filter==='all'?'all':current))));
  }
