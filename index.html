@@ -93,13 +93,21 @@
     .gallery-controls button { background: transparent; color: #fff; border: 0; font: 24px/1 Arial, sans-serif; width: 44px; height: 44px; padding: 0; }
     .gallery-controls button:focus-visible { outline: 1px solid #fff; }
     .gallery-controls span { color: #888; font-size: 11px; letter-spacing: .12em; }
-    .studio-contact { margin: 30px 20px 0; }
+    .studio-contact {
+      position: fixed; inset: auto 0 0; z-index: 900;
+      box-sizing: border-box; margin: 0; background: #000;
+      padding: 18px 20px calc(20px + env(safe-area-inset-bottom, 0px));
+      text-align: center;
+    }
+    .studio-contact h1 { margin: 0 0 10px; }
+    .studio-contact h2 { margin: 0; }
+    main { padding-bottom: calc(170px + env(safe-area-inset-bottom, 0px)); }
     .studio-contact h1 { font-size: clamp(1.15rem, 3vw, 1.8rem); }
     .studio-contact h2 { line-height: 1.8; overflow-wrap: anywhere; }
     @media (max-width: 600px) {
       .project-gallery { --slide-width: 72vw; --slide-gap: 6vw; }
       main { padding-top: 13svh; }
-      .studio-contact { margin-top: 26px; }
+      .studio-contact { margin: 0; }
       .studio-contact h1 { font-size: clamp(1rem, 4.6vw, 1.5rem); letter-spacing: .06em; }
     }
 
@@ -191,7 +199,7 @@
    target="_blank"
    style="
        position: fixed;
-       bottom: 20px;
+       bottom: calc(140px + env(safe-area-inset-bottom, 0px));
        right: 20px;
        z-index: 1000;
        height: 64px;
