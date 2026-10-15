@@ -343,9 +343,9 @@
     "slug": "paltzerweg-64",
     "title": "Paltzerweg 64",
     "kind": "Uitbouw achtergevel",
-    "image": "images/paltzerweg-64.jpg",
+    "image": "images/paltzerweg-64-detail.webp",
     "batch": "01",
-    "artwork": "render",
+    "artwork": "line",
     "background": "full-image",
     "description": "Uitbouw aan de achtergevel, uitgewerkt in bouwkundige tekeningen en een visualisatie van de nieuwe buitenruimte.",
     "tags": [
@@ -354,7 +354,10 @@
       "Bouwkundige tekeningen",
       "Architectuurvisualisatie"
     ],
-    "inventoryId": "016"
+    "inventoryId": "016",
+    "width": 840,
+    "height": 1220,
+    "alt": "Axonometrische principetekening van de uitbouw en bouwkundige aansluitingen aan Paltzerweg 64"
   },
   {
     "slug": "hudigstraat-70",
