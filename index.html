@@ -169,6 +169,21 @@
     @media (min-width: 1200px) {
       .project-gallery { --slide-width: min(48vw, 900px); }
     }
+  
+    .segment-toggle { position:fixed; left:20px; bottom:calc(20px + env(safe-area-inset-bottom, 0px)); z-index:1100; display:grid; align-content:center; gap:6px; width:44px; height:44px; padding:8px; border:0; background:#000; color:#fff; cursor:pointer; }
+    .segment-toggle span { display:block; height:2px; width:28px; background:currentColor; }
+    .segment-toggle:focus-visible, .segment-dialog a:focus-visible, .segment-close:focus-visible { outline:2px solid #fff; outline-offset:4px; }
+    .segment-dialog { position:fixed; inset:auto auto calc(80px + env(safe-area-inset-bottom, 0px)) 20px; margin:0; width:min(360px, calc(100vw - 40px)); max-height:calc(100svh - 140px); overflow:auto; box-sizing:border-box; padding:24px; border:1px solid #333; background:#080808; color:#fff; text-align:left; }
+    .segment-dialog::backdrop { background:#0009; }
+    .segment-heading { display:flex; align-items:center; justify-content:space-between; gap:16px; margin-bottom:22px; }
+    .segment-heading h2 { margin:0; font:13px 'GiphursMedium', Arial, sans-serif; color:#999; }
+    .segment-close { width:32px; height:32px; border:0; background:transparent; color:#fff; font:28px/1 Arial, sans-serif; cursor:pointer; }
+    .segment-dialog nav { display:grid; gap:8px; }
+    .segment-dialog a { display:flex; justify-content:space-between; gap:14px; padding:14px 0; border-bottom:1px solid #292929; color:#ccc; text-decoration:none; font:16px/1.4 'GiphursMedium', Arial, sans-serif; }
+    .segment-dialog a[aria-current="true"] { color:#fff; }
+    .segment-dialog a[aria-current="true"]::before { content:'•'; }
+    .segment-dialog a small { margin-left:auto; color:#777; font:11px/2 Arial, sans-serif; }
+
   </style>
 
   
@@ -2579,6 +2594,18 @@
     </header>
   </main>
 
+
+  <button class="segment-toggle" type="button" aria-label="Open projectmenu" aria-haspopup="dialog" aria-controls="segment-menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  <dialog class="segment-dialog" id="segment-menu" aria-labelledby="segment-heading">
+    <div class="segment-heading"><h2 id="segment-heading">Projectsegmenten</h2><button class="segment-close" type="button" aria-label="Sluit projectmenu">×</button></div>
+    <nav aria-label="Projectsegmenten">
+      <a href="?" data-segment="all">Alle projecten <small></small></a>
+      <a href="?segment=home" data-segment="home">Huisuitbreidingen <small></small></a>
+      <a href="?segment=technical" data-segment="technical">Complex technisch ontwerp <small></small></a>
+      <a href="?segment=interior" data-segment="interior">Interieur <small></small></a>
+    </nav>
+  </dialog>
+
   <!-- WhatsApp-knop rechtsonder -->
 <a class="whatsapp-contact" aria-label="Neem contact op via WhatsApp" rel="noopener noreferrer" href="https://wa.me/31626130070?text=Hoi!%20Voor%20een%20snelle%20offerte%20stuur%20ik%20mijn%20postcode%2C%20omschrijving%20van%20de%20verbouwing%20en%20telefoonnummer%20mee." 
    target="_blank"
@@ -2607,6 +2634,51 @@
   <script>
     (() => {
       const track = document.querySelector('.project-track');
+
+      const projectMenu = document.getElementById('segment-menu');
+      const menuToggle = document.querySelector('.segment-toggle');
+      const requestedSegment = new URLSearchParams(location.search).get('segment');
+      const segment = ['home', 'technical', 'interior'].includes(requestedSegment) ? requestedSegment : 'all';
+      const allProjects = Array.from(track.querySelectorAll('.project-slide'));
+      function projectSegments(slide) {
+        const kind = slide.querySelector('.project-kind')?.textContent || '';
+        const themes = Array.from(slide.querySelectorAll('.project-tag')).map(tag => tag.textContent).join(' ');
+        const affiliation = slide.querySelector('.project-affiliation')?.textContent || '';
+        const text = (kind + ' ' + themes).toLowerCase();
+        const bureau = slide.classList.contains('project-slide--bureau') || /namens (INBO|KRFT)/i.test(affiliation);
+        const interior = /interieur|horeca|coffeeshop|keuken/.test(text) && slide.dataset.project !== 'rozengracht';
+        const technical = bureau || /detaillering|hsb|houtskelet|technisch ontwerp/.test(text);
+        const home = !bureau && !interior && /woning|dak|aanbouw|uitbouw|renovatie|verbouwing|bestaand|splits/.test(text);
+        return [home && 'home', technical && 'technical', interior && 'interior'].filter(Boolean);
+      }
+      projectMenu.querySelectorAll('[data-segment]').forEach(link => {
+        const name = link.dataset.segment;
+        link.querySelector('small').textContent = allProjects.filter(slide => name === 'all' || projectSegments(slide).includes(name)).length;
+        if (name === segment) link.setAttribute('aria-current', 'true');
+        const url = new URL(location.href);
+        url.hash = '';
+        if (name === 'all') url.searchParams.delete('segment');
+        else url.searchParams.set('segment', name);
+        link.href = url.pathname + url.search;
+      });
+      menuToggle.addEventListener('click', () => {
+        projectMenu.showModal();
+        menuToggle.setAttribute('aria-expanded', 'true');
+      });
+      projectMenu.querySelector('.segment-close').addEventListener('click', () => projectMenu.close());
+      projectMenu.addEventListener('close', () => {
+        menuToggle.setAttribute('aria-expanded', 'false');
+        menuToggle.focus();
+      });
+      projectMenu.addEventListener('click', event => {
+        if (event.target !== projectMenu) return;
+        const rect = projectMenu.getBoundingClientRect();
+        if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) projectMenu.close();
+      });
+      if (segment !== 'all') allProjects.forEach(slide => {
+        if (!projectSegments(slide).includes(segment)) slide.remove();
+      });
+
       const originals = Array.from(track.querySelectorAll('.project-slide'));
       const count = originals.length;
       const counter = document.getElementById('project-counter');
@@ -2635,7 +2707,7 @@
       const slides = Array.from(track.querySelectorAll('.project-slide'));
       gallery.classList.add('gallery-enhanced');
       const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-      let active = count + 1;
+      let active = count + (segment === 'all' ? 1 : 0);
       let frame = 0;
       let settleTimer = 0;
       let pointerDown = false;
