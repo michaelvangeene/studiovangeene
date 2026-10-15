@@ -197,12 +197,13 @@
     "batch": "01",
     "artwork": "line",
     "background": "transparent-filter",
-    "description": "Bouwkundige uitwerking van een aanbouw en dakopbouw, met tekeningen en aansluitdetails voor de uitbreiding van de bestaande woning.",
+    "description": "Bouwkundige uitwerking van een aanbouw en dakopbouw, met tekeningen en aansluitdetails voor de uitbreiding van de bestaande woning. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "Aanbouw",
       "Dakopbouw",
       "Bouwkundige tekeningen",
-      "Detaillering"
+      "Detaillering",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "004"
   },
@@ -214,12 +215,13 @@
     "batch": "01",
     "artwork": "line",
     "background": "transparent-filter",
-    "description": "Bouwkundige uitwerking van een dakopbouw aan de Bert Haanstrakade, inclusief het balkon en de aansluiting op de bestaande woning.",
+    "description": "Bouwkundige uitwerking van een dakopbouw aan de Bert Haanstrakade, inclusief het balkon en de aansluiting op de bestaande woning. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "Dakopbouw",
       "Balkon",
       "Bouwkundige uitwerking",
-      "Amsterdam"
+      "Amsterdam",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "003"
   },
@@ -231,12 +233,13 @@
     "batch": "01",
     "artwork": "line",
     "background": "transparent-filter",
-    "description": "Uitwerking van een tuinkamer aan de Westerdokdijk, met gevelaanzichten en de aansluiting op het terras.",
+    "description": "Uitwerking van een tuinkamer aan de Westerdokdijk, met gevelaanzichten en de aansluiting op het terras. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "Tuinkamer",
       "Gevelaanzichten",
       "Bouwkundige tekeningen",
-      "Amsterdam"
+      "Amsterdam",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "010"
   },
@@ -248,11 +251,12 @@
     "batch": "01",
     "artwork": "line",
     "background": "transparent-filter",
-    "description": "Bouwkundige tekeningen voor een woninguitbreiding, met de bestaande en nieuwe situatie in één samenhangende set.",
+    "description": "Bouwkundige tekeningen voor een woninguitbreiding, met de bestaande en nieuwe situatie in één samenhangende set. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "Woninguitbreiding",
       "Bouwkundige tekeningen",
-      "Bestaande bouw"
+      "Bestaande bouw",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "006"
   },
@@ -280,12 +284,13 @@
     "batch": "01",
     "artwork": "line",
     "background": "transparent-filter",
-    "description": "Bouwkundige uitwerking van dakuitbreidingen voor twee woningen aan de Zwanenbloemlaan in Amsterdam.",
+    "description": "Bouwkundige uitwerking van dakuitbreidingen voor twee woningen aan de Zwanenbloemlaan in Amsterdam. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "Dakuitbreiding",
       "Bouwkundige tekeningen",
       "Bestaande bouw",
-      "Amsterdam"
+      "Amsterdam",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "008"
   },
@@ -330,12 +335,13 @@
     "batch": "01",
     "artwork": "render",
     "background": "transparent",
-    "description": "Woninguitbreiding aan de Zwanenbloemlaan in Amsterdam, uitgewerkt in bouwkundige tekeningen en een ruimtelijke visualisatie.",
+    "description": "Woninguitbreiding aan de Zwanenbloemlaan in Amsterdam, uitgewerkt in bouwkundige tekeningen en een ruimtelijke visualisatie. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "Woninguitbreiding",
       "Bouwkundige tekeningen",
       "Architectuurvisualisatie",
-      "Amsterdam"
+      "Amsterdam",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "012"
   },
@@ -347,12 +353,13 @@
     "batch": "01",
     "artwork": "line",
     "background": "full-image",
-    "description": "Uitbouw aan de achtergevel, uitgewerkt in bouwkundige tekeningen en een visualisatie van de nieuwe buitenruimte.",
+    "description": "Uitbouw aan de achtergevel, uitgewerkt in bouwkundige tekeningen en een visualisatie van de nieuwe buitenruimte. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "Uitbouw",
       "Woninguitbreiding",
       "Bouwkundige tekeningen",
-      "Architectuurvisualisatie"
+      "Architectuurvisualisatie",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "016",
     "width": 840,
@@ -368,12 +375,13 @@
     "artwork": "render",
     "background": "full-image",
     "collaboration": "JVAI",
-    "description": "Dakopbouw aan D.L. Hudigstraat 70 in Amsterdam, met tekeningen en een visualisatie voor de omgevingsvergunning, in samenwerking met JVAI.",
+    "description": "Dakopbouw aan D.L. Hudigstraat 70 in Amsterdam, met tekeningen en een visualisatie voor de omgevingsvergunning, in samenwerking met JVAI. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "Dakopbouw",
       "Omgevingsvergunning",
       "Architectuurvisualisatie",
-      "Amsterdam"
+      "Amsterdam",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "023"
   },
@@ -386,12 +394,13 @@
     "artwork": "render",
     "background": "full-image",
     "collaboration": "JVAI",
-    "description": "Dakuitbreiding aan Hogeweg 28-3 in Amsterdam, met plattegronden, doorsneden en principedetails voor de omgevingsvergunning, in samenwerking met JVAI.",
+    "description": "Dakuitbreiding aan Hogeweg 28-3 in Amsterdam, met plattegronden, doorsneden en principedetails voor de omgevingsvergunning, in samenwerking met JVAI. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "Dakuitbreiding",
       "Omgevingsvergunning",
       "Bouwkundige detaillering",
-      "Amsterdam"
+      "Amsterdam",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "038"
   },
@@ -404,12 +413,13 @@
     "artwork": "render",
     "background": "full-image",
     "collaboration": "JVAI",
-    "description": "Woninguitbreiding in Amstelveen, uitgewerkt in vergunningstekeningen en een gevelvisualisatie, in samenwerking met JVAI.",
+    "description": "Woninguitbreiding in Amstelveen, uitgewerkt in vergunningstekeningen en een gevelvisualisatie, in samenwerking met JVAI. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "Woninguitbreiding",
       "Vergunningstekeningen",
       "Gevelvisualisatie",
-      "Amstelveen"
+      "Amstelveen",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "041"
   },
@@ -422,12 +432,13 @@
     "artwork": "render",
     "background": "full-image",
     "collaboration": "JVAI",
-    "description": "Woninguitbreiding aan Lisdoddelaan 94b in Amsterdam, met gevels, plattegronden en een ruimtelijke visualisatie, in samenwerking met JVAI.",
+    "description": "Woninguitbreiding aan Lisdoddelaan 94b in Amsterdam, met gevels, plattegronden en een ruimtelijke visualisatie, in samenwerking met JVAI. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "Woninguitbreiding",
       "Bouwkundige tekeningen",
       "Architectuurvisualisatie",
-      "Amsterdam"
+      "Amsterdam",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "034"
   },
@@ -440,12 +451,13 @@
     "artwork": "render",
     "background": "full-image",
     "collaboration": "JVAI",
-    "description": "Transformatie en uitbreiding in Westzaan, uitgewerkt in bouwkundige tekeningen en gevelvisualisaties, in samenwerking met JVAI.",
+    "description": "Transformatie en uitbreiding in Westzaan, uitgewerkt in bouwkundige tekeningen en gevelvisualisaties, in samenwerking met JVAI. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "Transformatie",
       "Bouwkundige uitwerking",
       "Gevelvisualisatie",
-      "Westzaan"
+      "Westzaan",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "040"
   },
@@ -458,12 +470,13 @@
     "artwork": "render",
     "background": "full-image",
     "collaboration": "JVAI",
-    "description": "Dakuitbreidingen voor twee woningen in Amsterdam, met tekeningen en een visualisatie van de opbouw en het terras, in samenwerking met JVAI.",
+    "description": "Dakuitbreidingen voor twee woningen in Amsterdam, met tekeningen en een visualisatie van de opbouw en het terras, in samenwerking met JVAI. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "Dakuitbreiding",
       "Dakterras",
       "Bouwkundige tekeningen",
-      "Amsterdam"
+      "Amsterdam",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "036"
   },
@@ -476,12 +489,13 @@
     "artwork": "render",
     "background": "full-image",
     "collaboration": "JVAI",
-    "description": "Uitbouw aan de achtergevel in Duivendrecht, met een definitief ontwerp, bouwkundige details en een visualisatie, in samenwerking met JVAI.",
+    "description": "Uitbouw aan de achtergevel in Duivendrecht, met een definitief ontwerp, bouwkundige details en een visualisatie, in samenwerking met JVAI. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "Uitbouw",
       "Definitief ontwerp",
       "Bouwkundige detaillering",
-      "Duivendrecht"
+      "Duivendrecht",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "037"
   },
@@ -493,12 +507,13 @@
     "batch": "02",
     "artwork": "render",
     "background": "full-image",
-    "description": "Woninguitbreiding in Arnhem, uitgewerkt in vergunningstekeningen en details, met een ruimtelijke impressie van de uitbouw.",
+    "description": "Woninguitbreiding in Arnhem, uitgewerkt in vergunningstekeningen en details, met een ruimtelijke impressie van de uitbouw. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "Woninguitbreiding",
       "Omgevingsvergunning",
       "Bouwkundige detaillering",
-      "Arnhem"
+      "Arnhem",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "029"
   },
@@ -528,12 +543,13 @@
     "artwork": "line",
     "background": "transparent-filter",
     "collaboration": "JVAI",
-    "description": "Dakopbouw in Weesp, met gevelaanzichten, doorsneden en details voor de aansluiting op de bestaande woning, in samenwerking met JVAI.",
+    "description": "Dakopbouw in Weesp, met gevelaanzichten, doorsneden en details voor de aansluiting op de bestaande woning, in samenwerking met JVAI. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "Dakopbouw",
       "Bouwkundige tekeningen",
       "Bouwkundige detaillering",
-      "Weesp"
+      "Weesp",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "017"
   },
@@ -831,11 +847,12 @@
     "title": "Ruyschstraat 343a, Amsterdam",
     "kind": "HSB / dakopbouw",
     "batch": "remaining",
-    "description": "Werkzaamheden: HSB-elementtekeningen voor uitvoering en prefabricage.",
+    "description": "Werkzaamheden: HSB-elementtekeningen voor uitvoering en prefabricage. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "HSB  /  dakopbouw",
       "Houtskeletbouw",
-      "Amsterdam"
+      "Amsterdam",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "042",
     "image": "images/ruyschstraat-343a.webp",
@@ -847,11 +864,12 @@
     "title": "Derde Oosterparkstraat 198 / 198D, Amsterdam",
     "kind": "HSB / dakopbouw",
     "batch": "remaining",
-    "description": "Werkzaamheden: HSB-elementtekeningen voor uitvoering en prefabricage.",
+    "description": "Werkzaamheden: HSB-elementtekeningen voor uitvoering en prefabricage. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "HSB  /  dakopbouw",
       "Houtskeletbouw",
-      "Amsterdam"
+      "Amsterdam",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "043",
     "image": "images/derde-oosterparkstraat-198d.webp",
@@ -863,12 +881,13 @@
     "title": "Koopvaardersplantsoen 87",
     "kind": "Woningverbouwing",
     "batch": "remaining",
-    "description": "Werkzaamheden: BIM, details, Bouwbesluit, render en aanpassing opbouw.",
+    "description": "Werkzaamheden: BIM, details, Bouwbesluit, render en aanpassing opbouw. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "Woningverbouwing",
       "BIM-modellering",
       "Bouwkundige detaillering",
-      "Architectuurvisualisatie"
+      "Architectuurvisualisatie",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "044",
     "collaboration": "JVAI",
@@ -881,12 +900,13 @@
     "title": "Kanaalstraat 106-3",
     "kind": "Dakhuis / dakopbouw",
     "batch": "remaining",
-    "description": "Werkzaamheden: BIM, details, Bouwbesluit en render.",
+    "description": "Werkzaamheden: BIM, details, Bouwbesluit en render. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "Dakhuis  /  dakopbouw",
       "BIM-modellering",
       "Bouwkundige detaillering",
-      "Architectuurvisualisatie"
+      "Architectuurvisualisatie",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "045",
     "collaboration": "JVAI",
@@ -899,11 +919,12 @@
     "title": "Nuovaweg 2, Alphen aan de Rijn",
     "kind": "HSB / woninguitbreiding",
     "batch": "remaining",
-    "description": "Werkzaamheden: HSB-elementen voor drie aanbouwen, opbouw en twee dakkapellen.",
+    "description": "Werkzaamheden: HSB-elementen voor drie aanbouwen, opbouw en twee dakkapellen. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "HSB  /  woninguitbreiding",
       "Houtskeletbouw",
-      "Alphen aan de Rijn"
+      "Alphen aan de Rijn",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "046",
     "image": "images/nuovaweg-2.webp",
@@ -937,11 +958,12 @@
     "title": "Rijksstraatweg – HSB-aanbouw en tuinhuis, Duivendrecht",
     "kind": "HSB / aanbouw en tuinhuis",
     "batch": "remaining",
-    "description": "Werkzaamheden: HSB-elementtekeningen voor uitvoering.",
+    "description": "Werkzaamheden: HSB-elementtekeningen voor uitvoering. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "HSB  /  aanbouw en tuinhuis",
       "Houtskeletbouw",
-      "Duivendrecht"
+      "Duivendrecht",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "048",
     "image": "images/rijksstraatweg-hsb-cutout.svg",
@@ -956,11 +978,12 @@
     "title": "Willem Walravenhove 66, Nieuwegein",
     "kind": "HSB / dakopbouw",
     "batch": "remaining",
-    "description": "Werkzaamheden: HSB-elementtekeningen voor uitvoering.",
+    "description": "Werkzaamheden: HSB-elementtekeningen voor uitvoering. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "HSB  /  dakopbouw",
       "Houtskeletbouw",
-      "Nieuwegein"
+      "Nieuwegein",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "049",
     "image": "images/willem-walravenhove-66.webp",
@@ -1080,12 +1103,13 @@
     "title": "Blauwpijpstraat 33",
     "kind": "Dakopbouw",
     "batch": "remaining",
-    "description": "Werkzaamheden: BIM, details, Bouwbesluit en render.",
+    "description": "Werkzaamheden: BIM, details, Bouwbesluit en render. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "Dakopbouw",
       "BIM-modellering",
       "Bouwkundige detaillering",
-      "Architectuurvisualisatie"
+      "Architectuurvisualisatie",
+      "Werktekeningen voor aannemer"
     ],
     "inventoryId": "056",
     "collaboration": "JVAI",
@@ -1538,12 +1562,13 @@
     "batch": "03",
     "title": "Hogeweg 38-3, Amsterdam",
     "kind": "Dakopbouw",
-    "description": "Bouwkundige modellering en vergunningtekeningen voor een dakopbouw aan Hogeweg 38-3 in Amsterdam, in samenwerking met JVAI.",
+    "description": "Bouwkundige modellering en vergunningtekeningen voor een dakopbouw aan Hogeweg 38-3 in Amsterdam, in samenwerking met JVAI. Ook de werktekeningen voor de aannemer zijn voorbereid.",
     "tags": [
       "Dakopbouw",
       "BIM-modellering",
       "Omgevingsvergunning",
-      "Amsterdam"
+      "Amsterdam",
+      "Werktekeningen voor aannemer"
     ],
     "collaboration": "JVAI",
     "image": "images/hogeweg-38.webp",
