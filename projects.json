@@ -177,7 +177,7 @@
     "slug": "gerard-doustraat",
     "title": "Gerard Doustraat, Amsterdam",
     "kind": "Gevelvisualisatie",
-    "image": "images/gerard-doustraat-photoreal-20261015.webp",
+    "image": "images/gerard-doustraat-start-v2-20261015.webp",
     "batch": "initial",
     "artwork": "render",
     "background": "full-image",
@@ -188,7 +188,7 @@
       "Amsterdam"
     ],
     "inventoryId": "028",
-    "video": "/videos/gerard-doustraat-20261015.mp4",
+    "video": "/videos/gerard-doustraat-v2-20261015.mp4",
     "width": 1451,
     "height": 1084,
     "alt": "Fotorealistische visualisatie van de Gerard Doustraat met een weelderige inheemse tuin"

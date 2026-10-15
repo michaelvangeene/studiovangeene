@@ -20,14 +20,14 @@
       if(!v){
         v = document.createElement('video');v.className = 'project-motion';
         v.muted = true;v.loop = true;v.playsInline = true;v.preload = 'none';
-        v.poster = '/images/gerard-doustraat-photoreal-20261015.webp';
+        v.poster = '/images/gerard-doustraat-start-v2-20261015.webp';
         v.setAttribute('aria-hidden','true');
         host.append(v);
       }
       const selected = card.classList.contains('is-active') || card.classList.contains('active');
       active ||= selected;
       if(selected && !paused && !document.hidden && !document.querySelector('dialog[open]')){
-        if(!v.getAttribute('src'))v.src = '/videos/gerard-doustraat-20261015.mp4';
+        if(!v.getAttribute('src'))v.src = '/videos/gerard-doustraat-v2-20261015.mp4';
         if(v.paused)v.play().catch(()=>{});
       }else if(!v.paused)v.pause();
     });
