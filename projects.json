@@ -1287,24 +1287,6 @@
     "imageCredit": "Ontwerp © Peter Bergboer · BMA Ontwerpers"
   },
   {
-    "slug": "doornenburg-5",
-    "title": "Doornenburg 5, Veenendaal",
-    "kind": "Woningverbouwing",
-    "batch": "remaining",
-    "description": "Werkzaamheden: BIM nieuwe situatie en render.",
-    "tags": [
-      "Woningverbouwing",
-      "BIM-modellering",
-      "Architectuurvisualisatie",
-      "Veenendaal"
-    ],
-    "inventoryId": "065",
-    "collaboration": "BMA Ontwerpers",
-    "image": null,
-    "artwork": "text",
-    "background": "project-information"
-  },
-  {
     "slug": "pleinesbos-65",
     "title": "Pleinesbos 65, Vleuten",
     "kind": "Woningverbouwing",
@@ -1401,23 +1383,6 @@
     "artwork": "line",
     "background": "transparent-filter",
     "imageCredit": "Ontwerp © Peter Bergboer · BMA Ontwerpers"
-  },
-  {
-    "slug": "nudepark",
-    "title": "Nudepark, Wageningen",
-    "kind": "Bouwkundige uitwerking",
-    "batch": "remaining",
-    "description": "Werkzaamheden: Details.",
-    "tags": [
-      "Bouwkundige uitwerking",
-      "Bouwkundige detaillering",
-      "Wageningen"
-    ],
-    "inventoryId": "071",
-    "collaboration": "BMA Ontwerpers",
-    "image": null,
-    "artwork": "text",
-    "background": "project-information"
   },
   {
     "slug": "vd-dordrecht",
