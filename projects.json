@@ -177,7 +177,7 @@
     "slug": "gerard-doustraat",
     "title": "Gerard Doustraat, Amsterdam",
     "kind": "Gevelvisualisatie",
-    "image": "images/gerard-doustraat.webp",
+    "image": "images/gerard-doustraat-photoreal-20261015.webp",
     "batch": "initial",
     "artwork": "render",
     "background": "full-image",
@@ -187,7 +187,11 @@
       "Architectuurvisualisatie",
       "Amsterdam"
     ],
-    "inventoryId": "028"
+    "inventoryId": "028",
+    "video": "/videos/gerard-doustraat-20261015.mp4",
+    "width": 1451,
+    "height": 1084,
+    "alt": "Fotorealistische visualisatie van de Gerard Doustraat met een weelderige inheemse tuin"
   },
   {
     "slug": "wilhelminaplantsoen-69",

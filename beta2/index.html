@@ -222,10 +222,12 @@ dialog{padding:0;border:1px solid #333;background:#101010;color:#eee;max-width:1
   }else paint();
  }
  buttons.forEach(b=>b.addEventListener('click',()=>choose(b.dataset.filter)));
- function openDetail(){const p=items[mod(Math.round(position),items.length)];if(!p)return;const img=detail.querySelector('img');img.hidden=!p.image;if(p.image){img.src=imageUrl(p);img.alt=p.title;img.classList.toggle('line',p.artwork==='line');}else{img.removeAttribute('src');}detail.querySelector('h2').textContent=(p.kind?p.kind+' — ':'')+p.title;detail.querySelector('.detail-description').textContent=p.description||p.kind;detail.querySelector('.credit').textContent=credits(p);fillTags(detail.querySelector('.tags'),p);detail.showModal();}
+ function openDetail(){detail.querySelector('video')?.remove();const p=items[mod(Math.round(position),items.length)];if(!p)return;const img=detail.querySelector('img');img.hidden=!p.image;if(p.image){img.src=imageUrl(p);img.alt=p.title;img.classList.toggle('line',p.artwork==='line');}else{img.removeAttribute('src');}detail.querySelector('h2').textContent=(p.kind?p.kind+' — ':'')+p.title;detail.querySelector('.detail-description').textContent=p.description||p.kind;detail.querySelector('.credit').textContent=credits(p);fillTags(detail.querySelector('.tags'),p);if(p.video){img.hidden=true;const v=document.createElement('video');v.className='detail-image';v.src=p.video;v.poster=imageUrl(p);v.controls=true;v.muted=true;v.loop=true;v.playsInline=true;v.setAttribute('aria-label','Animatie van '+p.title);img.after(v);if(!reduced.matches)v.play().catch(()=>{});}detail.showModal();}
+ detail.addEventListener('close',()=>detail.querySelector('video')?.pause());
  detail.querySelector('.close').addEventListener('click',()=>detail.close());detail.addEventListener('click',e=>{if(e.target===detail){const r=detail.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)detail.close();}});
  addEventListener('resize',()=>{cameraGoalX=cameraGoalY=0;paint();kick();});reduced.addEventListener('change',()=>{cameraGoalX=cameraGoalY=0;kick();});document.addEventListener('visibilitychange',()=>{if(document.hidden){cancelAnimationFrame(frame);frame=0;}else{lastTime=0;kick();}});
  fetch('/projects.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('Projectgegevens niet beschikbaar');return r.json();}).then(data=>{projects=data.filter(p=>p.slug!=='pesthuis-leiden');prepareRing();}).catch(()=>{title.textContent='De projecten kunnen niet worden geladen.';description.textContent='Ververs de pagina om het opnieuw te proberen.';cards.forEach(c=>c.hidden=true);});
 })();
 </script>
+<script src="/project-motion.js?v=20261015" defer></script>
 </body></html>
