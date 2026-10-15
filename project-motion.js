@@ -11,7 +11,7 @@
   toggle.addEventListener('click', () => {paused = !paused;sync();});
   const media = {
     'gerard-doustraat': {poster:'/images/gerard-doustraat-start-v2-20261015.webp',video:'/videos/gerard-doustraat-v2-20261015.mp4'},
-    'rozengracht': {poster:'/images/rozengracht-photoreal-20261015.webp',video:'/videos/rozengracht-20261015.mp4'}
+    'rozengracht': {poster:'/images/rozengracht-rain-20261015.webp',video:'/videos/rozengracht-rain-20261015.mp4'}
   };
   const selector = Object.keys(media).map(slug => `.project-slide[data-project="${slug}"],.orbit-card[data-slug="${slug}"]`).join(',');
   function sync() {
