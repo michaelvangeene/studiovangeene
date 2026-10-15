@@ -922,12 +922,12 @@
     ],
     "inventoryId": "047",
     "collaboration": "JVAI",
-    "image": "images/fritz-dietrich-kahlenbergstraat-11b.webp",
-    "artwork": "render",
+    "image": "images/fritz-dietrich-kahlenbergstraat-11b-doorsnede.webp",
+    "artwork": "line",
     "background": "full-image",
-    "width": 1280,
-    "height": 1000,
-    "alt": "Visualisatie van Fritz Dietrich Kahlenbergstraat 11b, Amsterdam"
+    "width": 1080,
+    "height": 855,
+    "alt": "Doorsnede door de dakopbouw, werkkamer en het dakterras aan Fritz Dietrich Kahlenbergstraat 11b"
   },
   {
     "slug": "rijksstraatweg-hsb",
