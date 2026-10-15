@@ -229,5 +229,5 @@ dialog{padding:0;border:1px solid #333;background:#101010;color:#eee;max-width:1
  fetch('/projects.json',{cache:'no-cache'}).then(r=>{if(!r.ok)throw Error('Projectgegevens niet beschikbaar');return r.json();}).then(data=>{projects=data.filter(p=>p.slug!=='pesthuis-leiden');prepareRing();}).catch(()=>{title.textContent='De projecten kunnen niet worden geladen.';description.textContent='Ververs de pagina om het opnieuw te proberen.';cards.forEach(c=>c.hidden=true);});
 })();
 </script>
-<script src="/project-motion.js?v=20261015-v2" defer></script>
+<script src="/project-motion.js?v=20261015-rz" defer></script>
 </body></html>

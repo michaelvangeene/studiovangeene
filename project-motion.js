@@ -9,10 +9,15 @@
   toggle.type = 'button';toggle.className = 'motion-toggle';
   (document.querySelector('.caption') || document.querySelector('.gallery-controls')).after(toggle);
   toggle.addEventListener('click', () => {paused = !paused;sync();});
-  const selector = '.project-slide[data-project="gerard-doustraat"],.orbit-card[data-slug="gerard-doustraat"]';
+  const media = {
+    'gerard-doustraat': {poster:'/images/gerard-doustraat-start-v2-20261015.webp',video:'/videos/gerard-doustraat-v2-20261015.mp4'},
+    'rozengracht': {poster:'/images/rozengracht-photoreal-20261015.webp',video:'/videos/rozengracht-20261015.mp4'}
+  };
+  const selector = Object.keys(media).map(slug => `.project-slide[data-project="${slug}"],.orbit-card[data-slug="${slug}"]`).join(',');
   function sync() {
     let active = false;
     document.querySelectorAll(selector).forEach(card => {
+      const asset = media[card.dataset.project || card.dataset.slug];
       const host = card.querySelector('.project-image') || card;
       // Ring panels are emptied when they move to the back of the carousel.
       if(!host.querySelector('img'))return;
@@ -20,14 +25,14 @@
       if(!v){
         v = document.createElement('video');v.className = 'project-motion';
         v.muted = true;v.loop = true;v.playsInline = true;v.preload = 'none';
-        v.poster = '/images/gerard-doustraat-start-v2-20261015.webp';
+        v.poster = asset.poster;
         v.setAttribute('aria-hidden','true');
         host.append(v);
       }
       const selected = card.classList.contains('is-active') || card.classList.contains('active');
       active ||= selected;
       if(selected && !paused && !document.hidden && !document.querySelector('dialog[open]')){
-        if(!v.getAttribute('src'))v.src = '/videos/gerard-doustraat-v2-20261015.mp4';
+        if(!v.getAttribute('src'))v.src = asset.video;
         if(v.paused)v.play().catch(()=>{});
       }else if(!v.paused)v.pause();
     });
