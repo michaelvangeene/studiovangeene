@@ -523,23 +523,6 @@
     "inventoryId": "029"
   },
   {
-    "slug": "paradijsweg-104",
-    "title": "Paradijsweg 104, Ter Aar",
-    "kind": "Erfafscheiding",
-    "image": "images/paradijsweg-104.webp",
-    "batch": "02",
-    "artwork": "line",
-    "background": "transparent-filter",
-    "description": "Uitwerking van een erfafscheiding in Ter Aar, met aanzichten en een principedetail voor de omgevingsvergunning.",
-    "tags": [
-      "Erfafscheiding",
-      "Omgevingsvergunning",
-      "Bouwkundige detaillering",
-      "Ter Aar"
-    ],
-    "inventoryId": "035"
-  },
-  {
     "slug": "gj-wiefferingdreef-9",
     "title": "G.J. Wiefferingdreef 9, Weesp",
     "kind": "Dakopbouw",
@@ -563,7 +546,7 @@
     "title": "New Times, Amstelstraat 35, Amsterdam",
     "kind": "Horeca/interieur",
     "batch": "remaining",
-    "description": "Werkzaamheden: Ontwerp en technische uitwerking horeca.",
+    "description": "Ontwerp van bar en horeca-interieur, met technische tekeningen voor het opvragen van aannemersoffertes.",
     "tags": [
       "Horeca / interieur",
       "Amsterdam"
