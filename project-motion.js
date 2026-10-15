@@ -10,6 +10,7 @@
   (document.querySelector('.caption') || document.querySelector('.gallery-controls')).after(toggle);
   toggle.addEventListener('click', () => {paused = !paused;sync();});
   const media = {
+    'amstelstraat-35': {poster:'https://app-uploads.krea.ai/public/f9ee27cf-d58e-49d0-9a67-6efd2c45ab3b-image.png',video:'https://app-uploads.krea.ai/public/bc31810c-70ed-4ecf-bf39-6654f470c839-video.mp4'},
     'tilburg': {poster:'/images/tilburg-clean-20261015.webp',video:'/videos/tilburg-20261015.mp4'},
     'gerard-doustraat': {poster:'/images/gerard-doustraat-start-v2-20261015.webp',video:'/videos/gerard-doustraat-v2-20261015.mp4'},
     'rozengracht': {poster:'/images/rozengracht-rain-20261015.webp',video:'/videos/rozengracht-rain-20261015.mp4'}
