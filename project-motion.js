@@ -10,7 +10,7 @@
   (document.querySelector('.caption') || document.querySelector('.gallery-controls')).after(toggle);
   toggle.addEventListener('click', () => {paused = !paused;sync();});
   const media = {
-    'cuneralaan-34': {poster:'https://app-uploads.krea.ai/public/f39f0a9e-26c7-434f-840b-035a1a13f854.png',video:'https://app-uploads.krea.ai/public/4538f035-7da2-4d89-9977-3692c4ae1239-video.mp4'},
+    'cuneralaan-34': {poster:'https://app-uploads.krea.ai/public/6706249f-c3fc-4841-8343-87bb1da1c51a-image.png',video:'https://app-uploads.krea.ai/public/237c4087-1f7c-465f-ba7e-a9b3c5e351eb-video.mp4'},
     'amstelstraat-35': {poster:'https://app-uploads.krea.ai/public/f9ee27cf-d58e-49d0-9a67-6efd2c45ab3b-image.png',video:'https://app-uploads.krea.ai/public/bc31810c-70ed-4ecf-bf39-6654f470c839-video.mp4'},
     'tilburg': {poster:'/images/tilburg-clean-20261015.webp',video:'/videos/tilburg-20261015.mp4'},
     'gerard-doustraat': {poster:'/images/gerard-doustraat-start-v2-20261015.webp',video:'/videos/gerard-doustraat-v2-20261015.mp4'},
