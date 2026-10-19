@@ -726,21 +726,6 @@
     "alt": "Bouwkundige tekening van Moerkerkestraat 45 A01/B01/B02"
   },
   {
-    "slug": "gevelisolatie-bestaande-woning",
-    "title": "Gevelisolatie bestaande woning",
-    "kind": "Gevelisolatie",
-    "batch": "remaining",
-    "description": "Werkzaamheden: BIM, nieuwe gevelaanzichten en detail.",
-    "tags": [
-      "Gevelisolatie",
-      "BIM-modellering"
-    ],
-    "inventoryId": "030",
-    "image": null,
-    "artwork": "text",
-    "background": "project-information"
-  },
-  {
     "slug": "smederij-schetsontwerp",
     "title": "Smederij – schetsontwerp",
     "kind": "Ontwerpstudie",
