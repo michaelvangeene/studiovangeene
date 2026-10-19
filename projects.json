@@ -833,22 +833,25 @@
   },
   {
     "slug": "koopvaardersplantsoen-87",
-    "title": "Koopvaardersplantsoen 87",
-    "kind": "Woningverbouwing",
+    "title": "Koopvaardersplantsoen 87, Amsterdam",
+    "kind": "Dakopbouw en gevelontwerp",
     "batch": "remaining",
-    "description": "Werkzaamheden: BIM, details, Bouwbesluit, render en aanpassing opbouw. Ook de werktekeningen voor de aannemer zijn voorbereid.",
+    "description": "Dakopbouw aan het Koopvaardersplantsoen 87 in Amsterdam, in samenwerking met JVAI. Studio van Geene verzorgde materiaalonderzoek, gevelontwerp, BIM-modellering en bouwkundige detaillering, met aandacht voor kozijnen, gevelbekleding en de aansluiting op het dakterras. De technische uitwerking omvatte toetsing aan het Bouwbesluit, architectuurvisualisaties en werktekeningen voor de aannemer.",
     "tags": [
-      "Woningverbouwing",
-      "BIM-modellering",
+      "Dakopbouw",
+      "Amsterdam",
+      "Materiaalonderzoek",
+      "Gevelontwerp",
       "Bouwkundige detaillering",
-      "Architectuurvisualisatie",
+      "BIM-modellering",
       "Werktekeningen voor aannemer"
     ],
     "inventoryId": "044",
     "collaboration": "JVAI",
     "image": "images/koopvaardersplantsoen-87.webp",
     "artwork": "render",
-    "background": "full-image"
+    "background": "full-image",
+    "alt": "Visualisatie van de dakopbouw met dakterras aan Koopvaardersplantsoen 87 in Amsterdam"
   },
   {
     "slug": "kanaalstraat-106-3",
