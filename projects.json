@@ -1314,7 +1314,7 @@
     "title": "Cuneralaan 34, Rhenen",
     "kind": "Woningverbouwing",
     "batch": "remaining",
-    "description": "Werkzaamheden: Bestemmingsonderzoek, BIM, SO/VO, vergunning, daglicht/ventilatie en renders.",
+    "description": "Werkzaamheden: Bestemmingsonderzoek, BIM, SO/VO, vergunning, daglicht/ventilatie, renders, materiaalonderzoek, verduurzamingsmaatregelen en ontwerp en uitwerking voor de kostencalculatie van de aannemer.",
     "tags": [
       "Woningverbouwing",
       "BIM-modellering",
@@ -1324,7 +1324,8 @@
     ],
     "inventoryId": "068",
     "collaboration": "BMA Ontwerpers",
-    "image": "images/cuneralaan-34.webp",
+    "image": "https://app-uploads.krea.ai/public/f39f0a9e-26c7-434f-840b-035a1a13f854.png",
+    "video": "https://app-uploads.krea.ai/public/4538f035-7da2-4d89-9977-3692c4ae1239-video.mp4",
     "artwork": "render",
     "background": "full-image",
     "imageCredit": "Ontwerp © Peter Bergboer · BMA Ontwerpers"
