@@ -848,10 +848,12 @@
     ],
     "inventoryId": "044",
     "collaboration": "JVAI",
-    "image": "images/koopvaardersplantsoen-87.webp",
+    "image": "https://app-uploads.krea.ai/public/21417fce-d10b-4dd1-a6fe-03c68ba69b96-image.png",
     "artwork": "render",
     "background": "full-image",
-    "alt": "Visualisatie van de dakopbouw met dakterras aan Koopvaardersplantsoen 87 in Amsterdam"
+    "alt": "Visualisatie van de dakopbouw met dakterras aan Koopvaardersplantsoen 87 in Amsterdam",
+    "width": 5504,
+    "height": 3072
   },
   {
     "slug": "kanaalstraat-106-3",
