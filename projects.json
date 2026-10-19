@@ -650,24 +650,6 @@
     "background": "full-image"
   },
   {
-    "slug": "edward-masseystraat-12",
-    "title": "Edward Masseystraat 12",
-    "kind": "Woningverbouwing",
-    "batch": "remaining",
-    "description": "Werkzaamheden: BIM, vergunningtekeningen en render.",
-    "tags": [
-      "Woningverbouwing",
-      "BIM-modellering",
-      "Omgevingsvergunning",
-      "Architectuurvisualisatie"
-    ],
-    "inventoryId": "021",
-    "collaboration": "JVAI",
-    "image": null,
-    "artwork": "text",
-    "background": "project-information"
-  },
-  {
     "slug": "delfgaauwstraat-51-a-b-c",
     "title": "Delfgaauwstraat 51 A/B/C",
     "kind": "Woning / verkooptekeningen",
