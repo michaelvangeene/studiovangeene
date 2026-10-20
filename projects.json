@@ -177,15 +177,20 @@
   {
     "slug": "gerard-doustraat",
     "title": "Gerard Doustraat, Amsterdam",
-    "kind": "Gevelvisualisatie",
+    "kind": "Gevelontwerp en technische uitwerking",
     "image": "images/gerard-doustraat-start-v2-20261015.webp",
     "batch": "initial",
     "artwork": "render",
     "background": "full-image",
-    "description": "Gevelvisualisatie voor Gerard Doustraat in Amsterdam, als beeldstudie van de architectonische uitstraling.",
+    "description": "Gevelontwerp voor de Gerard Doustraat in Amsterdam, met visueel onderzoek naar de architectonische uitstraling en materiaal- en kleuronderzoek. Het ontwerp is uitgewerkt in werktekeningen voor de kozijnleverancier en ten behoeve van de calculatie.",
     "tags": [
       "Gevelontwerp",
-      "Architectuurvisualisatie",
+      "Visueel onderzoek",
+      "Materiaalonderzoek",
+      "Kleuronderzoek",
+      "Werktekeningen",
+      "Kozijnen",
+      "Calculatie",
       "Amsterdam"
     ],
     "inventoryId": "028",
