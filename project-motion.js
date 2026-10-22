@@ -15,7 +15,7 @@
     'cuneralaan-34': {poster:'https://app-uploads.krea.ai/public/6706249f-c3fc-4841-8343-87bb1da1c51a-image.png',video:'https://app-uploads.krea.ai/public/237c4087-1f7c-465f-ba7e-a9b3c5e351eb-video.mp4'},
     'amstelstraat-35': {poster:'https://app-uploads.krea.ai/public/f9ee27cf-d58e-49d0-9a67-6efd2c45ab3b-image.png',video:'https://app-uploads.krea.ai/public/bc31810c-70ed-4ecf-bf39-6654f470c839-video.mp4'},
     'tilburg': {poster:'/images/tilburg-clean-20261015.webp',video:'/videos/tilburg-20261015.mp4'},
-    'gerard-doustraat': {poster:'/images/gerard-doustraat-start-v2-20261015.webp',video:'/videos/gerard-doustraat-v2-20261015.mp4'},
+    'gerard-doustraat': {poster:'https://app-uploads.krea.ai/public/58326a3b-bdc7-45ee-868a-e32aa243286c-image.jpeg',video:'https://app-uploads.krea.ai/public/7e183b06-2244-44d8-867e-7609ccda00b7-video.mp4'},
     'rozengracht': {poster:'/images/rozengracht-rain-20261015.webp',video:'/videos/rozengracht-rain-20261015.mp4'}
   };
   const selector = Object.keys(media).map(slug => `.project-slide[data-project="${slug}"],.orbit-card[data-slug="${slug}"]`).join(',');
