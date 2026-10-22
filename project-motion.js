@@ -10,6 +10,7 @@
   (document.querySelector('.caption') || document.querySelector('.gallery-controls')).after(toggle);
   toggle.addEventListener('click', () => {paused = !paused;sync();});
   const media = {
+    'rozengracht-interieur': {poster:'https://app-uploads.krea.ai/public/d00c6329-ce10-477e-9259-c6cc6fed7a0c-image.png',video:'https://app-uploads.krea.ai/public/f9bc87c4-f03a-4ac0-b111-348b4d5508bb-video.mp4'},
     'koopvaardersplantsoen-87': {poster:'https://app-uploads.krea.ai/public/21417fce-d10b-4dd1-a6fe-03c68ba69b96-image.png',video:'https://app-uploads.krea.ai/public/ef332f98-2089-4529-8891-49618e4d4901-video.mp4'},
     'cuneralaan-34': {poster:'https://app-uploads.krea.ai/public/6706249f-c3fc-4841-8343-87bb1da1c51a-image.png',video:'https://app-uploads.krea.ai/public/237c4087-1f7c-465f-ba7e-a9b3c5e351eb-video.mp4'},
     'amstelstraat-35': {poster:'https://app-uploads.krea.ai/public/f9ee27cf-d58e-49d0-9a67-6efd2c45ab3b-image.png',video:'https://app-uploads.krea.ai/public/bc31810c-70ed-4ecf-bf39-6654f470c839-video.mp4'},
