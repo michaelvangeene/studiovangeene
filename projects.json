@@ -178,7 +178,7 @@
     "slug": "gerard-doustraat",
     "title": "Gerard Doustraat, Amsterdam",
     "kind": "Gevelontwerp en technische uitwerking",
-    "image": "images/gerard-doustraat-start-v2-20261015.webp",
+    "image": "https://app-uploads.krea.ai/public/58326a3b-bdc7-45ee-868a-e32aa243286c-image.jpeg",
     "batch": "initial",
     "artwork": "render",
     "background": "full-image",
@@ -194,7 +194,7 @@
       "Amsterdam"
     ],
     "inventoryId": "028",
-    "video": "/videos/gerard-doustraat-v2-20261015.mp4",
+    "video": "https://app-uploads.krea.ai/public/7e183b06-2244-44d8-867e-7609ccda00b7-video.mp4",
     "width": 1451,
     "height": 1084,
     "alt": "Fotorealistische visualisatie van de Gerard Doustraat met een weelderige inheemse tuin"
