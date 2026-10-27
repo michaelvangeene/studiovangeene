@@ -9,16 +9,17 @@ function post(body, origin = 'https://studiovangeene.nl') {
 }
 test('collector writes only the permitted fields and restricts origins', async () => {
   const writes = [];
-  const env = { EVENTS: { writeDataPoint: point => writes.push(point) } };
+  const env = { DB: { prepare: () => ({ bind: (...values) => ({ run: async () => { writes.push(values); return { success: true }; } }) }) } };
   const response = await worker.fetch(post({ event: 'contact_click', segment: 'all', channel: 'whatsapp', project: 'rozengracht', email: 'ignored@example.com' }), env);
   assert.equal(response.status, 204);
   assert.equal(response.headers.get('Access-Control-Allow-Origin'), 'https://studiovangeene.nl');
-  assert.deepEqual(writes, [{ indexes: ['studiovangeene.nl'], blobs: ['contact_click', 'rozengracht', 'all', 'whatsapp', 'v1'], doubles: [1] }]);
+  assert.match(writes[0][0], /^\d{4}-\d{2}-\d{2}$/);
+  assert.deepEqual(writes[0].slice(1), ['contact_click', 'rozengracht', 'all', 'whatsapp']);
   assert.equal((await worker.fetch(post({ event: 'page_view', segment: 'all' }, 'https://other.example'), env)).status, 403);
   assert.equal(writes.length, 1);
 });
 test('collector rejects malformed/oversized events without writes', async () => {
-  const env = { EVENTS: { writeDataPoint: () => assert.fail('invalid event written') } };
+  const env = { DB: { prepare: () => assert.fail('invalid event written') } };
   for (const body of [null, { event: 'project_view', segment: 'all' }, { event: 'contact_click', segment: 'all', channel: 'email@example.com' }, { event: 'project_view', segment: 'all', project: '../private?email=x' }, { event: 'page_view', segment: 'invalid' }, { event: 'page_view', segment: 'all', extra: 'a'.repeat(1100) }]) {
     assert.equal((await worker.fetch(post(body), env)).status, 400);
   }

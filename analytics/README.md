@@ -1,29 +1,23 @@
 # Portfolio interaction measurement
 
-Prepared for activation on studiovangeene.nl. No changes are live until the collector is deployed and the script tag below is added to index.html, before </body>.
+The portfolio sends anonymous interaction counts to `https://studiovangeene-events.studiovangeene.workers.dev/collect`. Existing Cloudflare Web Analytics remains separate and unchanged.
 
-```html
-<script src="/site-analytics.js?v=1" data-endpoint="https://studiovangeene-events.studiovangeene.workers.dev/collect" defer></script>
-```
+Events: `page_view` (one per page load), `project_view` (active card visible for 1.5 seconds, once per project per page load including carousel clones), `contact_click` (WhatsApp/email/phone link activation; not proof of a sent message), `segment_select` (project filter selection).
 
-The endpoint above is the planned address, not an existing deployment. Creating the account's workers.dev subdomain requires user approval following automatic review rejection on 2026-10-27. Do not enable the browser script before the endpoint has been verified.
+No cookies or visitor IDs. The client sends only the event name, public project slug, selected segment and contact channel. No full URLs, query parameters, referrers, destination addresses or message text are sent. The collector stores only aggregate totals per calendar day in Europe/Amsterdam in an EU-jurisdiction D1 database. It does not store individual events, IPs, user agents or request logs. Aggregate counts remain until deliberately removed; there is no automatic expiry.
 
-Deploy worker.mjs as the module for `studiovangeene-events`, compatibility date 2026-10-27, binding `{ "type": "analytics_engine", "name": "EVENTS", "dataset": "studiovangeene_interactions" }`. Disable invocation logs to avoid storing request metadata. Enable the script's workers.dev endpoint only after the account subdomain is approved.
+Do Not Track and Global Privacy Control disable this extra measurement; `?analytics=off` disables it for the current page. Ad blockers may suppress requests. Browser requests must originate from either portfolio hostname. Non-browser clients can spoof origins, so counts are indicative. No read endpoint is publicly exposed; use the authenticated Cloudflare D1 API or dashboard.
 
-Events: page_view (one per page load), project_view (active card visible for 1.5 seconds, once per project per page load including carousel clones), contact_click (WhatsApp/email/phone link activation; not proof of a sent message), segment_select (project filter selection).
+Cloudflare account: `3d8cd66b8f8173ccfb6ab7dca994cfc7`; D1 database: `905320be-df99-43cc-b46c-e2db63db361b` (`studiovangeene-analytics`). These identifiers are not credentials. Worker configuration is in wrangler.jsonc; schema is in schema.sql. Worker invocation logging is disabled. The deployment uses no secrets. Keep the script tag in index.html before the closing body tag.
 
-No cookies or visitor IDs. Only event name, public project slug, selected segment, contact channel and schema version are stored, with the platform timestamp. The client sends no full URL, query parameters, referrer, destination addresses or message text. The server does not write IP or user agent to the dataset. Do Not Track and Global Privacy Control disable this extra measurement; `?analytics=off` disables it for the current page. Cloudflare Web Analytics remains separate and unchanged. Ad blockers may suppress requests. The public collector accepts only the two portfolio origins, but non-browser clients can spoof origins; counts are indicative.
-
-Analytics Engine retains events for three months. SQL reads use the authenticated Cloudflare account API, not a public dashboard. Example, with sample weighting:
+Example reporting query:
 
 ```sql
-SELECT blob1 AS event, blob2 AS project, blob3 AS segment, blob4 AS channel,
-       SUM(_sample_interval * double1) AS total
-FROM studiovangeene_interactions
-WHERE timestamp >= NOW() - INTERVAL '28' DAY
+SELECT event, project, segment, channel, SUM(total) AS total
+FROM daily_events
+WHERE day >= date('now', '-28 days')
 GROUP BY event, project, segment, channel
-ORDER BY total DESC
-FORMAT JSON
+ORDER BY total DESC;
 ```
 
-Run checks with `node --test analytics/analytics.test.mjs`. After approval, deploy the collector, verify POST acceptance and private SQL storage using a marked test project, enable the script, publish through the existing GitHub Pages workflow and verify collection from the live site. Exclude the marked test project from reports.
+Run checks with `node --test analytics/analytics.test.mjs`. Deployment requires updating the module and D1 binding through the Cloudflare API (or Wrangler), publishing the source through the existing GitHub Pages workflow, and verifying live POST collection with an installation-test project. Remove only that test row after verification.

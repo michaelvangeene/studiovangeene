@@ -43,7 +43,9 @@ export default {
         (data.event === 'segment_select' && !SEGMENTS.has(channel)) ||
         (['page_view', 'project_view'].includes(data.event) && channel !== '')) return new Response(null, { status: 400, headers });
     try {
-      env.EVENTS.writeDataPoint({ indexes: ['studiovangeene.nl'], blobs: [data.event, project, data.segment, channel, 'v1'], doubles: [1] });
+      const day = new Intl.DateTimeFormat('en-CA', { timeZone: 'Europe/Amsterdam', year: 'numeric', month: '2-digit', day: '2-digit' }).format(new Date());
+      const result = await env.DB.prepare('INSERT INTO daily_events (day, event, project, segment, channel, total) VALUES (?, ?, ?, ?, ?, 1) ON CONFLICT (day, event, project, segment, channel) DO UPDATE SET total = total + 1').bind(day, data.event, project, data.segment, channel).run();
+      if (!result.success) throw new Error('write failed');
     } catch (_) { return new Response(null, { status: 503, headers }); }
     return new Response(null, { status: 204, headers });
   }
