@@ -42,4 +42,5 @@
     document.dispatchEvent(new CustomEvent('studio:contact', { detail: { channel } }));
     window.location.href = destination;
   });
+  form.querySelectorAll('button[type="submit"]').forEach(button => { button.disabled = false; });
 })();

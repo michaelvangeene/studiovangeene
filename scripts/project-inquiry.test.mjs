@@ -8,7 +8,7 @@ function composer(via = 'interieurontwerp', valid = true) {
   const values = { name: 'Test & Co', place: 'Utrecht', description: 'Keuken & bar?\nTwee opties.', timing: '', discovery: 'Google' };
   const service = { value: '', selectedOptions: [{ textContent: 'Interieur woning / horeca' }] };
   const nodes = {
-    'project-brief': { addEventListener: (name, fn) => { handlers[name] = fn; }, reportValidity: () => valid },
+    'project-brief': { querySelectorAll: () => [], addEventListener: (name, fn) => { handlers[name] = fn; }, reportValidity: () => valid },
     'inquiry-sources': { textContent: '{"interieurontwerp":{"label":"Interieurontwerp","kind":"interieur"}}' },
     'entry-context': { hidden: true }, service, 'brief-status': {}
   };
