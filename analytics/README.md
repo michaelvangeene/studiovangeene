@@ -2,9 +2,9 @@
 
 The portfolio sends anonymous interaction counts to `https://studiovangeene-events.studiovangeene.workers.dev/collect`. Existing Cloudflare Web Analytics remains separate and unchanged.
 
-Events: `page_view` (one per page load), `project_view` (active card visible for 1.5 seconds, once per project per page load including carousel clones), `contact_click` (WhatsApp/email/phone link activation; not proof of a sent message), `segment_select` (project filter selection).
+Events: `page_view` (one per page load), `project_view` (active card visible for 1.5 seconds, once per project per page load including carousel clones), `contact_click` (WhatsApp/email/phone link activation; not proof of a sent message), `segment_select` (project filter selection). Since 30 October 2026, page views and contact actions outside the carousel carry a bounded public page label (e.g. `page-project-bespreken`) in the existing `project` field. Earlier page views have an empty project field. Form actions count only opening a WhatsApp/email draft, never a submitted enquiry.
 
-No cookies or visitor IDs. The client sends only the event name, public project slug, selected segment and contact channel. No full URLs, query parameters, referrers, destination addresses or message text are sent. The collector stores only aggregate totals per calendar day in Europe/Amsterdam in an EU-jurisdiction D1 database. It does not store individual events, IPs, user agents or request logs. Aggregate counts remain until deliberately removed; there is no automatic expiry.
+No cookies or visitor IDs. The client sends only the event name, public project slug or page label, selected segment and contact channel. No full URLs, query parameters, referrers, destination addresses or message text are sent. The collector stores only aggregate totals per calendar day in Europe/Amsterdam in an EU-jurisdiction D1 database. It does not store individual events, IPs, user agents or request logs. Aggregate counts remain until deliberately removed; there is no automatic expiry.
 
 Do Not Track and Global Privacy Control disable this extra measurement; `?analytics=off` disables it for the current page. Ad blockers may suppress requests. Browser requests must originate from either portfolio hostname. Non-browser clients can spoof origins, so counts are indicative. No read endpoint is publicly exposed; use the authenticated Cloudflare D1 API or dashboard.
 
@@ -21,3 +21,5 @@ ORDER BY total DESC;
 ```
 
 Run checks with `node --test analytics/analytics.test.mjs`. Deployment requires updating the module and D1 binding through the Cloudflare API (or Wrangler), publishing the source through the existing GitHub Pages workflow, and verifying live POST collection with an installation-test project. Remove only that test row after verification.
+
+The project enquiry composer asks visitors optionally how they found the studio. This answer and other form input go only into the visitor-controlled outgoing message, never to the event collector. `via` entry context is matched against the public allowlist embedded at build time; arbitrary query values are ignored. Rebuild the enquiry page with `python scripts/build-inquiry-page.py` after changing the project inventory.

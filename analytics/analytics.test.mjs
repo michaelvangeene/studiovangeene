@@ -27,7 +27,7 @@ test('collector rejects malformed/oversized events without writes', async () => 
   assert.equal((await worker.fetch(req, env)).status, 400);
 });
 
-function browser({ disabled = false } = {}) {
+function browser({ disabled = false, pathname = '/' } = {}) {
   const requests = [];
   const handlers = {};
   const timers = new Map();
@@ -42,7 +42,7 @@ function browser({ disabled = false } = {}) {
   };
   const context = {
     document, navigator: { doNotTrack: disabled ? '1' : '0' },
-    location: { search: '', href: 'https://studiovangeene.nl/?secret=not-sent' },
+    location: { pathname, search: '', href: 'https://studiovangeene.nl/?secret=not-sent' },
     window: { addEventListener() {} }, URLSearchParams, URL, innerWidth: 1000, innerHeight: 800,
     MutationObserver: class { constructor(callback) { mutation = callback; } observe() {} },
     setTimeout(callback) { timers.set(++timerId, callback); return timerId; },
@@ -77,4 +77,17 @@ test('contact clicks preserve navigation and omit link addresses/message text', 
   assert.equal(last.options.referrerPolicy, 'no-referrer');
   assert.ok(!JSON.stringify(last).includes('private'));
   assert.equal(browser({ disabled: true }).requests.length, 0);
+});
+
+test('service page labels and form contact events omit visitor input', () => {
+  const b = browser({ pathname: '/project-bespreken/' });
+  assert.equal(b.requests[0].data.project, 'page-project-bespreken');
+  b.handlers['studio:contact']({ detail: { channel: 'email', name: 'private-name', description: 'private-plan' } });
+  assert.equal(b.requests.at(-1).data.event, 'contact_click');
+  assert.equal(b.requests.at(-1).data.channel, 'email');
+  assert.equal(b.requests.at(-1).data.project, 'page-project-bespreken');
+  assert.ok(!JSON.stringify(b.requests).includes('private-'));
+  const before = b.requests.length;
+  b.handlers['studio:contact']({ detail: { channel: 'invalid' } });
+  assert.equal(b.requests.length, before);
 });

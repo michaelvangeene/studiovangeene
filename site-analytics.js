@@ -18,7 +18,9 @@
       referrerPolicy: 'no-referrer', headers: { 'Content-Type': 'text/plain' }, body
     }).catch(() => {});
   }
-  send('page_view');
+  const page = (location.pathname || '/').replace(/^\/+|\/+$/g, '').replace(/\//g, '-') || 'portfolio';
+  const pageKey = /^[a-z0-9-]{1,90}$/.test(page) ? 'page-' + page : 'page-other';
+  send('page_view', { project: pageKey });
   const track = document.querySelector('.project-track');
   const viewed = new Set();
   let current = '';
@@ -51,6 +53,10 @@
     window.addEventListener('resize', scan, { passive: true });
     scan();
   }
+  document.addEventListener('studio:contact', event => {
+    const channel = event.detail?.channel;
+    if (['email', 'whatsapp'].includes(channel)) send('contact_click', { channel, project: pageKey });
+  });
   document.addEventListener('click', event => {
     const link = event.target.closest?.('a');
     if (!link) return;
@@ -61,7 +67,7 @@
     else {
       try { if (['wa.me', 'api.whatsapp.com', 'web.whatsapp.com'].includes(new URL(href, location.href).hostname)) channel = 'whatsapp'; } catch (_) {}
     }
-    if (channel) send('contact_click', { channel, project: current });
+    if (channel) send('contact_click', { channel, project: current || pageKey });
     if (['all', 'home', 'technical', 'interior'].includes(link.dataset.segment)) {
       send('segment_select', { channel: link.dataset.segment });
     }
