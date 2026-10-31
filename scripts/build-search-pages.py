@@ -91,7 +91,7 @@ def generate(page):
 <div class="content">{page['body']}</div>
 <section class="contact" id="contact"><p class="eyebrow">Direct contact met Michael</p><h2>Wat wil je laten uitwerken?</h2><p>Stuur de locatie, een korte omschrijving en eventuele bestaande tekeningen mee. Dan bespreken we de werkzaamheden, planning en een passend voorstel.</p><div class="actions"><a class="button" href="/project-bespreken/?via={page['slug']}">Vertel over je project ↗</a><a href="https://wa.me/31626130070?text=Hoi%20Michael%2C%20ik%20heb%20een%20vraag%20naar%20aanleiding%20van%20{page['slug']}.">WhatsApp ↗</a><a href="mailto:michael@studiovangeene.nl">michael@studiovangeene.nl</a><a href="tel:+31626130070">06 2613 0070</a></div></section>
 </main><footer class="wrap"><p>Studio van Geene · bouwkundig ontwerp en tekenwerk vanuit Utrecht</p><nav aria-label="Meer werk"><a href="/">Volledig portfolio</a><a href="/tekenaar/">Voor aannemers en ontwerpbureaus</a></nav></footer>
-<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{{"token":"53a09125f96e42c1adb8ea5bbb56404a"}}'></script><script defer src="/site-analytics.js?v=20261030-1" data-endpoint="https://studiovangeene-events.studiovangeene.workers.dev/collect"></script>
+<script src="/analytics-loader.js?v=20261031-1" defer></script>
 </body></html>'''
 
 if __name__ == '__main__':

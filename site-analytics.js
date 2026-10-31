@@ -5,7 +5,9 @@
   if (!endpoint || window.__studioAnalyticsLoaded) return;
   window.__studioAnalyticsLoaded = true;
   const params = new URLSearchParams(location.search);
-  if (params.get('analytics') === 'off' || navigator.doNotTrack === '1' || navigator.globalPrivacyControl) return;
+  let excluded = params.get('analytics') === 'off';
+  try { excluded = excluded || localStorage.getItem('studio-analytics-opt-out') === '1'; } catch (_) {}
+  if (excluded || navigator.doNotTrack === '1' || navigator.globalPrivacyControl) return;
   const segment = ['home', 'technical', 'interior'].includes(params.get('segment')) ? params.get('segment') : 'all';
   let sent = 0;
   function send(event, fields = {}) {
