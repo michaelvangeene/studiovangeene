@@ -25,6 +25,17 @@
 #hema-atlas details {border-top:1px solid var(--line);padding-top:9px}
 #hema-atlas details p {margin-top:8px}
 #hema-atlas .atlas-detail[hidden] {display:none}
+#hema-atlas [data-open-photos] {justify-self:start}
+#hema-atlas .atlas-photos {box-sizing:border-box;width:min(920px,calc(100% - 28px));max-height:calc(100dvh - 28px);padding:clamp(14px,3vw,26px);border:1px solid #d9d6ce;border-radius:8px;background:var(--background);color:var(--foreground);overflow:auto}
+#hema-atlas .atlas-photos::backdrop {background:rgba(24,25,26,.66)}
+#hema-atlas .atlas-photo-header {display:flex;justify-content:space-between;align-items:start;gap:12px;margin-bottom:18px}
+#hema-atlas .atlas-photo-header h2 {margin:0 0 4px;font-size:clamp(20px,4vw,29px);line-height:1.1}
+#hema-atlas .atlas-photo-gallery {display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+#hema-atlas .atlas-photo-gallery figure {margin:0}
+#hema-atlas .atlas-photo-gallery img {display:block;width:100%;aspect-ratio:4/3;object-fit:contain;background:#ebe8e1}
+#hema-atlas .atlas-photo-gallery figcaption {display:grid;gap:2px;margin-top:7px}
+#hema-atlas .atlas-photo-gallery a {color:inherit}
+@media(max-width:620px){#hema-atlas .atlas-photo-gallery {grid-template-columns:1fr}#hema-atlas .atlas-photo-gallery img {aspect-ratio:auto;height:auto}}
 @media(max-width:600px){#hema-atlas .atlas-results{grid-template-columns:1fr}#hema-atlas canvas{height:390px}}
 </style>
 <header class="atlas-head">
@@ -47,6 +58,22 @@
 <label class="form-label"><span data-count aria-live="polite">Locaties laden</span><select class="form-select" data-results aria-label="Selecteer een gevonden HEMA-locatie"></select></label>
 <div class="atlas-detail" data-detail aria-live="polite"></div>
 </div>
+<dialog class="atlas-photos" data-photos aria-labelledby="atlas-photo-title">
+<div class="atlas-photo-header">
+<div><h2 id="atlas-photo-title">HEMA Utrecht-Centrum</h2><p class="text-muted">Steenweg 59, 3511 JN Utrecht</p></div>
+<form method="dialog"><button type="submit" class="btn" autofocus>Sluiten</button></form>
+</div>
+<div class="atlas-photo-gallery">
+<figure>
+<img data-src="https://dynl.mktgcdn.com/p/Rmg4DjYSDYiWnWwuJ1JLxmVx9tnTEcmYAKk59X7c3BY/1753x1192.jpg" alt="Winkelentree van HEMA Utrecht-Centrum" referrerpolicy="no-referrer">
+<figcaption><strong>Winkelentree</strong><a class="text-small" href="https://winkels.hema.nl/nl/utrecht/hema-utrecht-centrum" target="_blank" rel="noopener">Bron: HEMA-winkelzoeker</a></figcaption>
+</figure>
+<figure>
+<img data-src="https://www.breeam.nl/upload/1140x450/images/sync/inuse/010/3/10349.jpg" alt="Gebouwfoto bij het BREEAM-dossier van HEMA Utrecht-Centrum" referrerpolicy="no-referrer">
+<figcaption><strong>Gevel aan de Oudegracht</strong><a class="text-small" href="https://www.breeam.nl/projecten/hema-utrecht-steenweg-59-10349" target="_blank" rel="noopener">Foto: Tom Wolthuis / BREEAM-NL</a></figcaption>
+</figure>
+</div>
+</dialog>
 <details>
 <summary>Bronnen en selectiecriteria</summary>
 <p><strong>Dekking.</strong> Op 11 november 2026 zijn 569 unieke Nederlandse locatiepagina’s uit de provinciale index en sitemap van HEMA gehaald, inclusief één luchthavenhorecapunt. De landingspagina toonde 585 locaties. De openbare lijststructuur leverde 16 locaties minder op dan deze teller. De kaartspelden komen van de winkelpagina’s. De provincie is bepaald op basis van de coördinaten en de CBS-grenzen van 2025. <a href="https://winkels.hema.nl/nl" target="_blank" rel="noopener">HEMA-winkelzoeker</a> · <a href="https://winkels.hema.nl/sitemap.xml" target="_blank" rel="noopener">Sitemap</a> · <a href="https://www.pdok.nl/ogc-webservices/-/article/cbs-gebiedsindelingen" target="_blank" rel="noopener">CBS / PDOK</a></p>
@@ -69,6 +96,20 @@
  const rows = data('rows'), geo = data('geo'), labels = data('labels')
  const search = find('[data-search]'), province = find('[data-province]'), type = find('[data-type]')
  const relevance = find('[data-relevance]'), operation = find('[data-operation]'), results = find('[data-results]')
+ const photos = find('[data-photos]')
+ const photoLocation = 'https://winkels.hema.nl/nl/utrecht/hema-utrecht-centrum'
+ function showPhotos(){
+  for(const photo of photos.querySelectorAll('img[data-src]')){
+   photo.addEventListener('error',()=>{
+    const message=document.createElement('p')
+    message.textContent='Foto tijdelijk niet beschikbaar. Bekijk de bron hieronder.'
+    photo.replaceWith(message)
+   },{once:true})
+   photo.src=photo.dataset.src
+   delete photo.dataset.src
+  }
+  photos.showModal()
+ }
  const detail = find('[data-detail]'), canvas = find('canvas'), ctx = canvas.getContext('2d')
  const swatches = new Map([
   ['Grote centrumvestiging','--a'],['Centrumvestiging','--b'],['Compact centrumfiliaal','--b'],
@@ -130,6 +171,16 @@
     const a=document.createElement('a');a.textContent=label;a.href=url;a.target='_blank';a.rel='noopener';links.append(a)
    }
    detail.append(links)
+   if(r.winkel===photoLocation){
+    const button=document.createElement('button')
+    button.type='button'
+    button.className='btn'
+    button.dataset.openPhotos=''
+    button.setAttribute('aria-haspopup','dialog')
+    button.textContent='Bekijk 2 foto’s'
+    button.addEventListener('click',showPhotos)
+    detail.append(button)
+   }
    if(center&&width){const p=points[r.id];map.call(zoom.transform,d3.zoomIdentity.translate(width/2,height/2).scale(Math.max(5,transform.k)).translate(-p[0],-p[1]))}
   }else{
    const p=document.createElement('p');p.className='text-muted';p.textContent='Geen locaties met deze filters.';detail.append(p)
@@ -217,7 +268,10 @@
    const d=Math.hypot(event.clientX-b.left-x,event.clientY-b.top-y)
    if(d<=dist){picked=r;dist=d}
   }
-  if(picked)select(picked)
+  if(picked){
+   select(picked)
+   if(picked.winkel===photoLocation)showPhotos()
+  }
  })
  search.addEventListener('input',()=>filter(true))
  for(const control of [province,type,relevance,operation])control.addEventListener('change',()=>filter(true))
