@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 620" role="img" aria-labelledby="titel uitleg">
+  <title id="titel">Doorsnedeprincipe tussen de Oudegracht en de Steenweg</title>
+  <desc id="uitleg">Onderzoeksdiagram van een historisch grachtdeel, een nieuwbouwdeel met drie bouwlagen en een kelder, en de interne verbinding op ongelijke niveaus.</desc>
+  <rect width="960" height="620" fill="#f3f1ed"/>
+  <path d="M104 445 H840 V515 H104Z" fill="#e6e0d8"/>
+  <path d="M130 418 V235 L231 146 L330 235 V418Z" fill="#e8dfd5" stroke="#363331" stroke-width="3"/>
+  <path d="M541 445 V207 H704 L783 136 L857 207 V445Z" fill="#e6d6d2" stroke="#363331" stroke-width="3"/>
+  <path d="M130 418 V501 H330 V418 M541 445 V523 H857 V445" fill="#e0d8d0" stroke="#363331" stroke-width="3"/>
+  <g fill="none" stroke="#363331" stroke-width="3">
+    <path d="M130 418 H330 M130 356 H330 M130 295 H330 M130 235 H330"/>
+    <path d="M541 445 H857 M541 369 H857 M541 291 H857 M541 207 H857"/>
+    <path d="M61 418 H130 M857 445 H909"/>
+  </g>
+  <g fill="none" stroke="#b22533" stroke-width="3.5">
+    <path d="M332 418 H387 L468 445 H539 M332 356 H387 L468 369 H539" stroke-dasharray="9 7"/>
+    <path d="M445 435 V319 M437 327 L445 318 L454 327"/>
+  </g>
+  <g font-family="Arial, sans-serif" fill="#302c2a">
+    <text x="231" y="86" text-anchor="middle" font-size="27" font-weight="600">Oudegracht 137</text>
+    <text x="231" y="115" text-anchor="middle" font-size="20">Warenhuisgevel · 1865</text>
+    <text x="700" y="86" text-anchor="middle" font-size="27" font-weight="600">Steenweg 59</text>
+    <text x="700" y="115" text-anchor="middle" font-size="20">Nieuwbouw · 1978</text>
+    <text x="435" y="288" text-anchor="middle" font-size="18" fill="#971b28">Interne verbinding</text>
+    <text x="231" y="471" text-anchor="middle" font-size="20">Kelders</text>
+    <text x="702" y="489" text-anchor="middle" font-size="20">Kelder</text>
+    <text x="48" y="576" font-size="17">Bouwlagen en verbinding schematisch · niet op schaal</text>
+  </g>
+</svg>

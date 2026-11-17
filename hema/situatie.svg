@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 720" role="img" aria-labelledby="titel uitleg">
+  <title id="titel">Situatieschets van het HEMA-bouwblok</title>
+  <desc id="uitleg">Twee stegen begrenzen het warenhuis tussen Oudegracht en Steenweg. Het grachtdeel van het warenhuis en de uitbreiding zijn afzonderlijk aangeduid.</desc>
+  <rect width="960" height="720" fill="#f3f1ed"/>
+  <path d="M0 123 Q480 40 960 123 L960 185 Q480 103 0 185Z" fill="#d9e4e6"/>
+  <g fill="#e7e3dc" stroke="#c9c2bb" stroke-width="1.5">
+    <path d="M83 211 L235 186 L268 506 L91 532Z"/>
+    <path d="M236 186 L314 180 L340 497 L268 506Z"/>
+    <path d="M707 181 L824 204 L881 522 L754 505Z"/>
+    <path d="M824 204 L931 229 L948 538 L881 522Z"/>
+    <path d="M81 640 L268 616 L278 720 L90 720Z"/>
+    <path d="M268 616 L425 598 L426 720 L278 720Z"/>
+    <path d="M425 598 L610 601 L622 720 L426 720Z"/>
+    <path d="M610 601 L763 629 L787 720 L622 720Z"/>
+    <path d="M763 629 L913 653 L933 720 L787 720Z"/>
+  </g>
+  <path d="M367 174 Q491 167 628 172 L694 507 Q540 483 397 512Z" fill="#ebe0dc" stroke="#691d23" stroke-width="2"/>
+  <path d="M367 174 Q491 167 628 172 L648 272 Q515 261 376 273Z" fill="#c73542" stroke="#691d23" stroke-width="2"/>
+  <path d="M331 175 L357 497 M672 178 L728 511" fill="none" stroke="#a52332" stroke-width="3" stroke-dasharray="8 8"/>
+  <g font-family="Arial, sans-serif" fill="#292625">
+    <text x="479" y="100" text-anchor="middle" font-size="25" font-weight="600">Oudegracht</text>
+    <text x="500" y="225" text-anchor="middle" font-size="24" font-weight="600" fill="#fff">Oudegracht 137</text>
+    <text x="510" y="360" text-anchor="middle" font-size="37" font-weight="700" letter-spacing="2">HEMA</text>
+    <text x="520" y="393" text-anchor="middle" font-size="23">Uitbreiding · 1978</text>
+    <text x="518" y="558" text-anchor="middle" font-size="27" font-weight="600">Steenweg 59</text>
+    <text x="320" y="347" text-anchor="middle" font-size="22" transform="rotate(-95 320 347)">Jodenrijtje</text>
+    <text x="744" y="341" text-anchor="middle" font-size="22" transform="rotate(80 744 341)">Lauwersteeg</text>
+    <text x="34" y="685" font-size="17">Schematisch · niet op schaal</text>
+  </g>
+</svg>
