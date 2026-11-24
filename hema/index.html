@@ -9,6 +9,13 @@
   <link rel="icon" href="/favicon.ico">
   <link rel="stylesheet" href="./dossier.css">
   <script src="./dossier.js" defer></script>
+  <style>
+    .source-note { position: relative; }
+    .source-trigger { padding: 0; border: 0; background: none; color: inherit; font: inherit; text-decoration: underline; text-underline-offset: .18em; cursor: pointer; }
+    .source-preview { position: absolute; z-index: 5; inset: 100% 0 auto; width: min(100%, 34rem); box-sizing: border-box; max-height: 55vh; overflow: auto; padding: 1rem; border: 1px solid var(--line); background: var(--paper); box-shadow: 0 .5rem 1.5rem rgb(0 0 0 / .14); }
+    .source-preview h4, .source-preview blockquote { margin: 0 0 .65rem; }
+    .source-preview blockquote { border-inline-start: 2px solid var(--line); padding-inline-start: .85rem; }
+  </style>
 </head>
 <body>
 <a class="skip" href="#inhoud">Naar de inhoud</a>
@@ -76,7 +83,14 @@
       <span class="zoom" aria-hidden="true">⤢</span>
     </a>
     <figcaption class="caption"><strong>Steenweg richting Choorstraat</strong><span>1975 · Steenweg, Utrecht</span><span><a href="https://commons.wikimedia.org/wiki/File:Overzicht_Steenweg_richting_Choorstraat_-_Utrecht_-_20212285_-_RCE.jpg">Ton Schollen / Rijksdienst voor het Cultureel Erfgoed</a> · <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA 4.0</a></span></figcaption>
-  </figure><div class="wide inset-text"><h3>De korrel van de Steenweg</h3><p>Jean Penders beschreef in 1977 hoe de nieuwe gevel aan de Steenweg het ritme van vijf panden moest oproepen. Zijn kritiek richtte zich ook op de schaal van de nieuwe steeggevels.</p><p><a href="https://objects.library.uu.nl/download/1874-9902/fulltext">Jean Penders, pp. 61–62 ↗</a> · <a href="https://oud-utrecht.nl/images/pdf-bestanden/Jaarboek/JOUT_1986-01.pdf#page=156">Straatbeelden uit ca. 1930 en 1986 ↗</a></p></div></div>
+  </figure><div class="wide inset-text"><h3>De korrel van de Steenweg</h3><p>Jean Penders beschreef in 1977 hoe de nieuwe gevel aan de Steenweg het ritme van vijf panden moest oproepen. Zijn kritiek richtte zich ook op de schaal van de nieuwe steeggevels.</p><div class="source-note"><p><button class="source-trigger" type="button" aria-expanded="false" aria-controls="penders-fragment">Jean Penders, pp. 61–62</button> · <a href="https://oud-utrecht.nl/images/pdf-bestanden/Jaarboek/JOUT_1986-01.pdf#page=156">Straatbeelden uit ca. 1930 en 1986 ↗</a></p><aside id="penders-fragment" class="source-preview" aria-labelledby="penders-title" hidden>
+      <h4 id="penders-title">Doe meer met minder geweld</h4>
+      <blockquote>
+        <p>Toch is de Steenweggevel nog steeds te grootschalig, en het is triest dat de Schoonheidscommissie het niet nodig vond dat ook aan de gevels van Lauwersteeg en Jodenrijtje iets veranderd werd. De „herinnering” aan de oude structuur is hier nog teveel gevraagd: saaie lange gevels en een enorm plat dak in plaats van meer dan tien gevels, terwijl Beschermd Stadsgezicht (hier zone B) de bescherming suggereert van „aard, type, hoogte, afmetingen van de bebouwing, alsmede de bekapping”.</p>
+        <p>Essentiëler is nog dat een heel stuk binnenstad nu één winkel wordt, terwijl het vroeger aparte woningen en winkels waren.</p>
+      </blockquote>
+      <p><a href="https://objects.library.uu.nl/download/1874-9902/fulltext">Lees het hele artikel in Oud-Utrecht (1977), pp. 61–62 ↗</a></p>
+    </aside></div></div></div>
 </section>
 <section id="architectuur" aria-labelledby="titel-architectuur">
   <header class="section-head"><h2 id="titel-architectuur">Architectuur</h2><p>Achter de gevel aan de Oudegracht liggen drie oudere panden met kelders en eigen kappen. Het winkelgedeelte aan de Steenweg heeft drie bovengrondse bouwlagen en een kelder. Trappen en liften verbinden de verschillende vloerniveaus.</p></header>
@@ -181,5 +195,41 @@
   <div class="dialog-media"><img alt=""></div>
   <div class="caption dialog-caption"></div>
 </dialog>
+<script>
+  {
+    const note = document.querySelector('.source-note');
+    const trigger = note.querySelector('.source-trigger');
+    const preview = document.getElementById('penders-fragment');
+    let pinned = false;
+
+    function showPreview(open) {
+      preview.hidden = !open;
+      trigger.setAttribute('aria-expanded', String(open));
+    }
+
+    trigger.addEventListener('pointerenter', event => {
+      if (event.pointerType === 'mouse') showPreview(true);
+    });
+    note.addEventListener('pointerleave', () => {
+      if (!pinned && !preview.contains(document.activeElement)) showPreview(false);
+    });
+    trigger.addEventListener('click', () => {
+      pinned = !pinned;
+      showPreview(pinned);
+    });
+    document.addEventListener('click', event => {
+      if (!note.contains(event.target)) {
+        pinned = false;
+        showPreview(false);
+      }
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key !== 'Escape' || preview.hidden) return;
+      if (preview.contains(document.activeElement)) trigger.focus();
+      pinned = false;
+      showPreview(false);
+    });
+  }
+</script>
 </body>
 </html>
