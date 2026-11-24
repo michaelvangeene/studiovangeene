@@ -1,105 +1,75 @@
 (() => {
   const rows = [...document.querySelectorAll('#projects li')];
   const filters = [...document.querySelectorAll('[data-filter]')];
-  const reset = document.querySelector('#reset');
-  const count = document.querySelector('#count');
-  const overview = document.querySelector('#overview');
-  const status = document.querySelector('#status');
+  const dialog = document.querySelector('#catalog');
+  const colors = {wonen:'#f58e84',interieur:'#f8ed43',techniek:'#7a4456'};
   let category = 'all';
-  let selectedGroup = null;
   let map, markers;
-
-  function matches(row) {
-    return category === 'all' || row.dataset.type === category;
+  const coordinates = row => [Number(row.dataset.lat), Number(row.dataset.lon)];
+  const visible = () => rows.filter(row => !row.hidden && row.hasAttribute('data-lat'));
+  function fit(items) {
+    if (map && items.length) map.fitBounds(items.map(coordinates), {padding:[44,54],maxZoom:17});
   }
-  function updateList() {
-    const visible = rows.filter(row => matches(row) && (!selectedGroup || selectedGroup.includes(row)));
-    rows.forEach(row => { row.hidden = !visible.includes(row); });
-    count.textContent = visible.length + (visible.length === 1 ? ' project' : ' projecten');
-    reset.hidden = !selectedGroup;
-    document.querySelector('#projects').scrollTop = 0;
+  function select(items, position) {
+    const box = document.createElement('div');
+    const list = document.createElement('div');
+    list.className = 'selection';
+    items.forEach(row => list.append(row.querySelector('a').cloneNode(true)));
+    box.append(list);
+    if (items.length > 1 && items.some(row => map.distance(position,coordinates(row)) > 10)) {
+      const zoom = document.createElement('button');
+      zoom.className = 'zoom-group';
+      zoom.textContent = 'Inzoomen op deze projecten';
+      zoom.onclick = () => { map.closePopup(); fit(items); };
+      box.append(zoom);
+    }
+    L.popup({maxWidth:285,autoPanPadding:[18,65]}).setLatLng(position).setContent(box).openOn(map);
+    list.querySelector('a').focus({preventScroll:true});
   }
-  function locationOf(row) {
-    return [Number(row.dataset.lat), Number(row.dataset.lon)];
-  }
-  function inView() {
-    return rows.filter(row => matches(row) && row.hasAttribute('data-lat'));
-  }
-  function fit(rowsToFit) {
-    if (map && rowsToFit.length) map.fitBounds(rowsToFit.map(locationOf), {padding:[35,35], maxZoom:16, animate:false});
-  }
-  function renderMarkers() {
-    if (!map) return;
+  function render() {
     markers.clearLayers();
     const groups = [];
-    for (const row of inView()) {
-      const point = map.project(locationOf(row));
-      const nearby = groups.find(group => group.point.distanceTo(point) < 42);
-      if (nearby) nearby.rows.push(row);
-      else groups.push({point,rows:[row]});
+    for (const row of visible()) {
+      const point = map.project(coordinates(row));
+      const near = groups.find(group => group.point.distanceTo(point) < 32);
+      if (near) near.items.push(row);
+      else groups.push({point,items:[row]});
     }
-    for (const group of groups) {
-      const items = group.rows;
-      const row = items[0];
-      const single = items.length === 1;
-      const title = single ? row.querySelector('a span').firstChild.textContent : items.length + ' projecten bekijken';
-      const colors = {wonen:'#f58e84',interieur:'#f8ed43',techniek:'#7a4456'};
-      let percentage = 0;
-      const stops = Object.entries(colors).flatMap(([type,color]) => {
-        const amount = items.filter(item => item.dataset.type === type).length;
-        if (!amount) return [];
-        const start = percentage;
-        percentage += 100 * amount / items.length;
-        return [color+' '+start+'% '+percentage+'%'];
-      });
-      const ring = stops.length > 1 ? 'conic-gradient('+stops.join(',')+')' : colors[row.dataset.type];
-      const icon = L.divIcon({
-        className:'map-pin',
-        html:single ? '<span class="symbol '+row.dataset.type+'"></span>' : '<span class="cluster" style="background:'+ring+'"><b>'+items.length+'</b></span>',
-        iconSize:single ? [22,22] : [32,32]
-      });
-      const marker = L.marker(locationOf(row), {icon,title,alt:title}).addTo(markers);
-      marker.getElement().setAttribute('aria-label', title);
-      marker.on('click', () => {
-        if (single) { location.assign(row.querySelector('a').href); return; }
-        selectedGroup = items;
-        updateList();
-        fit(items);
-        const first = row.querySelector('a');
-        first.focus({preventScroll:true});
-        if (matchMedia('(max-width:720px)').matches) count.scrollIntoView({block:'start'});
-      });
+    for (const {items} of groups) {
+      const row = items[0], single = items.length === 1;
+      const types = [...new Set(items.map(item => item.dataset.type))];
+      const ring = types.length === 1 ? colors[types[0]] : 'conic-gradient('+types.map((type,i) => colors[type]+' '+(100*i/types.length)+'% '+(100*(i+1)/types.length)+'%').join(',')+')';
+      const icon = L.divIcon({className:'map-pin',iconSize:[32,32],html:single
+        ? '<i class="symbol '+row.dataset.type+'"></i>'
+        : '<i class="cluster" style="background:'+ring+'"></i>'});
+      const marker = L.marker(coordinates(row),{icon}).addTo(markers);
+      const el = marker.getElement();
+      el.setAttribute('role','button');
+      el.setAttribute('aria-label',single ? row.querySelector('span').firstChild.textContent : items.length+' projecten bekijken');
+      marker.on('click',() => select(items,marker.getLatLng()));
     }
   }
-  function resetView() {
-    selectedGroup = null;
-    updateList();
-    fit(inView());
-    renderMarkers();
+  document.querySelector('#index').onclick = () => dialog.showModal();
+  dialog.onclick = event => { if (event.target === dialog) dialog.close(); };
+  function update(type) {
+    category = type;
+    rows.forEach(row => { row.hidden = category !== 'all' && row.dataset.type !== category; });
+    document.querySelector('#count').textContent = rows.filter(row => !row.hidden).length+' projecten';
+    filters.forEach(button => button.setAttribute('aria-pressed', String(button.dataset.filter === type)));
   }
-  for (const button of filters) button.addEventListener('click', () => {
-    category = button.dataset.filter;
-    filters.forEach(filter => filter.setAttribute('aria-pressed', String(filter === button)));
-    resetView();
+  filters.forEach(button => button.onclick = () => {
+    update(button.dataset.filter); dialog.close();
+    if (map) { map.closePopup(); render(); fit(visible()); }
   });
-  reset.addEventListener('click', resetView);
-  overview.addEventListener('click', resetView);
-  updateList();
-  if (!window.L) {
-    status.textContent = 'De kaart is niet beschikbaar. Open een project in de lijst.';
-    status.hidden = false;
-    return;
-  }
-  map = L.map('map', {minZoom:6,maxZoom:19,zoomControl:false,scrollWheelZoom:false});
-  L.control.zoom({position:'bottomright',zoomInTitle:'Inzoomen',zoomOutTitle:'Uitzoomen'}).addTo(map);
-  let tileLoaded = false;
-  L.tileLayer('https://service.pdok.nl/kadaster/brt-achtergrondkaart/wmts/v2_0/grijs/EPSG:3857/{z}/{x}/{y}.png', {
-    maxNativeZoom:19,maxZoom:19,attribution:'Kaart: <a href="https://www.pdok.nl/">Kadaster / PDOK</a>'
-  }).on('tileload', () => { tileLoaded = true; status.hidden = true; })
-    .on('tileerror', () => {
-      if (!tileLoaded) { status.textContent = 'De onderkaart is tijdelijk niet beschikbaar.'; status.hidden = false; }
-    }).addTo(map);
+  update('all');
+  if (!window.L) { dialog.showModal(); return; }
+  map = L.map('map',{minZoom:7,maxZoom:19,zoomControl:false,attributionControl:false}).setView([52.368,4.925],11);
+  L.control.zoom({zoomInTitle:'Inzoomen',zoomOutTitle:'Uitzoomen'}).addTo(map);
+  L.tileLayer('https://rtiles.waag.org/services/buildings/tiles/{z}/{x}/{y}.png',{
+    maxNativeZoom:15,maxZoom:19,bounds:[[50.70,3.20],[53.60,7.30]],noWrap:true
+  }).addTo(map);
   markers = L.layerGroup().addTo(map);
-  resetView();
-  map.on('zoomend', renderMarkers);
+  render();
+  map.on('zoomend',render);
+  document.querySelector('#overview').onclick = () => { map.closePopup(); fit(visible()); };
 })();
