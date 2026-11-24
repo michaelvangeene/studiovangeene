@@ -2142,7 +2142,7 @@
 
 
   <main>
-<header class="portfolio-intro"><h1>Bouwkundig ontwerp &amp; tekenwerk vanuit Utrecht</h1><div class="intro-actions"><details class="studio-services"><summary>Diensten &amp; werkwijze</summary><div><p>Van een nieuwe indeling tot tekeningen voor de aannemer. Studio van Geene werkt aan verbouwingen, dakopbouwen en interieurs in Utrecht, Amsterdam en omgeving.</p><nav aria-label="Diensten"><a href="/bouwkundig-tekenaar-utrecht/">Verbouwen &amp; uitbreiden</a><a href="/vergunningtekeningen/">Vergunningtekeningen</a><a href="/dakopbouw/">Dakopbouw</a><a href="/interieurontwerp/">Interieur &amp; horeca</a><a href="/tekenaar/">BIM &amp; technisch tekenwerk</a></nav><p class="service-note">Direct contact met Michael. Werkzaamheden, prijs en planning vooraf afgesproken.</p></div></details><a class="project-start" href="/project-bespreken/">Bespreek je project ↗</a></div></header>
+<header class="portfolio-intro"><h1>Bouwkundig ontwerp &amp; tekenwerk vanuit Utrecht</h1><div class="intro-actions"><details class="studio-services"><summary>Diensten &amp; werkwijze</summary><div><p>Van een nieuwe indeling tot tekeningen voor de aannemer. Studio van Geene werkt aan verbouwingen, dakopbouwen en interieurs in Utrecht, Amsterdam en omgeving.</p><nav aria-label="Diensten"><a href="/bouwkundig-tekenaar-utrecht/">Verbouwen &amp; uitbreiden</a><a href="/vergunningtekeningen/">Vergunningtekeningen</a><a href="/dakopbouw/">Dakopbouw</a><a href="/interieurontwerp/">Interieur &amp; horeca</a><a href="/tekenaar/">BIM &amp; technisch tekenwerk</a></nav><p class="service-note">Direct contact met Michael. Werkzaamheden, prijs en planning vooraf afgesproken.</p></div></details><a class="project-start" href="/projectkaart/">Projectkaart ↗</a><a class="project-start" href="/project-bespreken/">Bespreek je project ↗</a></div></header>
     <section class="project-gallery" aria-label="Werk van Studio van Geene en projecten waaraan Michael werkte bij KRFT en INBO">
       <div class="project-track" tabindex="0" aria-label="Projectbeelden, swipe, scroll met het muiswiel of gebruik de pijlen">
         <!-- Gerealiseerde projecten waaraan Michael werkte bij KRFT en INBO. -->
@@ -2528,7 +2528,7 @@
       <a href="/vergunningtekeningen/">Vergunningtekeningen <small>↗</small></a>
       <a href="/dakopbouw/">Dakopbouw <small>↗</small></a>
       <a href="/tekenaar/">Tekenwerk uitbesteden <small>↗</small></a>
-      <a href="?" data-segment="all">Alle projecten <small></small></a>
+      <a href="/projectkaart/">Projectkaart <small>↗</small></a><a href="?" data-segment="all">Alle projecten <small></small></a>
       <a href="?segment=home" data-segment="home">Huisuitbreidingen <small></small></a>
       <a href="?segment=technical" data-segment="technical">Complex technisch ontwerp <small></small></a>
       <a href="?segment=interior" data-segment="interior">Interieur <small></small></a>
@@ -2619,7 +2619,9 @@
       const slides = Array.from(track.querySelectorAll('.project-slide'));
       gallery.classList.add('gallery-enhanced');
       const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
-      let active = count + (segment === 'all' ? 1 : 0);
+      const requestedProject = new URLSearchParams(location.search).get('project');
+      const requestedIndex = originals.findIndex(slide => slide.dataset.project === requestedProject);
+      let active = count + (requestedIndex >= 0 ? requestedIndex : segment === 'all' ? 1 : 0);
       let frame = 0;
       let settleTimer = 0;
       let pointerDown = false;
