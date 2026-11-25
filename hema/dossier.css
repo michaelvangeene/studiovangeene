@@ -137,3 +137,16 @@ body:has(dialog[open]) { overflow: hidden; }
   .anchors, .archive-tools, .zoom, dialog { display: none; }
   figure, .record { break-inside: avoid; }
 }
+
+/* Historic HEMA plans: editorial preview grid */
+.archive-subhead { margin: 0 0 11px; font-family: var(--display); font-size: clamp(1.22rem, 1.9vw, 1.58rem); font-weight: 500; letter-spacing: -.022em; }
+.archive-subhead.archive-other { padding-top: 18px; margin-top: 40px; border-top: 1px solid var(--line); }
+.archive-preview-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: clamp(22px, 3.4vw, 60px); row-gap: clamp(28px, 4vw, 58px); margin: 23px 0 54px; align-items: start; }
+.archive-plate.record { display: block; padding: 0; border: 0; min-width: 0; }
+.archive-plate .media { background: #f8f7f5; }
+.archive-plate .media img { display: block; width: 100%; height: auto; aspect-ratio: var(--ratio, 16/9); object-fit: contain; }
+.archive-plate .caption { gap: 2px; padding-top: 10px; }
+.archive-plate .caption strong { font-size: clamp(1.06rem, 1.7vw, 1.25rem); line-height: 1.32; }
+.archive-plate .archive-scan-link { margin: 8px 0 0; font-size: .82rem; }
+.archive-plate .archive-scan-link a { font-weight: 600; }
+@media (max-width: 760px) { .archive-preview-grid { grid-template-columns: minmax(0, 1fr); row-gap: 31px; } .archive-subhead.archive-other { margin-top: 24px; } }
