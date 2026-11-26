@@ -161,6 +161,7 @@
       filter: url(#line-art-outline);
       clip-path: inset(4.5% 0);
     }
+    .project-slide[data-project="rijksstraatweg-hsb"] .project-image img { clip-path: none; }
     .gallery-enhanced .project-slide:not(.is-active)[data-line-style="outline"] .project-image img {
       filter: url(#line-art-outline) blur(calc(var(--halftone-size) * .12));
     }
@@ -2154,10 +2155,11 @@
           0 0 0 0 1
           0 0 0 0 1
           -.2126 -.7152 -.0722 0 1"/>
-        <feComponentTransfer result="ink">
+        <feComponentTransfer result="converted">
           <feFuncA type="linear" slope="3.8" intercept="-.03"/>
         </feComponentTransfer>
-        <feMorphology operator="erode" radius="2.25" result="interior"/>
+        <feComposite in="converted" in2="SourceAlpha" operator="in" result="ink"/>
+        <feMorphology in="ink" operator="erode" radius="2.25" result="interior"/>
         <feComposite in="ink" in2="interior" operator="out"/>
       </filter>
     </defs>
@@ -2409,7 +2411,7 @@
           <div class="project-image"><img src="images/fritz-dietrich-kahlenbergstraat-11b-doorsnede.webp" alt="Doorsnede door de dakopbouw, werkkamer en het dakterras aan Fritz Dietrich Kahlenbergstraat 11b in Amsterdam" width="1080" height="855" loading="lazy" decoding="async"></div>
           <figcaption><h2 class="project-title">Fritz Dietrich Kahlenbergstraat 11b, Amsterdam</h2><span class="project-kind">Woningverbouwing / HSB</span><span class="project-affiliation">In samenwerking met JVAI</span><p class="project-description">Werkzaamheden: BIM, details, Bouwbesluit, render en HSB-elementtekeningen.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing  /  HSB</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Houtskeletbouw</span><span class="project-tag">Bouwkundige detaillering</span><span class="project-tag">Amsterdam</span></div><a class="project-inquiry" href="/project-bespreken/?via=fritz-dietrich-kahlenbergstraat-11b">Ook zo’n project? Bespreek je plan ↗</a></figcaption>
         </figure>
-        <figure class="project-slide project-slide--added project-slide--batch03" id="project-rijksstraatweg-hsb" data-project="rijksstraatweg-hsb" data-artwork="render">
+        <figure class="project-slide project-slide--added project-slide--batch03" id="project-rijksstraatweg-hsb" data-project="rijksstraatweg-hsb" data-artwork="line" data-line-style="outline">
           <div class="project-image"><img src="images/rijksstraatweg-hsb-cutout.svg?v=20261014-batch03" alt="Visualisatie van Rijksstraatweg – HSB-aanbouw en tuinhuis, Duivendrecht" width="1600" height="661" loading="lazy" decoding="async"></div>
           <figcaption><h2 class="project-title">Rijksstraatweg – HSB-aanbouw en tuinhuis, Duivendrecht</h2><span class="project-kind">HSB / aanbouw en tuinhuis</span><p class="project-description">Werkzaamheden: HSB-elementtekeningen voor uitvoering. Ook de werktekeningen voor de aannemer zijn voorbereid.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">HSB  /  aanbouw en tuinhuis</span><span class="project-tag">Houtskeletbouw</span><span class="project-tag">Duivendrecht</span><span class="project-tag">Werktekeningen voor aannemer</span></div><a class="project-inquiry" href="/project-bespreken/?via=rijksstraatweg-hsb">Ook zo’n project? Bespreek je plan ↗</a></figcaption>
         </figure>
