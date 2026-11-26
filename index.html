@@ -157,6 +157,13 @@
     .gallery-enhanced .project-slide:not(.is-active)[data-artwork="line"] .project-image img {
       filter: url(#line-art) blur(calc(var(--halftone-size) * .12));
     }
+    .project-slide[data-line-style="outline"] .project-image img {
+      filter: url(#line-art-outline);
+      clip-path: inset(4.5% 0);
+    }
+    .gallery-enhanced .project-slide:not(.is-active)[data-line-style="outline"] .project-image img {
+      filter: url(#line-art-outline) blur(calc(var(--halftone-size) * .12));
+    }
 
 
     .project-slide .project-title { margin: 0 0 5px; color: #fff; font: 14px/1.5 'GiphursMedium', Arial, sans-serif; letter-spacing: .02em; }
@@ -2141,6 +2148,18 @@
           <feFuncA type="linear" slope="3.8" intercept="-.03"/>
         </feComponentTransfer>
       </filter>
+      <filter id="line-art-outline" x="0" y="0" width="100%" height="100%" color-interpolation-filters="sRGB">
+        <feColorMatrix type="matrix" values="
+          0 0 0 0 1
+          0 0 0 0 1
+          0 0 0 0 1
+          -.2126 -.7152 -.0722 0 1"/>
+        <feComponentTransfer result="ink">
+          <feFuncA type="linear" slope="3.8" intercept="-.03"/>
+        </feComponentTransfer>
+        <feMorphology operator="erode" radius="2.25" result="interior"/>
+        <feComposite in="ink" in2="interior" operator="out"/>
+      </filter>
     </defs>
   </svg>
 
@@ -2370,11 +2389,11 @@
           <div class="project-image"><img src="images/zwanenbloemlaan-232.webp" alt="Woningverbouwing – Zwanenbloemlaan 232, Amsterdam" width="1600" height="1000" loading="lazy" decoding="async"></div>
           <figcaption><h2 class="project-title">Zwanenbloemlaan 232, Amsterdam</h2><span class="project-kind">Woningverbouwing</span><span class="project-affiliation">In samenwerking met JVAI</span><p class="project-description">Werkzaamheden: BIM, details, Bouwbesluit en render.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">Woningverbouwing</span><span class="project-tag">BIM-modellering</span><span class="project-tag">Bouwkundige detaillering</span><span class="project-tag">Architectuurvisualisatie</span><span class="project-tag">Amsterdam</span></div><a class="project-inquiry" href="/project-bespreken/?via=zwanenbloemlaan-232">Ook zo’n project? Bespreek je plan ↗</a></figcaption>
         </figure>
-        <figure class="project-slide project-slide--added" id="project-ruyschstraat-343a" data-project="ruyschstraat-343a" data-artwork="line">
+        <figure class="project-slide project-slide--added" id="project-ruyschstraat-343a" data-project="ruyschstraat-343a" data-artwork="line" data-line-style="outline">
           <div class="project-image"><img src="images/ruyschstraat-343a.webp" alt="HSB / dakopbouw – Ruyschstraat 343a, Amsterdam" width="1600" height="1000" loading="lazy" decoding="async"></div>
           <figcaption><h2 class="project-title">Ruyschstraat 343a, Amsterdam</h2><span class="project-kind">HSB / dakopbouw</span><p class="project-description">Werkzaamheden: HSB-elementtekeningen voor uitvoering en prefabricage. Ook de werktekeningen voor de aannemer zijn voorbereid.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">HSB  /  dakopbouw</span><span class="project-tag">Houtskeletbouw</span><span class="project-tag">Amsterdam</span><span class="project-tag">Werktekeningen voor aannemer</span></div><a class="project-inquiry" href="/project-bespreken/?via=ruyschstraat-343a">Ook zo’n project? Bespreek je plan ↗</a></figcaption>
         </figure>
-        <figure class="project-slide project-slide--added" id="project-derde-oosterparkstraat-198d" data-project="derde-oosterparkstraat-198d" data-artwork="line">
+        <figure class="project-slide project-slide--added" id="project-derde-oosterparkstraat-198d" data-project="derde-oosterparkstraat-198d" data-artwork="line" data-line-style="outline">
           <div class="project-image"><img src="images/derde-oosterparkstraat-198d.webp" alt="HSB / dakopbouw – Derde Oosterparkstraat 198 / 198D, Amsterdam" width="1600" height="1000" loading="lazy" decoding="async"></div>
           <figcaption><h2 class="project-title">Derde Oosterparkstraat 198 / 198D, Amsterdam</h2><span class="project-kind">HSB / dakopbouw</span><p class="project-description">Werkzaamheden: HSB-elementtekeningen voor uitvoering en prefabricage. Ook de werktekeningen voor de aannemer zijn voorbereid.</p><div class="project-tags" aria-label="Projectthema’s"><span class="project-tag">HSB  /  dakopbouw</span><span class="project-tag">Houtskeletbouw</span><span class="project-tag">Amsterdam</span><span class="project-tag">Werktekeningen voor aannemer</span></div><a class="project-inquiry" href="/project-bespreken/?via=derde-oosterparkstraat-198d">Ook zo’n project? Bespreek je plan ↗</a></figcaption>
         </figure>
