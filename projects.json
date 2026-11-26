@@ -22,7 +22,28 @@
       "KRFT",
       "Hoorn"
     ],
-    "inventoryId": "077"
+    "inventoryId": "077",
+    "projectUrl": "https://krft.nl/news/timberrrr"
+  },
+  {
+    "slug": "kc-zijdelwaard",
+    "title": "KC Zijdelwaard, Uithoorn",
+    "kind": "Kindcentrum",
+    "batch": "bureau-ervaring",
+    "employer": "KRFT",
+    "image": "images/kc-zijdelwaard.webp",
+    "artwork": "render",
+    "background": "full-image",
+    "description": "Kindcentrum met onderwijs, kinderopvang en jeugdvoorzieningen. Michael werkte bij KRFT aan ontwerp, geveluitwerking en BIM-coördinatie.",
+    "tags": [
+      "Onderwijsgebouw",
+      "Gevelontwerp",
+      "BIM-coördinatie",
+      "Uithoorn"
+    ],
+    "contribution": "Ontwerp, geveluitwerking en BIM-coördinatie",
+    "imageCredit": "Projectbeeld KRFT · Bijdrage Michael van Geene",
+    "projectUrl": "https://krft.nl/news/municipality-of-uithoorn-and-krft-architecture-studio-present-preliminary-design"
   },
   {
     "slug": "wonderwoods-utrecht",
@@ -47,7 +68,8 @@
       "Technische uitwerking",
       "Utrecht"
     ],
-    "inventoryId": "073"
+    "inventoryId": "073",
+    "projectUrl": "https://inbo.com/nl/projects/biodiversiteit-in-twee-torens-wonderwoods-utrecht/"
   },
   {
     "slug": "mfc-de-bloesem-zetten",
@@ -74,7 +96,8 @@
       "BIM-coördinatie",
       "Zetten"
     ],
-    "inventoryId": "078"
+    "inventoryId": "078",
+    "projectUrl": "https://krft.nl/projects/multifunctioneel-centrum-zetten-nl"
   },
   {
     "slug": "rottanova-rotterdam",
@@ -101,7 +124,8 @@
       "Technische uitwerking",
       "Rotterdam"
     ],
-    "inventoryId": "072"
+    "inventoryId": "072",
+    "projectUrl": "https://inbo.com/nl/projects/rottanova-rotterdam/"
   },
   {
     "slug": "havenkade-nijmegen",
@@ -126,7 +150,8 @@
       "Woningbouw",
       "INBO",
       "Nijmegen"
-    ]
+    ],
+    "projectUrl": "https://inbo.com/nl/werk/"
   },
   {
     "slug": "ivoordreef-utrecht",
@@ -153,7 +178,8 @@
       "Bouwkundige uitwerking",
       "Utrecht"
     ],
-    "inventoryId": "075"
+    "inventoryId": "075",
+    "projectUrl": "https://inbo.com/nl/werk/"
   },
   {
     "slug": "rozengracht",
@@ -1371,7 +1397,8 @@
     "sourceLabel": "Statenhof Dordrecht",
     "alt": "Projectbeeld van Statenhof, de herontwikkeling van het voormalige V&D-pand in Dordrecht",
     "width": 770,
-    "height": 634
+    "height": 634,
+    "projectUrl": "https://inbo.com/nl/werk/"
   },
   {
     "slug": "heijmans-woonconcept",
@@ -1397,7 +1424,8 @@
     "sourceLabel": "Heijmans Huismerk",
     "alt": "Referentiebeeld Heijmans Huismerk: conceptwoningen in Hoog Dalem, Gorinchem",
     "width": 480,
-    "height": 854
+    "height": 854,
+    "projectUrl": "https://inbo.com/nl/werk/"
   },
   {
     "slug": "mfa-gorssel",
@@ -1415,7 +1443,8 @@
     "image": "images/mfa-gorssel.webp",
     "artwork": "render",
     "background": "full-image",
-    "imageCredit": "Projectbeeld KRFT · Bijdrage Michael van Geene"
+    "imageCredit": "Projectbeeld KRFT · Bijdrage Michael van Geene",
+    "projectUrl": "https://krft.nl/projects"
   },
   {
     "slug": "het-baken-cruquius",
@@ -1433,7 +1462,8 @@
     "image": "images/het-baken-cruquius.webp",
     "artwork": "render",
     "background": "full-image",
-    "imageCredit": "Projectbeeld KRFT · Bijdrage Michael van Geene"
+    "imageCredit": "Projectbeeld KRFT · Bijdrage Michael van Geene",
+    "projectUrl": "https://krft.nl/projects"
   },
   {
     "slug": "wisselspoor-daalcentraal",
@@ -1451,7 +1481,8 @@
     "image": "images/wisselspoor-daalcentraal.webp",
     "artwork": "render",
     "background": "full-image",
-    "imageCredit": "Projectbeeld KRFT · Bijdrage Michael van Geene"
+    "imageCredit": "Projectbeeld KRFT · Bijdrage Michael van Geene",
+    "projectUrl": "https://krft.nl/projects"
   },
   {
     "slug": "tiny-house-eindhoven",
@@ -1469,25 +1500,6 @@
       "Bouwbesluit",
       "Eindhoven"
     ]
-  },
-  {
-    "slug": "kc-zijdelwaard",
-    "title": "KC Zijdelwaard, Uithoorn",
-    "kind": "Kindcentrum",
-    "batch": "bureau-ervaring",
-    "employer": "KRFT",
-    "image": "images/kc-zijdelwaard.webp",
-    "artwork": "render",
-    "background": "full-image",
-    "description": "Kindcentrum met onderwijs, kinderopvang en jeugdvoorzieningen. Michael werkte bij KRFT aan ontwerp, geveluitwerking en BIM-coördinatie.",
-    "tags": [
-      "Onderwijsgebouw",
-      "Gevelontwerp",
-      "BIM-coördinatie",
-      "Uithoorn"
-    ],
-    "contribution": "Ontwerp, geveluitwerking en BIM-coördinatie",
-    "imageCredit": "Projectbeeld KRFT · Bijdrage Michael van Geene"
   },
   {
     "slug": "hogeweg-38",
@@ -1570,7 +1582,8 @@
     "background": "transparent",
     "width": 903,
     "height": 1000,
-    "alt": "BIM-model van Victoriatoren, Eindhoven"
+    "alt": "BIM-model van Victoriatoren, Eindhoven",
+    "projectUrl": "https://inbo.com/nl/projects/victoriatoren-eindhoven/"
   },
   {
     "slug": "tilburg",
