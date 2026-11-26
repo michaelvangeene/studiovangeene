@@ -14,7 +14,7 @@
     'koopvaardersplantsoen-87': {poster:'https://app-uploads.krea.ai/public/21417fce-d10b-4dd1-a6fe-03c68ba69b96-image.png',video:'https://app-uploads.krea.ai/public/ef332f98-2089-4529-8891-49618e4d4901-video.mp4'},
     'cuneralaan-34': {poster:'https://app-uploads.krea.ai/public/6706249f-c3fc-4841-8343-87bb1da1c51a-image.png',video:'https://app-uploads.krea.ai/public/237c4087-1f7c-465f-ba7e-a9b3c5e351eb-video.mp4'},
     'amstelstraat-35': {poster:'https://app-uploads.krea.ai/public/f9ee27cf-d58e-49d0-9a67-6efd2c45ab3b-image.png',video:'https://app-uploads.krea.ai/public/bc31810c-70ed-4ecf-bf39-6654f470c839-video.mp4'},
-    'tilburg': {poster:'/images/tilburg-clean-20261015.webp',video:'https://www.krea.ai/api/img?f=mp4&i=https%3A%2F%2Fapp-uploads.krea.ai%2Fpublic%2Ff1a75dd3-d571-4b79-8a06-cb54818c4c7c-video.mp4&s=1920'},
+    'tilburg': {poster:'/images/tilburg-clean-20261015.webp',video:'https://www.krea.ai/api/img?f=mp4&i=https%3A%2F%2Fapp-uploads.krea.ai%2Fpublic%2Ff1a75dd3-d571-4b79-8a06-cb54818c4c7c-video.mp4&s=512'},
     'gerard-doustraat': {poster:'https://app-uploads.krea.ai/public/58326a3b-bdc7-45ee-868a-e32aa243286c-image.jpeg',video:'https://app-uploads.krea.ai/public/7e183b06-2244-44d8-867e-7609ccda00b7-video.mp4'},
     'rozengracht': {poster:'/images/rozengracht-rain-20261015.webp',video:'/videos/rozengracht-rain-20261015.mp4'}
   };
