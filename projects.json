@@ -793,23 +793,6 @@
     "alt": "Bouwkundige tekening van Swadenburgerdam 18–26"
   },
   {
-    "slug": "keukenvisualisatie-boekel",
-    "title": "Keukenvisualisatie Boekel",
-    "kind": "Interieurvisualisatie",
-    "batch": "remaining",
-    "description": "Werkzaamheden: BIM, renders, materialisatie en feedback.",
-    "tags": [
-      "Interieurvisualisatie",
-      "BIM-modellering",
-      "Architectuurvisualisatie",
-      "Boekel"
-    ],
-    "inventoryId": "033",
-    "image": "images/keukenvisualisatie-boekel.webp",
-    "artwork": "render",
-    "background": "full-image"
-  },
-  {
     "slug": "zwanenbloemlaan-232",
     "title": "Zwanenbloemlaan 232, Amsterdam",
     "kind": "Woningverbouwing",
