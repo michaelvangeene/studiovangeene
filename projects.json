@@ -1582,5 +1582,22 @@
       "Materialisatie",
       "Tilburg"
     ]
+  },
+  {
+    "slug": "keukenvisualisatie-boekel",
+    "title": "Keukenvisualisatie Boekel",
+    "kind": "Interieurvisualisatie",
+    "batch": "remaining",
+    "description": "Ontwerp van de keukenbar, materiaalstudie, lichtplan, BIM-modellering en interieurvisualisatie. Een slank blad van geborsteld roestvast staal sluit aan op afgerond houten maatwerk en kastfronten met geïntegreerde greepprofielen. Het kleurpalet is gebaseerd op een aangepaste combinatie 249 van Sanzō Wada.",
+    "tags": [
+      "Interieurvisualisatie",
+      "BIM-modellering",
+      "Architectuurvisualisatie",
+      "Boekel"
+    ],
+    "inventoryId": "033",
+    "image": "https://app-uploads.krea.ai/public/bc3354f2-abe4-4780-b8b4-ef0c47b4dd9c-image.png",
+    "artwork": "render",
+    "background": "full-image"
   }
 ]
